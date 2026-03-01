@@ -28,6 +28,31 @@
         }
     </style>
 </head>
+    <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-black border-t-4 border-green-500 p-4 z-[100] hidden">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-xs sm:text-sm text-slate-300 italic font-medium text-center md:text-left">
+            Vi bruker enkle informasjonskapsler for å sikre at nettsiden fungerer optimalt. 
+            Ved å bruke siden godtar du vår <a href="personvern.html" class="underline text-white">personvernerklæring</a>.
+        </p>
+        <button onclick="acceptCookies()" class="bg-green-500 text-black px-6 py-2 font-black uppercase italic text-sm rounded shadow-lg hover:bg-white transition">
+            OK, skjønner!
+        </button>
+    </div>
+</div>
+
+<script>
+    function acceptCookies() {
+        localStorage.setItem('cookiesAccepted', 'true');
+        document.getElementById('cookie-banner').classList.add('hidden');
+    }
+
+    // Vis banneret hvis det ikke er akseptert fra før
+    window.onload = function() {
+        if (!localStorage.getItem('cookiesAccepted')) {
+            document.getElementById('cookie-banner').classList.remove('hidden');
+        }
+    }
+</script>
 <body class="bg-slate-900 text-slate-100">
 
     <nav class="bg-black sticky top-0 z-50 border-b-2 border-ebt-green">
