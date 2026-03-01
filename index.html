@@ -1,152 +1,116 @@
 <!DOCTYPE html>
-
 <html lang="no">
 <head>
-<title>Hjem | Edvardsen Byggtjenester</title>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="#ffffff" name="theme-color"/>
-<link href="/assets/logo.png" rel="icon" type="image/png"/>
-<link href="/css/style.css" rel="stylesheet"/>
-<meta content="Tømrerarbeid og grunnarbeid i Akershus og Østfold. Ryddig jobb, god dialog og skikkelig håndverk." name="description"/>
-<meta content="Edvardsen Byggtjenester" property="og:title"/>
-<meta content="Tømrerarbeid og grunnarbeid i Akershus og Østfold." property="og:description"/>
-<meta content="/assets/logo.png" property="og:image"/>
-<meta content="website" property="og:type"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edvardsen Byggtjenester | Tømrer & Grunnarbeid</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
-<header class="header">
-<div class="container nav">
-<a aria-label="Gå til forsiden" class="brand" href="/index.html">
-<span class="brand-mark"><img alt="Edvardsen Byggtjenester logo" loading="lazy" src="/assets/logo.png"/></span>
-<span class="brand-text">
-<span class="brand-title">Edvardsen Byggtjenester</span>
-<span class="brand-sub">Tømrer • Grunnarbeid • Utleie</span>
-</span>
-</a>
-<button aria-expanded="false" aria-label="Åpne meny" class="nav-toggle">
-<span></span><span></span><span></span>
-</button>
-<nav aria-label="Hovedmeny" class="nav-links">
-<a href="/index.html">Hjem</a>
-<div class="dropdown">
-<button aria-expanded="false" aria-haspopup="true" class="dropbtn" type="button">Tjenester</button>
-<div class="dropdown-menu" role="menu">
-<a href="/tomrertjenester.html" role="menuitem">Tømrertjenester</a>
-<a href="/grunnarbeid.html" role="menuitem">Grunnarbeid</a>
-<a href="/utleie.html" role="menuitem">Utleie</a>
-</div>
-</div>
-<a href="/referanser.html">Referanser</a>
-<a href="/om-oss.html">Om oss</a>
-<a href="/utleie.html">Utleie</a>
-<a class="btn" href="/kontakt.html">Kontakt</a>
-</nav>
-</div>
-</header>
-<div aria-label="Cookie-innstillinger" aria-live="polite" class="cookie-banner" id="cookieBanner" role="dialog">
-<div class="container cookie-inner">
-<div>
-<div class="cookie-title">Cookies</div>
-<div class="muted">Vi bruker kun nødvendige cookies for at siden skal fungere. Ingen sporing/annonsering er i bruk.</div>
-</div>
-<div class="cookie-actions">
-<button class="btn btn-ghost" id="cookieClose">Ok</button>
-<a class="btn btn-ghost" href="/cookies.html">Les mer</a>
-</div>
-</div>
-</div>
-<main>
-<section class="hero">
-<div class="container hero-grid">
-<div class="hero-copy">
-<p class="kicker">Østfold, Akershus og Follo</p>
-<h1>Tømrer og grunnarbeid i Vestby og omegn</h1>
-<p class="lead">Praktisk håndverk, ryddig gjennomføring og tydelig kommunikasjon – fra første befaring til ferdig resultat.</p><p class="muted">Jeg utfører små og mellomstore prosjekter innen tømrerarbeid og grunnarbeid for private kunder. Fokus på kvalitet, fremdrift og løsninger som varer.</p>
-<div class="cta">
-<a class="btn" href="/kontakt.html">Be om befaring / tilbud</a>
-<a class="btn btn-ghost" href="tel:+4790056314">Ring 900 56 314</a>
-</div>
-<div class="hero-points">
-<div class="point"><span class="check">✓</span><div><strong>Ryddig gjennomføring</strong><div class="muted">Tydelige avtaler og orden på plassen.</div></div></div>
-<div class="point"><span class="check">✓</span><div><strong>Praktiske løsninger</strong><div class="muted">Sier ifra hvis jeg ser bedre løsning.</div></div></div>
-<div class="point"><span class="check">✓</span><div><strong>Direkte kontakt</strong><div class="muted">Du snakker med meg, Kim-Roger.</div></div></div>
-</div>
-</div>
-<div class="hero-media">
-<img alt="Plassholderbilde for arbeid" loading="lazy" src="/assets/img/hero.svg"/>
-<div class="hero-badge">
-<div class="badge-title">Rask kontakt</div>
-<a class="link" href="tel:+4790056314">📞 900 56 314</a>
-<a class="link" href="mailto:kim.ebt@outlook.com">✉️ kim.ebt@outlook.com</a>
-<div class="muted small">📍 Karen Bachs vei 23, 1542 Vestby</div>
-</div>
-</div>
-</div>
-</section>
+<body class="bg-gray-50 text-gray-900 font-sans">
 
-<section class="section alt" id="utleie-teaser">
-<div class="container">
-<div class="card pad">
-<h2>Utleie (under arbeid)</h2>
-<p class="muted">Jeg bygger opp en enkel utleiedel. Foreløpig er det noe varmeutstyr tilgjengelig, og flere produkter kommer.</p>
-<a class="btn" href="/utleie.html">Se utleie</a>
-</div>
-</div>
-</section>
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="font-bold text-xl tracking-tight text-blue-900">EDVARDSEN <span class="text-orange-600">BYGGTJENESTER</span></div>
+            <div class="hidden md:flex space-x-6 font-medium">
+                <a href="#hjem" class="hover:text-orange-600">Hjem</a>
+                <a href="#tjenester" class="hover:text-orange-600">Tjenester</a>
+                <a href="#om" class="hover:text-orange-600">Om oss</a>
+                <a href="#utleie" class="hover:text-orange-600">Utleie</a>
+                <a href="#kontakt" class="bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700">Kontakt</a>
+            </div>
+        </div>
+    </nav>
 
-<section class="section alt">
-<div class="container grid-2">
-<div class="card">
-<h2>Med hjerte for faget</h2>
-<p>Jeg er opptatt av å levere skikkelig håndverk og gjøre ting ryddig. Hvis jeg ser noe som bør løses annerledes, sier jeg ifra.</p>
-<p class="muted">Område: Østfold, Akershus og Follo</p>
-<div class="cta">
-<a class="btn btn-ghost" href="/om-oss.html">Les om meg</a>
-</div>
-</div>
-<div class="card">
-<h2>Utleie (under arbeid)</h2>
-<p class="muted">Foreløpig kan du leie:</p>
-<div class="price-list">
-<div class="price-row"><div><strong>Varmeovn 3,3 kW</strong><div class="muted small">40 kr pr dag (inkl. mva)</div></div><a class="btn btn-ghost" href="/utleie.html">Se</a></div>
-<div class="price-row"><div><strong>Dieselvarmer</strong><div class="muted small">100 kr pr dag (inkl. mva)</div></div><a class="btn btn-ghost" href="/utleie.html">Se</a></div>
-</div>
-</div>
-</div>
-</section>
-</main>
-<footer class="footer">
-<div class="container footer-grid">
-<div>
-<div class="footer-brand">Edvardsen Byggtjenester</div>
-<div class="muted">Org.nr: 936 481 612 MVA</div>
-<div class="muted">Karen Bachs vei 23, 1542 Vestby</div>
-</div>
-<div>
-<div class="footer-title">Kontakt</div>
-<div><a href="tel:+4790056314">900 56 314</a></div>
-<div><a href="mailto:kim.ebt@outlook.com">kim.ebt@outlook.com</a></div>
-<div class="muted">Område: Østfold, Akershus og Follo</div>
-</div>
-<div>
-<div class="footer-title">Navigasjon</div>
-<div><a href="/index.html">Hjem</a></div>
-<div><a href="/tjenester.html">Tjenester</a></div>
-<div><a href="/om-oss.html">Om oss</a></div>
-<div><a href="/kontakt.html">Kontakt</a></div>
-</div>
-<div>
-<div class="footer-title">Lovpålagt</div>
-<div><a href="/personvern.html">Personvern</a></div>
-<div><a href="/cookies.html">Cookies</a></div>
-<div><a href="/vilkar-utleie.html">Vilkår utleie</a></div>
-</div>
-</div>
-<div class="container footer-bottom">
-<span class="muted">© 2026 Edvardsen Byggtjenester</span>
-</div>
-</footer>
-<script defer="" src="/js/main.js"></script>
+    <header id="hjem" class="relative bg-blue-900 text-white py-20 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Tømrer og grunnarbeid i Vestby og omegn</h1>
+            <p class="text-xl mb-8 text-blue-100">Praktisk håndverk, ryddig gjennomføring og tydelig kommunikasjon – fra første befaring til ferdig resultat.</p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="tel:90056314" class="bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition">
+                    Ring 900 56 314
+                </a>
+                <a href="#kontakt" class="bg-white hover:bg-gray-100 text-blue-900 font-bold py-3 px-8 rounded-lg text-lg transition">
+                    Be om befaring
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-16 max-w-6xl mx-auto px-4">
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-xl shadow-sm border-t-4 border-orange-500 text-center">
+                <i class="fas fa-broom text-3xl text-orange-500 mb-4"></i>
+                <h3 class="text-xl font-bold mb-2">Ryddig gjennomføring</h3>
+                <p class="text-gray-600">Tydelige avtaler og orden på plassen gjennom hele prosjektet.</p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-sm border-t-4 border-orange-500 text-center">
+                <i class="fas fa-lightbulb text-3xl text-orange-500 mb-4"></i>
+                <h3 class="text-xl font-bold mb-2">Praktiske løsninger</h3>
+                <p class="text-gray-600">Jeg sier ifra hvis jeg ser en bedre eller mer varig løsning.</p>
+            </div>
+            <div class="bg-white p-8 rounded-xl shadow-sm border-t-4 border-orange-500 text-center">
+                <i class="fas fa-user-check text-3xl text-orange-500 mb-4"></i>
+                <h3 class="text-xl font-bold mb-2">Direkte kontakt</h3>
+                <p class="text-gray-600">Du snakker direkte med meg, Kim-Roger, ingen mellomledd.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="tjenester" class="bg-gray-100 py-16 px-4">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Mine Tjenester</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="flex gap-4">
+                    <div class="bg-blue-900 text-white p-3 rounded-lg h-fit text-xl">🏠</div>
+                    <div>
+                        <h4 class="font-bold text-xl mb-2">Tømrerarbeid</h4>
+                        <p>Små og mellomstore prosjekter for private. Alt fra rehabilitering til nybygging av mindre konstruksjoner.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4">
+                    <div class="bg-blue-900 text-white p-3 rounded-lg h-fit text-xl">🚜</div>
+                    <div>
+                        <h4 class="font-bold text-xl mb-2">Grunnarbeid</h4>
+                        <p>Solid grunnarbeid som varer. Jeg har fokus på kvalitet og riktig fremdrift fra start.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="utleie" class="py-16 px-4 max-w-4xl mx-auto">
+        <div class="bg-blue-50 border border-blue-100 rounded-2xl p-8 flex flex-col md:flex-row items-center gap-8">
+            <div class="text-3xl">🛠️</div>
+            <div>
+                <h2 class="text-2xl font-bold mb-2">Utleie (under arbeid)</h2>
+                <p class="mb-4">Jeg bygger opp en utleiedel. Foreløpig er noe varmeutstyr tilgjengelig, og flere produkter kommer fortløpende.</p>
+                <a href="mailto:kim.ebt@outlook.com" class="text-blue-900 font-bold hover:underline">Ta kontakt for info om utstyr &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <footer id="kontakt" class="bg-gray-900 text-gray-300 py-16 px-4">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
+            <div>
+                <h3 class="text-white font-bold text-xl mb-4">Edvardsen Byggtjenester</h3>
+                <p>Org.nr: 936 481 612 MVA</p>
+                <p>Karen Bachs vei 23, 1542 Vestby</p>
+            </div>
+            <div>
+                <h3 class="text-white font-bold text-xl mb-4">Kontakt</h3>
+                <p class="flex items-center gap-2 mb-2"><i class="fas fa-phone text-orange-500"></i> 900 56 314</p>
+                <p class="flex items-center gap-2"><i class="fas fa-envelope text-orange-500"></i> kim.ebt@outlook.com</p>
+            </div>
+            <div>
+                <h3 class="text-white font-bold text-xl mb-4">Område</h3>
+                <p>Jeg tar oppdrag i Vestby, Follo, Akershus og Østfold.</p>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto mt-12 pt-8 border-t border-gray-800 text-sm text-center">
+            <p>&copy; 2026 Edvardsen Byggtjenester | <a href="#" class="hover:text-white">Personvern</a> | <a href="#" class="hover:text-white">Cookies</a></p>
+        </div>
+    </footer>
+
 </body>
 </html>
