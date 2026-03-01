@@ -9,7 +9,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
-        .hero-dark { background-color: #000000; background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23111111' fill-opacity='0.5'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+        .hero-dark { 
+            background-color: #000000; 
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23111111' fill-opacity='0.5'%3E%3Cpath d='M36 34v-4h-2v4-h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); 
+        }
         .text-ebt-green { color: #00E676; }
         .bg-ebt-green { background-color: #00E676; }
         .border-ebt-green { border-color: #00E676; }
@@ -17,7 +20,7 @@
 </head>
 <body class="bg-slate-50">
 
-  <nav class="bg-black sticky top-0 z-50 border-b-2 border-ebt-green">
+    <nav class="bg-black sticky top-0 z-50 border-b-2 border-ebt-green">
         <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
             <a href="index.html" class="flex items-center gap-3">
                 <img src="/assets/logo.png" alt="EBT Logo" class="h-12 w-auto">
@@ -28,7 +31,7 @@
             <div class="flex space-x-4 md:space-x-6 font-bold text-slate-200 text-xs md:text-sm uppercase italic">
                 <a href="tomrertjenester.html" class="hover:text-ebt-green transition">Tømrer</a>
                 <a href="grunnarbeid.html" class="hover:text-ebt-green transition">Grunnarbeid</a>
-                <a href="utleie.html" class="hover:text-ebt-green transition">Utleie</a>
+                <a href="utleie.html" class="text-ebt-green underline">Utleie</a>
                 <a href="om-oss.html" class="hover:text-ebt-green transition">Om oss</a>
                 <a href="kontakt.html" class="bg-ebt-green text-black px-4 py-1 rounded">Kontakt</a>
             </div>
@@ -36,41 +39,78 @@
     </nav>
 
     <header class="hero-dark text-white py-16 px-4 border-b-8 border-ebt-green">
-        <div class="max-w-7xl mx-auto">
-            <h1 class="text-5xl font-black uppercase italic leading-tight text-ebt-green">Utleie av utstyr</h1>
-            <p class="text-xl text-slate-300 font-bold uppercase italic tracking-widest mt-2">Kvalitetsutstyr til ditt prosjekt</p>
+        <div class="max-w-7xl mx-auto text-right">
+            <h1 class="text-5xl font-black uppercase italic leading-tight text-ebt-green">Utleie av verktøy</h1>
+            <p class="text-xl text-slate-300 font-bold uppercase italic tracking-widest mt-2">Kvalitetsutstyr for tørk og varme</p>
         </div>
     </header>
 
     <main class="max-w-7xl mx-auto py-16 px-4">
-        <div class="bg-black text-white p-6 rounded mb-12 border-l-8 border-ebt-green italic">
-            Vi leier ut utstyr til både private og bedrifter i Vestby-området. Ta kontakt for tilgjengelighet!
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-8">
-            <div class="bg-white border-2 border-slate-200 p-8 rounded shadow-lg group hover:border-ebt-green transition-all">
-                <div class="flex justify-between items-start mb-4">
-                    <h3 class="text-2xl font-black uppercase italic">Varmeovn 3,3 kW</h3>
-                    <span class="bg-black text-ebt-green px-3 py-1 text-xs font-black uppercase">40,- / dag</span>
+        <div class="grid md:grid-cols-2 gap-12 items-start">
+            
+            <div class="space-y-6">
+                <div class="flex items-center gap-4">
+                    <div class="h-10 w-2 bg-black"></div>
+                    <h2 class="text-4xl font-black uppercase italic">Varme og tørk</h2>
                 </div>
-                <p class="text-slate-600 mb-6">Effektiv byggtørker/varmeovn som er perfekt for mindre rom eller tørking av betong/sparkel.</p>
-                <a href="kontakt.html" class="block text-center bg-black text-white font-black py-3 uppercase italic hover:bg-ebt-green hover:text-black transition">Sjekk ledighet</a>
+                <p class="text-lg text-slate-700 leading-relaxed">
+                    Har du behov for midlertidig oppvarming eller tørking av bygg? Jeg leier ut driftssikkert utstyr som sørger for gode arbeidsforhold, selv på de kaldeste dagene.
+                </p>
+                <p class="text-slate-600">
+                    I tillegg til varmeutstyr har jeg diverse mindre håndverktøy tilgjengelig for utleie. Ta kontakt for en hyggelig prat om hva du trenger til ditt prosjekt.
+                </p>
+                
+                <div class="bg-black text-white p-6 rounded-sm italic border-l-4 border-ebt-green shadow-lg">
+                    Vi holder til i Vestby og tilbyr fleksible leieavtaler for både korte og lengre oppdrag.
+                </div>
+                
+                <a href="kontakt.html" class="inline-block bg-ebt-green text-black font-black px-8 py-4 uppercase italic hover:bg-black hover:text-white transition shadow-md">
+                    Sjekk tilgjengelighet her
+                </a>
             </div>
 
-            <div class="bg-white border-2 border-slate-200 p-8 rounded shadow-lg group hover:border-ebt-green transition-all">
-                <div class="flex justify-between items-start mb-4">
-                    <h3 class="text-2xl font-black uppercase italic">Dieselvarmer</h3>
-                    <span class="bg-black text-ebt-green px-3 py-1 text-xs font-black uppercase">100,- / dag</span>
+            <div class="bg-white p-8 border-2 border-slate-200 shadow-xl relative">
+                <h3 class="text-xl font-black uppercase italic mb-6 border-b-2 border-ebt-green pb-2">Tilgjengelig utstyr nå:</h3>
+                
+                <div class="space-y-8">
+                    <div class="flex gap-4">
+                        <div class="text-ebt-green text-2xl"><i class="fas fa-fire-alt"></i></div>
+                        <div>
+                            <h4 class="font-black uppercase italic text-black">Dieselvarmer</h4>
+                            <p class="text-sm text-slate-600">Kraftig varmer som er perfekt for garasjer, nybygg eller større telt.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <div class="text-ebt-green text-2xl"><i class="fas fa-mitten"></i></div>
+                        <div>
+                            <h4 class="font-black uppercase italic text-black">Varmeovner / Byggtørkere</h4>
+                            <p class="text-sm text-slate-600">Effektive elektriske ovner for mindre rom og punkt-oppvarming.</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4">
+                        <div class="text-ebt-green text-2xl"><i class="fas fa-tools"></i></div>
+                        <div>
+                            <h4 class="font-black uppercase italic text-black">Diverse småverktøy</h4>
+                            <p class="text-sm text-slate-600">Har du glemt eller mangler du et spesifikt verktøy? Spør meg, så ser vi om jeg har det inne.</p>
+                        </div>
+                    </div>
                 </div>
-                <p class="text-slate-600 mb-6">Kraftig varmer for større garasjer, telt eller bygg under oppføring. Krever god ventilasjon.</p>
-                <a href="kontakt.html" class="block text-center bg-black text-white font-black py-3 uppercase italic hover:bg-ebt-green hover:text-black transition">Sjekk ledighet</a>
+
+                <div class="mt-10 pt-6 border-t border-slate-100">
+                    <p class="text-xs text-slate-400 italic uppercase font-bold tracking-wider">
+                        Kommer snart: Avfuktere og uttrekksvifter.
+                    </p>
+                </div>
             </div>
         </div>
     </main>
 
     <footer class="bg-black text-slate-500 py-10 px-4 border-t-4 border-ebt-green text-center">
         <p class="font-black uppercase italic text-white mb-2">Edvardsen Byggtjenester</p>
-        <p class="text-xs">Karen Bachs vei 23, 1542 Vestby</p>
+        <p class="text-xs tracking-widest uppercase">Org.nr: 936 481 612 MVA | Karen Bachs vei 23, 1542 Vestby</p>
     </footer>
+
 </body>
 </html>
