@@ -3,81 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edvardsen Byggtjenester | Tømrer & Grunnarbeid i Vestby</title>
+    <title>Edvardsen Byggtjenester | Din Mester i Vestby</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
-        .hero-dark { 
-            background-color: #000000; 
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23111111' fill-opacity='0.5'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); 
-        }
+        .hero-pattern { background-color: #000; background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23111111' fill-opacity='0.5'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
         .text-ebt-green { color: #00E676; }
         .bg-ebt-green { background-color: #00E676; }
     </style>
 </head>
 <body class="bg-slate-50">
-
     <nav class="bg-black sticky top-0 z-50 border-b-2 border-ebt-green">
-        <div class="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center">
-            <div class="flex items-center gap-2 sm:gap-4">
-                <a href="index.html" class="flex items-center gap-2">
-                    <img src="/assets/logo.png" alt="EBT Logo" class="h-8 sm:h-10 w-auto">
-                    <span class="text-white font-black uppercase italic hidden md:block text-sm">
-                        Edvardsen <span class="text-ebt-green underline">Byggtjenester</span>
-                    </span>
-                </a>
-                <div class="h-8 w-px bg-slate-700 hidden xs:block"></div>
-                <img src="/assets/mesterlogo.png" alt="Mester i byggfag" class="h-8 sm:h-10 w-auto opacity-90">
-            </div>
-            <div class="flex space-x-2 sm:space-x-4 font-bold text-slate-200 text-[10px] sm:text-xs md:text-sm uppercase italic">
-                <a href="tomrertjenester.html" class="hover:text-ebt-green transition py-2">Tømrer</a>
-                <a href="grunnarbeid.html" class="hover:text-ebt-green transition py-2">Grunn</a>
-                <a href="utleie.html" class="hover:text-ebt-green transition py-2">Utleie</a>
-                <a href="kontakt.html" class="bg-ebt-green text-black px-2 sm:px-4 py-1 rounded self-center">Kontakt</a>
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2">
+                <img src="/assets/logo.png" alt="EBT" class="h-8 w-auto">
+                <span class="text-white font-black uppercase italic hidden sm:block text-sm text-ebt-green">EBT</span>
+            </a>
+            <div class="flex space-x-3 font-bold text-slate-200 text-[9px] sm:text-xs uppercase italic">
+                <a href="tomrertjenester.html" class="hover:text-ebt-green">Tømrer</a>
+                <a href="grunnarbeid.html" class="hover:text-ebt-green">Grunnarbeid</a>
+                <a href="utleie.html" class="hover:text-ebt-green">Utleie</a>
+                <a href="om-oss.html" class="hover:text-ebt-green">Om oss</a>
             </div>
         </div>
     </nav>
 
-    <header class="hero-dark text-white py-16 md:py-24 px-4 border-b-8 border-ebt-green text-center">
-        <div class="max-w-4xl mx-auto">
-            <h1 class="text-4xl md:text-7xl font-black uppercase italic leading-tight mb-6">
-                Skikkelig <span class="text-ebt-green">Håndverk</span>
-            </h1>
-            <p class="text-lg md:text-2xl text-slate-300 font-bold uppercase italic tracking-widest mb-10">
-                Mester i byggfag • Vestby
-            </p>
-            <div class="flex flex-col sm:flex-row justify-center gap-4">
-                <a href="tel:90056314" class="bg-ebt-green text-black font-black px-8 py-4 rounded uppercase italic text-lg shadow-xl">Ring 900 56 314</a>
-                <a href="kontakt.html" class="bg-white text-black font-black px-8 py-4 rounded uppercase italic text-lg shadow-xl">Be om befaring</a>
-            </div>
+    <header class="hero-pattern text-white py-20 px-4 text-center border-b-8 border-ebt-green">
+        <h1 class="text-4xl md:text-7xl font-black uppercase italic text-ebt-green leading-none">Edvardsen<br>Byggtjenester</h1>
+        <p class="mt-4 text-lg md:text-2xl font-bold uppercase italic tracking-widest">Byggmester & Maskinfører</p>
+        <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4 px-6">
+            <a href="kontakt.html" class="bg-ebt-green text-black font-black px-8 py-4 uppercase italic">Start ditt prosjekt</a>
+            <a href="tel:90056314" class="bg-white text-black font-black px-8 py-4 uppercase italic">Ring 900 56 314</a>
         </div>
     </header>
 
-    <main class="max-w-7xl mx-auto py-12 px-4">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <a href="tomrertjenester.html" class="bg-white border-b-4 border-black p-6 shadow-lg hover:border-ebt-green transition">
-                <i class="fas fa-hammer text-2xl mb-4"></i>
-                <h3 class="text-xl font-black uppercase italic mb-2">Tømrer</h3>
-                <p class="text-sm text-slate-600">Terrasser, kledning og rehabilitering.</p>
-            </a>
-            <a href="grunnarbeid.html" class="bg-white border-b-4 border-black p-6 shadow-lg hover:border-ebt-green transition">
-                <i class="fas fa-excavator text-2xl mb-4"></i>
-                <h3 class="text-xl font-black uppercase italic mb-2">Grunnarbeid</h3>
-                <p class="text-sm text-slate-600">Graving, drenering og planering.</p>
-            </a>
-            <a href="utleie.html" class="bg-white border-b-4 border-black p-6 shadow-lg hover:border-ebt-green transition">
-                <i class="fas fa-tools text-2xl mb-4"></i>
-                <h3 class="text-xl font-black uppercase italic mb-2">Utleie</h3>
-                <p class="text-sm text-slate-600">Varmeovner og tørkeutstyr til leie.</p>
-            </a>
-        </div>
+    <main class="max-w-7xl mx-auto py-16 px-4 grid md:grid-cols-3 gap-8">
+        <a href="tomrertjenester.html" class="bg-white p-8 border-b-4 border-black hover:border-ebt-green transition shadow-lg">
+            <i class="fas fa-hammer text-4xl mb-4 text-ebt-green"></i>
+            <h2 class="text-2xl font-black uppercase italic">Tømrer</h2>
+            <p class="mt-2 text-slate-600">Alt fra terrasser til rehabilitering av bolig.</p>
+        </a>
+        <a href="grunnarbeid.html" class="bg-white p-8 border-b-4 border-black hover:border-ebt-green transition shadow-lg">
+            <i class="fas fa-excavator text-4xl mb-4 text-ebt-green"></i>
+            <h2 class="text-2xl font-black uppercase italic">Grunnarbeid</h2>
+            <p class="mt-2 text-slate-600">Graving, drenering og planering med egne maskiner.</p>
+        </a>
+        <a href="utleie.html" class="bg-white p-8 border-b-4 border-black hover:border-ebt-green transition shadow-lg">
+            <i class="fas fa-truck text-4xl mb-4 text-ebt-green"></i>
+            <h2 class="text-2xl font-black uppercase italic">Utleie</h2>
+            <p class="mt-2 text-slate-600">Leie av maskiner og utstyr til ditt prosjekt.</p>
+        </a>
     </main>
-
-    <footer class="bg-black text-slate-500 py-10 px-4 border-t-4 border-ebt-green text-center">
-        <p class="font-black uppercase italic text-white mb-2 text-sm">Edvardsen Byggtjenester</p>
-        <p class="text-[10px] uppercase">Org.nr: 936 481 612 MVA | Vestby</p>
-    </footer>
 </body>
 </html>
