@@ -16,116 +16,95 @@
         .text-ebt-green { color: #00E676; }
         .bg-ebt-green { background-color: #00E676; }
         .border-ebt-green { border-color: #00E676; }
-        /* Placeholder stil hvis bilde mangler */
-        .img-container { background-color: #1a1a1a; position: relative; overflow: hidden; }
-        .img-container img { width: 100%; height: 100%; object-cover: cover; position: relative; z-index: 2; }
-        .img-placeholder { 
-            position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
-            display: flex; items-center; justify-center; color: #333; font-weight: 900; 
-            font-style: italic; text-transform: uppercase; font-size: 0.75rem; z-index: 1;
-        }
     </style>
 </head>
-<body class="bg-slate-50">
+<body class="bg-slate-50 text-slate-900">
 
-<nav class="bg-black sticky top-0 z-50 border-b-2 border-ebt-green">
+    <nav class="bg-black sticky top-0 z-50 border-b-2 border-ebt-green">
         <div class="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center">
-            <div class="flex items-center gap-2 sm:gap-4">
+            <div class="flex items-center gap-2">
                 <a href="index.html" class="flex items-center gap-2">
                     <img src="/assets/logo.png" alt="EBT Logo" class="h-8 sm:h-10 w-auto">
                     <span class="text-white font-black uppercase italic hidden md:block text-sm">
                         Edvardsen <span class="text-ebt-green underline">Byggtjenester</span>
                     </span>
                 </a>
-                <div class="h-8 w-px bg-slate-700 hidden xs:block"></div>
+                <div class="h-8 w-px bg-slate-700 hidden sm:block mx-2"></div>
                 <img src="/assets/mesterlogo.png" alt="Mester i byggfag" class="h-8 sm:h-10 w-auto opacity-90">
             </div>
-            <div class="flex space-x-2 sm:space-x-4 font-bold text-slate-200 text-[10px] sm:text-xs md:text-sm uppercase italic">
+            <div class="flex space-x-3 sm:space-x-4 font-bold text-slate-200 text-[10px] sm:text-xs uppercase italic">
                 <a href="tomrertjenester.html" class="hover:text-ebt-green transition py-2">Tømrer</a>
-                <a href="grunnarbeid.html" class="hover:text-ebt-green transition py-2">Grunn</a>
+                <a href="grunnarbeid.html" class="text-ebt-green underline py-2">Grunn</a>
                 <a href="utleie.html" class="hover:text-ebt-green transition py-2">Utleie</a>
                 <a href="kontakt.html" class="bg-ebt-green text-black px-2 sm:px-4 py-1 rounded self-center">Kontakt</a>
             </div>
         </div>
     </nav>
-    <header class="hero-dark text-white py-16 px-4 border-b-8 border-ebt-green">
-        <div class="max-w-7xl mx-auto">
-            <h1 class="text-5xl font-black uppercase italic leading-tight text-ebt-green">Grunnarbeid</h1>
-            <p class="text-xl text-slate-300 font-bold uppercase italic tracking-widest mt-2">Graving • Drenering • Planering</p>
+
+    <header class="hero-dark text-white py-12 md:py-16 px-4 border-b-8 border-ebt-green">
+        <div class="max-w-7xl mx-auto text-center md:text-left">
+            <h1 class="text-4xl md:text-5xl font-black uppercase italic leading-tight text-ebt-green">Grunnarbeid</h1>
+            <p class="text-base md:text-xl text-slate-300 font-bold uppercase italic tracking-widest mt-2">Graving, planering og drenering</p>
         </div>
     </header>
 
-    <main class="max-w-7xl mx-auto py-16 px-4">
+    <main class="max-w-7xl mx-auto py-10 md:py-16 px-4">
         
-        <section class="mb-20">
-            <div class="flex items-center gap-4 mb-8">
-                <div class="h-10 w-2 bg-black"></div>
-                <h2 class="text-4xl font-black uppercase italic text-slate-900 underline decoration-ebt-green">Drenering</h2>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-10">
-                <div class="space-y-4">
-                    <p class="text-lg text-slate-600 font-medium font-semibold italic">Sikring av grunnmur er en investering i boligens levetid.</p>
-                    <p class="text-slate-600">Jeg utfører fullstendig utgraving, isolering og legging av drensrør etter dagens standard i Vestby og omegn.</p>
-                    <ul class="space-y-2 font-bold italic text-slate-800 uppercase text-sm pt-4">
-                        <li><i class="fas fa-check text-ebt-green mr-2"></i> Utgraving langs grunnmur</li>
-                        <li><i class="fas fa-check text-ebt-green mr-2"></i> Fuktsikring og isolering</li>
-                        <li><i class="fas fa-check text-ebt-green mr-2"></i> Riktig fall på drensrør</li>
-                    </ul>
+        <div class="flex flex-col md:grid md:grid-cols-2 gap-10 items-center mb-16">
+            <div class="space-y-4">
+                <div class="flex items-center gap-4">
+                    <div class="h-10 w-2 bg-black"></div>
+                    <h2 class="text-3xl font-black uppercase italic">Graving & Drenering</h2>
                 </div>
-                
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="img-container aspect-square rounded border-2 border-black">
-                        <div class="img-placeholder">Last opp drenering1.jpg</div>
-                        <img src="grunn_dren_1.jpg" onerror="this.style.display='none'">
-                    </div>
-                    <div class="img-container aspect-square rounded border-2 border-black">
-                        <div class="img-placeholder">Last opp grunn_dren_3.jpg</div>
-                        <img src="Drenering 2.JPG" onerror="this.style.display='none'">
-                    </div>
+                <p class="text-slate-700 leading-relaxed">
+                    Et godt bygg starter med et solid grunnarbeid. Vi utfører alt fra mindre graveoppdrag for hage og gårdsplass, til mer omfattende drenering rundt grunnmur. Med sertifisert kompetanse på gravemaskin sikrer vi presisjon i hver skuffe.
+                </p>
+                <div class="grid grid-cols-2 gap-2 text-xs font-black uppercase italic">
+                    <div class="bg-white p-3 border-l-4 border-ebt-green shadow">Gravemaskin (M2)</div>
+                    <div class="bg-white p-3 border-l-4 border-ebt-green shadow">Drenering</div>
+                    <div class="bg-white p-3 border-l-4 border-ebt-green shadow">Kabelgraving</div>
+                    <div class="bg-white p-3 border-l-4 border-ebt-green shadow">Planering</div>
                 </div>
             </div>
-        </section>
-
-        <section class="mb-20">
-            <div class="flex items-center gap-4 mb-8">
-                <div class="h-10 w-2 bg-black"></div>
-                <h2 class="text-4xl font-black uppercase italic text-slate-900 underline decoration-ebt-green">Planering</h2>
+            <div class="bg-slate-200 aspect-video w-full rounded shadow-inner overflow-hidden flex items-center justify-center text-slate-500 italic border-2 border-dashed border-slate-300">
+                [Bilde av gravemaskin i arbeid]
             </div>
-            
-            <div class="grid md:grid-cols-2 gap-10">
-                <div class="grid grid-cols-2 gap-4 order-2 md:order-1">
-                    <div class="img-container aspect-square rounded border-2 border-black">
-                        <div class="img-placeholder">Last opp planering1.jpg</div>
-                        <img src="grunn_planering_1.jpg" onerror="this.style.display='none'">
-                    </div>
-                    <div class="img-container aspect-square rounded border-2 border-black">
-                        <div class="img-placeholder">Last opp planering2.jpg</div>
-                        <img src="planering_etter_2.jpg" onerror="this.style.display='none'">
-                    </div>
-                </div>
-                
-                <div class="space-y-4 order-1 md:order-2">
-                    <p class="text-lg text-slate-600 font-medium font-semibold italic">Klargjøring av uteområder.</p>
-                    <p class="text-slate-600">Skal du ha ny gårdsplass, terrasse eller plen? Jeg sørger for at massene er riktig komprimert og at fallet leder vannet bort fra bygget.</p>
-                    <ul class="space-y-2 font-bold italic text-slate-800 uppercase text-sm pt-4">
-                        <li><i class="fas fa-check text-ebt-green mr-2"></i> Avretting av gårdsplass</li>
-                        <li><i class="fas fa-check text-ebt-green mr-2"></i> Klargjøring for belegningsstein</li>
-                        <li><i class="fas fa-check text-ebt-green mr-2"></i> Tilkjøring av matjord/pukk</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <div class="bg-black p-10 text-center rounded shadow-2xl border-t-4 border-ebt-green">
-            <h3 class="text-white text-2xl font-black uppercase italic mb-4">Be om gratis befaring?</h3>
-            <a href="tel:90056314" class="inline-block bg-ebt-green text-black font-black px-10 py-4 rounded uppercase italic text-xl hover:bg-white transition">Ring 900 56 314</a>
         </div>
+
+        <div class="flex flex-col md:grid md:grid-cols-2 gap-10 items-center mb-16">
+            <div class="order-2 md:order-1 bg-slate-200 aspect-video w-full rounded shadow-inner overflow-hidden flex items-center justify-center text-slate-500 italic border-2 border-dashed border-slate-300">
+                [Bilde av ferdig planert område]
+            </div>
+            <div class="order-1 md:order-2 space-y-4">
+                <div class="flex items-center gap-4">
+                    <div class="h-10 w-2 bg-black"></div>
+                    <h2 class="text-3xl font-black uppercase italic">Masser & Planering</h2>
+                </div>
+                <p class="text-slate-700 leading-relaxed">
+                    Trenger du å flytte masser eller klargjøre en tomt for bebyggelse eller plen? Med hjullaster og dumper håndterer vi effektivt flytting av jord, grus og stein. Vi sørger for en ryddig arbeidsplass og korrekt fall på terrenget.
+                </p>
+                <ul class="space-y-2 font-bold italic text-sm">
+                    <li><i class="fas fa-check text-ebt-green mr-2"></i> Massetransport (Dumper M6)</li>
+                    <li><i class="fas fa-check text-ebt-green mr-2"></i> Lasteoppdrag (Hjullaster M4)</li>
+                    <li><i class="fas fa-check text-ebt-green mr-2"></i> Oppretting av gårdsplass</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="bg-black text-white p-8 rounded-sm border-t-8 border-ebt-green shadow-2xl text-center">
+            <h3 class="text-2xl font-black uppercase italic mb-4">Behov for maskinkraft?</h3>
+            <p class="text-slate-400 mb-6 font-bold italic">Vi tar på oss både små og mellomstore oppdrag i Vestby og omegn.</p>
+            <a href="kontakt.html" class="inline-block bg-ebt-green text-black font-black px-10 py-4 rounded uppercase italic hover:bg-white transition w-full md:w-auto text-lg">
+                Få et uforpliktende pristilbud
+            </a>
+        </div>
+
     </main>
 
     <footer class="bg-black text-slate-500 py-10 px-4 border-t-4 border-ebt-green text-center">
-        <p class="font-black uppercase italic text-white mb-2">Edvardsen Byggtjenester</p>
-        <p class="text-xs tracking-widest uppercase">Org.nr: 936 481 612 MVA | Karen Bachs vei 23, 1542 Vestby</p>
+        <p class="font-black uppercase italic text-white mb-2 text-sm">Edvardsen Byggtjenester</p>
+        <p class="text-[10px] uppercase">Org.nr: 936 481 612 MVA | Karen Bachs vei 23, 1542 Vestby</p>
     </footer>
+
 </body>
 </html>
