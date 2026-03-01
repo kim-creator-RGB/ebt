@@ -16,17 +16,6 @@
         .text-ebt-green { color: #00E676; }
         .bg-ebt-green { background-color: #00E676; }
         .border-ebt-green { border-color: #00E676; }
-        
-        /* WOW EFFEKT CSS */
-        .service-card {
-            transition: all 0.3s ease-in-out;
-            border: 1px solid #334155; /* slate-700 subtil kant */
-        }
-        .service-card:hover {
-            transform: translateY(-5px);
-            border-color: #00E676; /* Green border on hover */
-            box-shadow: 0 10px 30px -10px rgba(0, 230, 118, 0.3); /* Green glow */
-        }
     </style>
 </head>
 <body class="bg-slate-900 text-slate-100">
@@ -35,13 +24,13 @@
         <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center gap-2 sm:gap-4">
                 <a href="index.html" class="flex items-center gap-2 sm:gap-3">
-                    <img src="/assets/logo.png" alt="EBT Logo" class="h-8 sm:h-10 md:h-12 w-auto">
+                    <img src="/assets/logo.png" alt="EBT Logo" class="h-8 sm:h-10 md:h-12 w-auto brightness-0 invert">
                     <span class="text-white font-black uppercase italic hidden lg:block text-sm">
                         Edvardsen <span class="text-ebt-green underline">Byggtjenester</span>
                     </span>
                 </a>
                 <div class="h-8 w-px bg-slate-700 hidden sm:block"></div>
-                <img src="/assets/mesterlogo.png" alt="Mesterbrev" class="h-8 sm:h-10 w-auto opacity-90" title="Mester i byggfag">
+                <img src="/assets/mesterlogo.png" alt="Mesterbrev" class="h-8 sm:h-10 w-auto opacity-90 brightness-0 invert" title="Mester i byggfag">
             </div>
             
             <div class="flex space-x-2 sm:space-x-4 md:space-x-6 font-bold text-slate-200 text-[9px] sm:text-xs md:text-sm uppercase italic">
@@ -76,35 +65,35 @@
     <main class="max-w-7xl mx-auto py-12 md:py-20 px-4">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
             
-            <div class="service-card bg-slate-950 border-b-8 border-white p-8 group flex flex-col justify-between">
+            <div class="bg-white border-b-8 border-black p-8 shadow-xl group hover:border-ebt-green transition flex flex-col justify-between text-slate-900">
                 <div>
-                    <div class="text-4xl mb-6 text-ebt-green"><i class="fas fa-hammer"></i></div>
-                    <h3 class="text-2xl md:text-3xl font-black uppercase italic mb-4 text-white">Tømrer</h3>
-                    <p class="text-slate-300 mb-8 font-medium italic">Nybygg, tilbygg, terrasser og rehabilitering. Kvalitet fra fundament til møne.</p>
+                    <div class="text-4xl mb-6 text-black group-hover:text-ebt-green transition"><i class="fas fa-hammer"></i></div>
+                    <h3 class="text-2xl md:text-3xl font-black uppercase italic mb-4">Tømrer</h3>
+                    <p class="text-slate-600 mb-8 font-medium">Alt fra terrasser og levegger til rehabilitering, etterisolering og bytte av kledning.</p>
                 </div>
-                <a href="tomrertjenester.html" class="inline-block font-black uppercase italic text-sm border-b-4 border-ebt-green pb-1 self-start text-ebt-green hover:text-white transition">
+                <a href="tomrertjenester.html" class="inline-block font-black uppercase italic text-sm border-b-4 border-ebt-green pb-1 self-start hover:text-ebt-green transition">
                     Se tømrertjenester <i class="fas fa-arrow-right ml-1"></i>
                 </a>
             </div>
 
-            <div class="service-card bg-slate-950 border-b-8 border-white p-8 group flex flex-col justify-between">
+            <div class="bg-white border-b-8 border-black p-8 shadow-xl group hover:border-ebt-green transition flex flex-col justify-between text-slate-900">
                 <div>
-                    <div class="text-4xl mb-6 text-ebt-green"><i class="fas fa-snowplow"></i></div>
-                    <h3 class="text-2xl md:text-3xl font-black uppercase italic mb-4 text-white">Grunnarbeid</h3>
-                    <p class="text-slate-300 mb-8 font-medium italic">Graving, drenering og planering av gårdsplass eller hage med egne maskiner.</p>
+                    <div class="text-4xl mb-6 text-black group-hover:text-ebt-green transition"><i class="fas fa-excavator"></i></div>
+                    <h3 class="text-2xl md:text-3xl font-black uppercase italic mb-4">Grunnarbeid</h3>
+                    <p class="text-slate-600 mb-8 font-medium">Graving, drenering og planering av gårdsplass eller hage med egne maskiner.</p>
                 </div>
-                <a href="grunnarbeid.html" class="inline-block font-black uppercase italic text-sm border-b-4 border-ebt-green pb-1 self-start text-ebt-green hover:text-white transition">
+                <a href="grunnarbeid.html" class="inline-block font-black uppercase italic text-sm border-b-4 border-ebt-green pb-1 self-start hover:text-ebt-green transition">
                     Se grunnarbeid <i class="fas fa-arrow-right ml-1"></i>
                 </a>
             </div>
 
-            <div class="service-card bg-slate-950 border-b-8 border-white p-8 group flex flex-col justify-between">
+            <div class="bg-white border-b-8 border-black p-8 shadow-xl group hover:border-ebt-green transition flex flex-col justify-between text-slate-900">
                 <div>
-                    <div class="text-4xl mb-6 text-ebt-green"><i class="fas fa-tools"></i></div>
-                    <h3 class="text-2xl md:text-3xl font-black uppercase italic mb-4 text-white">Utleie</h3>
-                    <p class="text-slate-300 mb-8 font-medium italic">Leie av dieselvarmere, verktøy og utstyr til ditt byggeprosjekt. Profesjonelt utstyr.</p>
+                    <div class="text-4xl mb-6 text-black group-hover:text-ebt-green transition"><i class="fas fa-tools"></i></div>
+                    <h3 class="text-2xl md:text-3xl font-black uppercase italic mb-4">Utleie</h3>
+                    <p class="text-slate-600 mb-8 font-medium">Leie av varmeovner, dieselvarmere, verktøy og utstyr til ditt byggeprosjekt.</p>
                 </div>
-                <a href="utleie.html" class="inline-block font-black uppercase italic text-sm border-b-4 border-ebt-green pb-1 self-start text-ebt-green hover:text-white transition">
+                <a href="utleie.html" class="inline-block font-black uppercase italic text-sm border-b-4 border-ebt-green pb-1 self-start hover:text-ebt-green transition">
                     Se utleiepark <i class="fas fa-arrow-right ml-1"></i>
                 </a>
             </div>
