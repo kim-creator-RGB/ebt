@@ -10,56 +10,81 @@
     <style>
         body { font-family: 'Inter', sans-serif; }
         .hero-pattern {
-            background-color: #0f172a;
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231e293b' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            background-color: #000000; /* Svart base fra logo */
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23111111' fill-opacity='0.5'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
+        /* Definerer logoens grønnfarge */
+        .text-ebt-green { color: #00E676; }
+        .bg-ebt-green { background-color: #00E676; }
+        .border-ebt-green { border-color: #00E676; }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900">
 
-    <nav class="bg-white sticky top-0 z-50 shadow-sm border-b">
-        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="flex flex-col leading-none">
-                <span class="text-2xl font-black text-slate-900 uppercase">Edvardsen</span>
-                <span class="text-sm font-bold text-orange-600 tracking-widest uppercase">Byggtjenester</span>
-            </div>
-            <div class="hidden md:flex space-x-8 items-center font-bold text-slate-700">
-                <a href="tomrertjenester.html" class="hover:text-orange-600 transition">Tømrer</a>
-                <a href="grunnarbeid.html" class="hover:text-orange-600 transition">Grunnarbeid</a>
-                <a href="utleie.html" class="hover:text-orange-600 transition">Utleie</a>
-                <a href="kontakt.html" class="bg-slate-900 text-white px-6 py-2 rounded hover:bg-orange-600 transition">Kontakt</a>
+    <nav class="bg-black sticky top-0 z-50 shadow-md border-b-2 border-ebt-green">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="/assets/logo.png" alt="Edvardsen Byggtjenester Logo" class="h-14 w-auto">
+                <div class="flex flex-col leading-none">
+                    <span class="text-xl font-black text-white uppercase tracking-tight">Edvardsen</span>
+                    <span class="text-xs font-bold text-ebt-green tracking-widest uppercase">Byggtjenester</span>
+                </div>
+            </a>
+            <div class="hidden md:flex space-x-6 items-center font-bold text-slate-200">
+                <a href="tomrertjenester.html" class="hover:text-ebt-green transition text-sm uppercase">Tømrer</a>
+                <a href="grunnarbeid.html" class="hover:text-ebt-green transition text-sm uppercase">Grunnarbeid</a>
+                <a href="utleie.html" class="hover:text-ebt-green transition text-sm uppercase">Utleie</a>
+                <a href="kontakt.html" class="bg-ebt-green text-black px-5 py-2 rounded font-extrabold hover:bg-white transition text-sm uppercase">Kontakt</a>
             </div>
         </div>
     </nav>
 
-    <header class="hero-pattern text-white py-24 px-4 border-b-8 border-orange-600">
-        <div class="max-w-7xl mx-auto text-left">
-            <h1 class="text-5xl md:text-7xl font-black mb-6 uppercase italic">Skikkelig håndverk,<br><span class="text-orange-500 italic-none">ingen snarveier.</span></h1>
-            <p class="text-xl text-slate-300 mb-10 max-w-2xl">Tømrer- og grunnarbeid i Vestby og omegn. Praktiske løsninger og ryddig gjennomføring fra start til slutt.</p>
-            <a href="tel:90056314" class="inline-block bg-orange-600 hover:bg-orange-700 text-white font-black py-4 px-10 rounded shadow-xl transition uppercase">Ring 900 56 314</a>
+    <header class="hero-pattern text-white py-28 px-4 border-b-8 border-ebt-green">
+        <div class="max-w-7xl mx-auto text-left relative z-10">
+            <span class="inline-block bg-ebt-green text-black text-xs font-black px-3 py-1 mb-4 uppercase tracking-widest italic rounded-sm">Vestby & Omegn</span>
+            <h1 class="text-5xl md:text-7xl font-black mb-6 leading-[1.1] uppercase italic">Skikkelig håndverk,<br><span class="text-ebt-green italic-none">uten snarveier.</span></h1>
+            <p class="text-xl text-slate-300 mb-10 max-w-2xl font-medium">Tømrer- og grunnarbeid utført med presisjon og yrkesstolthed. Jeg sikrer ryddig gjennomføring og tydelig kommunikasjon hele veien.</p>
+            <div class="flex flex-wrap gap-4">
+                <a href="tel:90056314" class="inline-block bg-white hover:bg-slate-200 text-black font-black py-4 px-10 rounded shadow-xl transition uppercase flex items-center gap-3 text-lg">
+                    <i class="fas fa-phone-alt"></i> RING 900 56 314
+                </a>
+                <a href="kontakt.html" class="inline-block border-2 border-white text-white font-black py-4 px-10 rounded hover:bg-white hover:text-black transition uppercase text-lg italic">
+                    Be om tilbud
+                </a>
+            </div>
         </div>
     </header>
 
-    <section class="py-20 px-4 max-w-7xl mx-auto grid md:grid-cols-2 gap-10">
-        <div class="bg-white p-10 border-l-8 border-slate-900 shadow-sm">
-            <i class="fas fa-hammer text-4xl text-orange-500 mb-6"></i>
-            <h2 class="text-2xl font-black uppercase mb-4">Tømrertjenester</h2>
-            <p class="mb-6 text-slate-600 font-medium">Små og mellomstore prosjekter. Nybygg, rehabilitering og tilbygg.</p>
-            <a href="tomrertjenester.html" class="text-orange-600 font-bold hover:underline italic uppercase text-sm italic">Les mer +</a>
+    <section class="py-24 px-4 max-w-7xl mx-auto grid md:grid-cols-2 gap-10">
+        <div class="bg-white p-10 border-l-8 border-black shadow-lg rounded-sm group hover:border-ebt-green transition-all">
+            <i class="fas fa-hammer text-5xl text-slate-300 mb-6 group-hover:text-ebt-green transition-colors"></i>
+            <h2 class="text-2xl font-black uppercase mb-4 italic">Tømrertjenester</h2>
+            <p class="mb-6 text-slate-600 font-medium leading-relaxed">Fra mindre reparasjoner til mellomstore tømrerprosjekter. Jeg leverer kvalitetssikret håndverk til din bolig.</p>
+            <a href="tomrertjenester.html" class="text-ebt-green font-bold hover:underline italic uppercase text-sm flex items-center gap-2">Les mer <i class="fas fa-arrow-right text-xs"></i></a>
         </div>
-        <div class="bg-white p-10 border-l-8 border-slate-900 shadow-sm">
-            <i class="fas fa-excavator text-4xl text-orange-500 mb-6"></i>
-            <h2 class="text-2xl font-black uppercase mb-4">Grunnarbeid</h2>
-            <p class="mb-6 text-slate-600 font-medium">Graving, planering og forberedelser av tomt med fokus på kvalitet.</p>
-            <a href="grunnarbeid.html" class="text-orange-600 font-bold hover:underline italic uppercase text-sm italic">Les mer +</a>
+        <div class="bg-white p-10 border-l-8 border-black shadow-lg rounded-sm group hover:border-ebt-green transition-all">
+            <i class="fas fa-excavator text-5xl text-slate-300 mb-6 group-hover:text-ebt-green transition-colors"></i>
+            <h2 class="text-2xl font-black uppercase mb-4 italic">Grunnarbeid</h2>
+            <p class="mb-6 text-slate-600 font-medium leading-relaxed">Maskinelt arbeid, graving og planering. Jeg sørger for et solid fundament før overbygget settes opp.</p>
+            <a href="grunnarbeid.html" class="text-ebt-green font-bold hover:underline italic uppercase text-sm flex items-center gap-2">Les mer <i class="fas fa-arrow-right text-xs"></i></a>
         </div>
     </section>
 
-    <footer class="bg-slate-950 text-slate-400 py-12 px-4 border-t-4 border-orange-600">
-        <div class="max-w-7xl mx-auto text-center">
-            <p class="text-white font-black uppercase italic mb-2">Edvardsen Byggtjenester</p>
-            <p>900 56 314 | kim.ebt@outlook.com</p>
-            <p class="text-xs mt-4 uppercase tracking-widest">© 2026 Vestby</p>
+    <footer class="bg-black text-slate-400 py-16 px-4 border-t-4 border-ebt-green">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12 text-center md:text-left">
+            <div>
+                <img src="/assets/logo.png" alt="EBT Logo" class="h-16 mx-auto md:mx-0 mb-4">
+                <p class="text-white font-black uppercase italic mb-1">Edvardsen Byggtjenester</p>
+                <p class="text-xs tracking-widest uppercase">936 481 612 MVA | Karen Bachs vei 23</p>
+            </div>
+            <div class="space-y-3 font-medium">
+                <h4 class="text-white font-black uppercase mb-4 text-sm tracking-widest">Kontakt</h4>
+                <p class="flex items-center justify-center md:justify-start gap-3"><i class="fas fa-phone text-ebt-green"></i> 900 56 314</p>
+                <p class="flex items-center justify-center md:justify-start gap-3"><i class="fas fa-envelope text-ebt-green"></i> kim.ebt@outlook.com</p>
+            </div>
+            <div class="bg-white/5 p-6 rounded-md border border-white/10 text-center font-black italic text-ebt-green">
+                GRATIS BEFARING I VESTBY!
+            </div>
         </div>
     </footer>
 </body>
