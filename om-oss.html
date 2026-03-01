@@ -3,44 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Om oss | Edvardsen Byggtjenester</title>
+    <title>Om Oss | Edvardsen Byggtjenester</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
+        .hero-dark { 
+            background-color: #000000; 
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23111111' fill-opacity='0.5'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); 
+        }
         .text-ebt-green { color: #00E676; }
         .bg-ebt-green { background-color: #00E676; }
+        .border-ebt-green { border-color: #00E676; }
+        
+        /* WOW EFFEKT CSS FOR SERTIFISERINGER */
+        .info-card {
+            transition: all 0.3s ease-in-out;
+            border: 1px solid #334155; /* slate-700 subtil kant */
+        }
+        .info-card:hover {
+            transform: translateY(-3px);
+            border-color: #00E676; /* Green border on hover */
+            box-shadow: 0 5px 20px -5px rgba(0, 230, 118, 0.2); /* Green glow */
+        }
     </style>
 </head>
-<body class="bg-slate-50">
-    <nav class="bg-black border-b-2 border-ebt-green p-4">
-        <a href="index.html" class="text-white font-black uppercase italic text-sm">Tilbake til <span class="text-ebt-green">Hovedsiden</span></a>
-    </nav>
+<body class="bg-slate-900 text-slate-100">
 
-    <main class="max-w-4xl mx-auto py-16 px-6">
-        <div class="flex items-center gap-4 mb-8">
-            <div class="h-12 w-2 bg-black"></div>
-            <h1 class="text-4xl md:text-5xl font-black uppercase italic">Om Oss</h1>
-        </div>
-        
-        <div class="prose prose-lg text-slate-700 space-y-6">
-            <p class="text-xl font-bold italic">Edvardsen Byggtjenester er et mesterbedrift lokalisert i Vestby.</p>
-            <p>Vi kombinerer tømrerfaget med maskinell kraft. Dette gjør at vi kan ta ansvar for hele prosessen – fra den første skuffa med jord flyttes, til siste list er på plass i det ferdige bygget.</p>
+    <nav class="bg-black sticky top-0 z-50 border-b-2 border-ebt-green">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-2 sm:gap-4">
+                <a href="index.html" class="flex items-center gap-2 sm:gap-3">
+                    <img src="/assets/logo.png" alt="EBT Logo" class="h-8 sm:h-10 md:h-12 w-auto">
+                    <span class="text-white font-black uppercase italic hidden lg:block text-sm">
+                        Edvardsen <span class="text-ebt-green underline">Byggtjenester</span>
+                    </span>
+                </a>
+                <div class="h-8 w-px bg-slate-700 hidden sm:block"></div>
+                <img src="/assets/mesterlogo.png" alt="Mesterbrev" class="h-8 sm:h-10 w-auto opacity-90" title="Mester i byggfag">
+            </div>
             
-            <div class="bg-white p-6 border-l-8 border-ebt-green shadow-md mt-10">
-                <h3 class="font-black uppercase italic mb-2">Vår Kompetanse:</h3>
-                <ul class="space-y-2 font-bold uppercase italic text-sm">
-                    <li><i class="fas fa-certificate text-ebt-green mr-2"></i> Mesterbrev i byggfag</li>
-                    <li><i class="fas fa-check text-ebt-green mr-2"></i> Maskinførerbevis M2, M4, M6</li>
-                    <li><i class="fas fa-check text-ebt-green mr-2"></i> Lokal forankring i Vestby</li>
-                </ul>
+            <div class="flex space-x-2 sm:space-x-4 md:space-x-6 font-bold text-slate-200 text-[9px] sm:text-xs md:text-sm uppercase italic">
+                <a href="tomrertjenester.html" class="hover:text-ebt-green transition py-1">Tømrer</a>
+                <a href="grunnarbeid.html" class="hover:text-ebt-green transition py-1 whitespace-nowrap">Grunnarbeid</a>
+                <a href="utleie.html" class="hover:text-ebt-green transition py-1">Utleie</a>
+                <a href="om-oss.html" class="text-ebt-green underline py-1 hover:text-white transition">Om oss</a>
+                <a href="kontakt.html" class="bg-ebt-green text-black px-2 sm:px-4 py-1 rounded">Kontakt</a>
             </div>
         </div>
+    </nav>
 
-        <div class="mt-16 text-center">
-            <p class="font-black uppercase italic text-slate-400">Org.nr: 936 481 612 MVA</p>
+    <header class="hero-dark text-white py-12 md:py-20 px-4 border-b-8 border-ebt-green">
+        <div class="max-w-7xl mx-auto text-center md:text-right">
+            <h1 class="text-4xl md:text-6xl font-black uppercase italic leading-tight text-ebt-green">Faglig Kompetanse</h1>
+            <p class="text-lg md:text-xl text-slate-300 font-bold uppercase italic tracking-widest mt-2">Mester i byggfag & Maskinfører</p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto py-12 md:py-20 px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+
+            <div class="space-y-6">
+                <div class="flex items-center gap-4 text-left">
+                    <div class="h-10 w-2 bg-ebt-green"></div>
+                    <h2 class="text-3xl md:text-4xl font-black uppercase italic">Om Edvardsen Byggtjenester</h2>
+                </div>
+
+                <p class="text-lg md:text-xl leading-relaxed text-slate-100 font-bold italic text-left">
+                    Kim-Roger Edvardsen – Innehaver og din lokale fagmann i Vestby.
+                </p>
+
+                <div class="prose prose-slate prose-invert prose-lg text-slate-300 leading-relaxed text-left">
+                    <p>
+                        Edvardsen Byggtjenester ble etablert for å tilby en kombinasjon av solid tømrerhåndverk og maskinelt grunnarbeid. Som utdannet <strong>Mester i byggfag</strong> har jeg den faglige tyngden som kreves for å sikre kvalitet i alle ledd av prosjektet ditt.
+                    </p>
+
+                    <p>
+                        Med over 10 års erfaring, inkludert roller som faglig leder og prosjektleder, forstår jeg viktigheten av god planlegging, ryddig kommunikasjon og økonomisk ansvar. Jeg har også kompetansebevis på gravemaskin (M2), hjullaster (M4) og dumper (M6), noe som gjør at jeg kan håndtere hele prosessen fra utgraving til ferdig bygg.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-6 text-left">
+                    <div class="info-card bg-slate-950 p-6 border-b-4 border-ebt-green shadow-xl flex gap-4 items-start">
+                        <div class="text-ebt-green text-2xl pt-1"><i class="fas fa-certificate"></i></div>
+                        <div>
+                            <h4 class="font-black uppercase italic text-xs mb-2 text-white">Sertifiseringer</h4>
+                            <ul class="text-[10px] text-slate-400 space-y-1.5 font-bold uppercase italic">
+                                <li>• Mesterbrev i byggfag</li>
+                                <li>• Maskinfører M2, M4, M6</li>
+                                <li>• Sertifisert for arbeid i høyden</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="info-card bg-slate-950 p-6 border-b-4 border-white shadow-xl flex gap-4 items-start">
+                        <div class="text-white text-2xl pt-1"><i class="fas fa-star"></i></div>
+                        <div>
+                            <h4 class="font-black uppercase italic text-xs mb-2 text-white">Verdier</h4>
+                            <p class="text-[10px] text-slate-400 font-bold uppercase italic leading-relaxed">Strukturert, løsningsorientert og alltid fokus på kundens behov.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative mt-10 md:mt-0 text-left">
+                <div class="bg-black rounded-sm overflow-hidden border-4 border-white shadow-2xl aspect-[4/5] relative">
+                    <img src="profilbilde.jpg" alt="Kim-Roger Edvardsen" class="w-full h-full object-cover relative z-10" onerror="this.style.display='none'">
+                    <div class="absolute inset-0 flex items-center justify-center text-slate-500 font-black italic text-center p-8 text-sm">
+                        Last opp profilbilde.jpg her
+                    </div>
+                </div>
+                <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-ebt-green -z-10 animate-pulse"></div>
+            </div>
         </div>
     </main>
+
+    <footer class="bg-black text-slate-500 py-12 px-4 border-t-8 border-ebt-green text-center">
+        <div class="max-w-7xl mx-auto flex flex-col items-center gap-6">
+            <img src="/assets/mesterlogo.png" alt="Mesterbrev" class="h-10 w-auto grayscale brightness-200 opacity-50">
+            <div class="text-center">
+                <p class="font-black uppercase italic text-white mb-2 text-lg">Edvardsen Byggtjenester</p>
+                <p class="text-[10px] sm:text-xs tracking-widest uppercase text-slate-400">Org.nr: 936 481 612 MVA | Karen Bachs vei 23, 1542 Vestby</p>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
