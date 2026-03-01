@@ -3,90 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tømrertjenester | Edvardsen Byggtjenester</title>
+    <title>Tømrer | Edvardsen Byggtjenester</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
-        .sub-header {
-            background-color: #000000;
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23111111' fill-opacity='0.5'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        }
+        .hero-dark { background-color: #000000; background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23111111' fill-opacity='0.5'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
         .text-ebt-green { color: #00E676; }
         .bg-ebt-green { background-color: #00E676; }
         .border-ebt-green { border-color: #00E676; }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900">
+<body class="bg-slate-50">
 
-    <nav class="bg-black sticky top-0 z-50 shadow-md border-b-2 border-ebt-green">
+    <nav class="bg-black sticky top-0 z-50 border-b-2 border-ebt-green">
         <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
             <a href="index.html" class="flex items-center gap-3">
-                <img src="/assets/logo.png" alt="EBT Logo" class="h-14 w-auto">
-                <div class="flex flex-col leading-none">
-                    <span class="text-xl font-black text-white uppercase tracking-tight">Edvardsen</span>
-                    <span class="text-xs font-bold text-ebt-green tracking-widest uppercase">Byggtjenester</span>
-                </div>
+                <img src="/assets/logo.png" alt="EBT Logo" class="h-12 w-auto">
+                <span class="text-white font-black uppercase italic hidden sm:block">Edvardsen <span class="text-ebt-green underline">Bygg</span></span>
             </a>
-            <div class="hidden md:flex space-x-6 items-center font-bold text-slate-200">
-                <a href="tomrertjenester.html" class="text-ebt-green transition text-sm uppercase">Tømrer</a>
-                <a href="grunnarbeid.html" class="hover:text-ebt-green transition text-sm uppercase">Grunnarbeid</a>
-                <a href="utleie.html" class="hover:text-ebt-green transition text-sm uppercase">Utleie</a>
-                <a href="kontakt.html" class="bg-ebt-green text-black px-5 py-2 rounded font-extrabold hover:bg-white transition text-sm uppercase">Kontakt</a>
+            <div class="flex space-x-6 font-bold text-slate-200 text-sm uppercase italic">
+                <a href="tomrertjenester.html" class="text-ebt-green underline">Tømrer</a>
+                <a href="grunnarbeid.html" class="hover:text-ebt-green transition">Grunnarbeid</a>
+                <a href="utleie.html" class="hover:text-ebt-green transition">Utleie</a>
+                <a href="kontakt.html" class="bg-ebt-green text-black px-4 py-1 rounded">Kontakt</a>
             </div>
         </div>
     </nav>
 
-    <header class="sub-header text-white py-20 px-4 border-b-8 border-ebt-green">
-        <div class="max-w-7xl mx-auto">
-            <span class="inline-block bg-ebt-green text-black text-xs font-black px-3 py-1 mb-4 uppercase tracking-widest italic rounded-sm">Kvalitetshåndverk</span>
-            <h1 class="text-5xl md:text-6xl font-black uppercase italic leading-none">Tømrertjenester <br><span class="text-ebt-green italic-none text-3xl md:text-4xl">Fra reparasjoner til ferdige bygg</span></h1>
+    <header class="hero-dark text-white py-16 px-4 border-b-8 border-ebt-green">
+        <div class="max-w-7xl mx-auto text-right">
+            <h1 class="text-5xl font-black uppercase italic leading-tight text-ebt-green">Tømrertjenester</h1>
+            <p class="text-xl text-slate-300 font-bold uppercase italic tracking-widest mt-2">Kvalitetshåndverk fra A til Å</p>
         </div>
     </header>
 
     <main class="max-w-7xl mx-auto py-16 px-4">
-        <div class="grid md:grid-cols-3 gap-12">
-            
-            <div class="md:col-span-2 space-y-12">
-                <section>
-                    <h2 class="text-3xl font-black uppercase italic mb-6">Tradisjonelt tømrerarbeid</h2>
-                    <p class="text-lg text-slate-600 leading-relaxed mb-8 font-medium">
-                        Jeg utfører tømrerarbeid med fokus på detaljer og varige løsninger. Enten du skal bygge nytt, utvide eller pusse opp, sørger jeg for en ryddig prosess og et resultat som står i stil med dine forventninger.
-                    </p>
-                    
-                    <div class="grid sm:grid-cols-2 gap-6">
-                        <div class="bg-white p-8 border-b-4 border-black shadow-lg group hover:border-ebt-green transition-all">
-                            <i class="fas fa-home text-3xl mb-4 text-slate-300 group-hover:text-ebt-green transition-colors"></i>
-                            <h3 class="font-black uppercase mb-2 italic">Nybygg & Tilbygg</h3>
-                            <p class="text-sm text-slate-500 font-medium">Vi setter opp garasjer, boder og mindre tilbygg som integreres sømløst i eksisterende masse.</p>
-                        </div>
-                        <div class="bg-white p-8 border-b-4 border-black shadow-lg group hover:border-ebt-green transition-all">
-                            <i class="fas fa-hammer text-3xl mb-4 text-slate-300 group-hover:text-ebt-green transition-colors"></i>
-                            <h3 class="font-black uppercase mb-2 italic">Rehabilitering</h3>
-                            <p class="text-sm text-slate-500 font-medium">Utskifting av kledning, vinduer, dører og etterisolering for bedre bokomfort.</p>
-                        </div>
-                        <div class="bg-white p-8 border-b-4 border-black shadow-lg group hover:border-ebt-green transition-all">
-                            <i class="fas fa-tools text-3xl mb-4 text-slate-300 group-hover:text-ebt-green transition-colors"></i>
-                            <h3 class="font-black uppercase mb-2 italic">Uteplassen</h3>
-                            <p class="text-sm text-slate-500 font-medium">Bygging av solide terrasser, plattinger og levegger tilpasset din tomt.</p>
-                        </div>
-                        <div class="bg-white p-8 border-b-4 border-black shadow-lg group hover:border-ebt-green transition-all">
-                            <i class="fas fa-pencil-ruler text-3xl mb-4 text-slate-300 group-hover:text-ebt-green transition-colors"></i>
-                            <h3 class="font-black uppercase mb-2 italic">Spesialoppdrag</h3>
-                            <p class="text-sm text-slate-500 font-medium">Har du en unik idé eller en utfordrende reparasjon? Vi finner de praktiske løsningene.</p>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="bg-slate-200 aspect-video rounded-lg flex items-center justify-center text-slate-400 italic font-bold border-2 border-dashed border-slate-300">
-                    Bilder av utførte prosjekter kommer her
-                </section>
+        
+        <section class="mb-20">
+            <div class="flex items-center gap-4 mb-8">
+                <div class="h-10 w-2 bg-black"></div>
+                <h2 class="text-4xl font-black uppercase italic text-slate-900 underline decoration-ebt-green">Nybygg & Rehabilitering</h2>
             </div>
+            
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="space-y-4">
+                    <p class="text-lg text-slate-600 font-medium">Fra mindre tilbygg til utskifting av kledning og vinduer. Jeg er opptatt av at jobben gjøres skikkelig første gangen, med fokus på tetting og isolering.</p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white p-4 border-l-4 border-black font-black uppercase italic text-xs shadow-sm">Kledningsbytte</div>
+                        <div class="bg-white p-4 border-l-4 border-black font-black uppercase italic text-xs shadow-sm">Etterisolering</div>
+                    </div>
+                </div>
+                <div class="bg-slate-900 aspect-video rounded-sm border-4 border-white shadow-xl overflow-hidden">
+                    <img src="tomrer1.jpg" alt="Byggeplass" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </section>
 
-            <div class="space-y-8">
-                <div class="bg-black text-white p-8 rounded-lg shadow-2xl border-t-4 border-ebt-green">
-                    <h3 class="text-xl font-black uppercase mb-5 text-ebt-green italic">Din lokale tømrer</h3>
-                    <p class="text-sm text-slate-300 mb-6 font-medium">Jeg legger stor vekt på ryddighet underveis i prosjektet og en åpen dialog slik at du alltid vet hva som skjer.</p>
-                    <ul class="space-y-4 mb-8">
-                        <li
+        <section class="mb-20">
+            <div class="flex items-center gap-4 mb-8">
+                <div class="h-10 w-2 bg-black"></div>
+                <h2 class="text-4xl font-black uppercase italic text-slate-900 underline decoration-ebt-green">Terrasser & Uteplass</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-10">
+                 <div class="bg-slate-900 aspect-video rounded-sm border-4 border-white shadow-xl overflow-hidden order-2 md:order-1">
+                    <img src="terrasse1.jpg" alt="Terrasse" class="w-full h-full object-cover">
+                </div>
+                <div class="space-y-4 order-1 md:order-2">
+                    <p class="text-lg text-slate-600 font-medium">Jeg bygger solide terrasser og plattinger som tåler norsk vær. Vi ser sammen på løsninger som passer din hage og dine behov.</p>
+                    <ul class="space-y-2 font-bold italic text-slate-800 uppercase text-sm">
+                        <li><i class="fas fa-hammer text-ebt-green mr-2"></i> Tilpassede levegger</li>
+                        <li><i class="fas fa-hammer text-ebt-green mr-2"></i> Trapper og rekkverk</li>
+                        <li><i class="fas fa-hammer text-ebt-green mr-2"></i> Skjult innfesting om ønskelig</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+</body>
+</html>
