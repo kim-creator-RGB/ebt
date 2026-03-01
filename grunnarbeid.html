@@ -9,69 +9,160 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
-        .hero-dark { background-color: #000; background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23111111' fill-opacity='0.5'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+        .hero-dark { 
+            background-color: #000000; 
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23111111' fill-opacity='0.5'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); 
+        }
         .text-ebt-green { color: #00E676; }
         .bg-ebt-green { background-color: #00E676; }
         .border-ebt-green { border-color: #00E676; }
-        .img-container { background-color: #1a1a1a; position: relative; overflow: hidden; }
-        .img-container img { width: 100%; height: 100%; object-fit: cover; position: relative; z-index: 2; }
-        .img-placeholder { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: #444; font-weight: 900; font-style: italic; text-transform: uppercase; font-size: 0.65rem; z-index: 1; text-align: center; padding: 10px; }
+        
+        /* WOW EFFEKT FOR BILDE-CONTAINERE */
+        .img-container { 
+            background-color: #0f172a; 
+            position: relative; 
+            overflow: hidden; 
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid #334155;
+        }
+        .img-container:hover {
+            border-color: #00E676;
+            transform: scale(1.02);
+            box-shadow: 0 10px 30px -10px rgba(0, 230, 118, 0.4);
+            z-index: 10;
+        }
+        .img-container img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            position: relative; 
+            z-index: 2; 
+        }
+        .img-placeholder { 
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            color: #475569; 
+            font-weight: 900; 
+            font-style: italic; 
+            text-transform: uppercase; 
+            font-size: 0.65rem; 
+            z-index: 1; 
+            text-align: center; 
+            padding: 10px; 
+        }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900">
+<body class="bg-slate-900 text-slate-100">
+
     <nav class="bg-black sticky top-0 z-50 border-b-2 border-ebt-green">
         <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center gap-2 sm:gap-4">
-                <a href="index.html" class="flex items-center gap-2">
-                    <img src="/assets/logo.png" alt="EBT Logo" class="h-8 sm:h-10 w-auto">
-                    <span class="text-white font-black uppercase italic hidden lg:block text-sm">Edvardsen <span class="text-ebt-green underline">Byggtjenester</span></span>
+                <a href="index.html" class="flex items-center gap-2 sm:gap-3">
+                    <img src="/assets/logo.png" alt="EBT Logo" class="h-8 sm:h-10 md:h-12 w-auto">
+                    <span class="text-white font-black uppercase italic hidden lg:block text-sm">
+                        Edvardsen <span class="text-ebt-green underline">Byggtjenester</span>
+                    </span>
                 </a>
                 <div class="h-8 w-px bg-slate-700 hidden sm:block"></div>
-                <img src="/assets/mesterlogo.png" alt="Mesterbrev" class="h-8 sm:h-10 w-auto opacity-90">
+                <img src="/assets/mesterlogo.png" alt="Mesterbrev" class="h-8 sm:h-10 w-auto opacity-90" title="Mester i byggfag">
             </div>
+            
             <div class="flex space-x-2 sm:space-x-4 md:space-x-6 font-bold text-slate-200 text-[9px] sm:text-xs md:text-sm uppercase italic">
-                <a href="tomrertjenester.html" class="hover:text-ebt-green py-1">Tømrer</a>
+                <a href="tomrertjenester.html" class="hover:text-ebt-green transition py-1">Tømrer</a>
                 <a href="grunnarbeid.html" class="text-ebt-green underline py-1 whitespace-nowrap">Grunnarbeid</a>
-                <a href="utleie.html" class="hover:text-ebt-green py-1">Utleie</a>
+                <a href="utleie.html" class="hover:text-ebt-green transition py-1">Utleie</a>
+                <a href="om-oss.html" class="hover:text-ebt-green transition py-1">Om oss</a>
                 <a href="kontakt.html" class="bg-ebt-green text-black px-2 sm:px-4 py-1 rounded">Kontakt</a>
             </div>
         </div>
     </nav>
 
-    <header class="hero-dark text-white py-12 px-4 border-b-8 border-ebt-green text-center md:text-left">
+    <header class="hero-dark text-white py-12 md:py-20 px-4 border-b-8 border-ebt-green text-center md:text-left">
         <div class="max-w-7xl mx-auto">
-            <h1 class="text-3xl md:text-5xl font-black uppercase italic text-ebt-green">Grunnarbeid</h1>
-            <p class="text-sm md:text-xl text-slate-300 font-bold uppercase italic tracking-widest mt-2">Graving • Drenering • Planering</p>
+            <h1 class="text-4xl md:text-6xl font-black uppercase italic leading-tight text-ebt-green">Grunnarbeid</h1>
+            <p class="text-lg md:text-2xl text-slate-300 font-bold uppercase italic tracking-widest mt-2">Graving • Drenering • Planering</p>
         </div>
     </header>
 
-    <main class="max-w-7xl mx-auto py-10 px-4 space-y-16">
-        <section class="grid md:grid-cols-2 gap-8 items-center">
-            <div class="space-y-4">
-                <div class="flex items-center gap-4"><div class="h-8 w-2 bg-black"></div><h2 class="text-2xl md:text-3xl font-black uppercase italic">Drenering</h2></div>
-                <p class="text-slate-600">Sikring av grunnmur mot fukt. Jeg utfører graving, isolering og drensrør etter dagens standard.</p>
+    <main class="max-w-7xl mx-auto py-12 md:py-20 px-4 space-y-24">
+        
+        <section class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <div class="flex items-center gap-4">
+                    <div class="h-10 w-2 bg-ebt-green shadow-[0_0_10px_rgba(0,230,118,0.5)]"></div>
+                    <h2 class="text-3xl md:text-4xl font-black uppercase italic text-white">Drenering</h2>
+                </div>
+                <p class="text-lg text-slate-300 font-medium italic leading-relaxed">
+                    Sikring av grunnmur mot fukt er en investering i byggets levetid. Jeg utfører graving, isolering og legging av drensrør etter dagens krav og standarder.
+                </p>
+                <div class="bg-slate-950 p-4 border-l-4 border-white italic text-sm text-slate-400">
+                    Vi sørger for riktig fall og masser slik at vannet ledes trygt bort fra boligen.
+                </div>
             </div>
-            <div class="grid grid-cols-2 gap-2">
-                <div class="img-container aspect-square rounded border-2 border-black"><div class="img-placeholder">Drenering 1</div><img src="grunn_dren_1.jpg" onerror="this.style.display='none'"></div>
-                <div class="img-container aspect-square rounded border-2 border-black"><div class="img-placeholder">Drenering 2</div><img src="Drenering 2.JPG" onerror="this.style.display='none'"></div>
+            <div class="grid grid-cols-2 gap-3">
+                <div class="img-container aspect-square rounded-sm shadow-2xl">
+                    <div class="img-placeholder">Drenering under arbeid</div>
+                    <img src="grunn_dren_1.jpg" alt="Drenering arbeid" onerror="this.style.display='none'">
+                </div>
+                <div class="img-container aspect-square rounded-sm shadow-2xl">
+                    <div class="img-placeholder">Ferdig isolert</div>
+                    <img src="Drenering 2.JPG" alt="Ferdig drenering" onerror="this.style.display='none'">
+                </div>
             </div>
         </section>
 
-        <section class="grid md:grid-cols-2 gap-8 items-center">
-            <div class="order-2 md:order-1 grid grid-cols-2 gap-2">
-                <div class="img-container aspect-square rounded border-2 border-black"><div class="img-placeholder">Planering 1</div><img src="grunn_planering_1.jpg" onerror="this.style.display='none'"></div>
-                <div class="img-container aspect-square rounded border-2 border-black"><div class="img-placeholder">Planering 2</div><img src="planering_etter_2.jpg" onerror="this.style.display='none'"></div>
+        <section class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="order-2 md:order-1 grid grid-cols-2 gap-3">
+                <div class="img-container aspect-square rounded-sm shadow-2xl">
+                    <div class="img-placeholder">Grunnarbeid hage</div>
+                    <img src="grunn_planering_1.jpg" alt="Planering før" onerror="this.style.display='none'">
+                </div>
+                <div class="img-container aspect-square rounded-sm shadow-2xl">
+                    <div class="img-placeholder">Klargjort for gårdsplass</div>
+                    <img src="planering_etter_2.jpg" alt="Planering etter" onerror="this.style.display='none'">
+                </div>
             </div>
-            <div class="order-1 md:order-2 space-y-4">
-                <div class="flex items-center gap-4"><div class="h-8 w-2 bg-black"></div><h2 class="text-2xl md:text-3xl font-black uppercase italic">Planering</h2></div>
-                <p class="text-slate-600">Klargjøring av uteområder, gårdsplasser og hager med riktig fall og komprimering.</p>
+            <div class="order-1 md:order-2 space-y-6">
+                <div class="flex items-center gap-4">
+                    <div class="h-10 w-2 bg-ebt-green shadow-[0_0_10px_rgba(0,230,118,0.5)]"></div>
+                    <h2 class="text-3xl md:text-4xl font-black uppercase italic text-white">Planering</h2>
+                </div>
+                <p class="text-lg text-slate-300 font-medium italic leading-relaxed">
+                    Klargjøring av uteområder, gårdsplasser og hager. Med egne maskiner sørger jeg for riktig fall, solid komprimering og et perfekt underlag for videre arbeid.
+                </p>
+                <ul class="text-slate-400 text-sm space-y-2 uppercase font-bold italic tracking-tighter">
+                    <li><i class="fas fa-check text-ebt-green mr-2"></i> Oppretting av gårdsplass</li>
+                    <li><i class="fas fa-check text-ebt-green mr-2"></i> Utgraving for tilbygg</li>
+                    <li><i class="fas fa-check text-ebt-green mr-2"></i> Planering av plen/hage</li>
+                </ul>
             </div>
         </section>
 
-        <div class="bg-black p-8 text-center rounded-sm border-t-8 border-ebt-green">
-            <h3 class="text-white text-xl font-black uppercase italic mb-6">Trenger du befaring?</h3>
-            <a href="tel:90056314" class="inline-block bg-ebt-green text-black font-black px-10 py-4 rounded uppercase italic text-lg hover:bg-white transition w-full sm:w-auto">Ring 900 56 314</a>
+        <div class="bg-slate-950 p-10 text-center rounded-sm border-b-8 border-ebt-green shadow-2xl relative overflow-hidden group">
+            <div class="absolute inset-0 bg-ebt-green opacity-5 group-hover:opacity-10 transition-opacity"></div>
+            <h3 class="text-white text-2xl md:text-3xl font-black uppercase italic mb-8 relative z-10">Trenger du en maskinfører til ditt prosjekt?</h3>
+            <a href="tel:90056314" class="inline-block bg-ebt-green text-black font-black px-12 py-5 rounded-sm uppercase italic text-xl hover:bg-white transition w-full sm:w-auto shadow-lg relative z-10">
+                <i class="fas fa-phone-alt mr-2"></i> Be om befaring
+            </a>
         </div>
     </main>
+
+    <footer class="bg-black text-slate-500 py-12 px-4 border-t-8 border-ebt-green text-center">
+        <div class="max-w-7xl mx-auto">
+            <p class="font-black uppercase italic text-white mb-4 text-xl tracking-wider text-center">Edvardsen Byggtjenester</p>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-4 text-[10px] md:text-xs uppercase font-bold tracking-widest italic text-white">
+                <span>Karen Bachs vei 23, 1542 Vestby</span>
+                <span class="hidden md:block">|</span>
+                <span>Org.nr: 936 481 612 MVA</span>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
