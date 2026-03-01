@@ -6,111 +6,80 @@
     <title>Edvardsen Byggtjenester | Tømrer & Grunnarbeid</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --hoved-farge: #1e3a8a; /* Bytt ut med din logofarge (f.eks mørkeblå) */
+            --kontrast-farge: #ea580c; /* Bytt ut med din aksentfarge (f.eks oransje) */
+        }
+    </style>
 </head>
 <body class="bg-gray-50 text-gray-900 font-sans">
 
-    <nav class="bg-white shadow-md sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="font-bold text-xl tracking-tight text-blue-900">EDVARDSEN <span class="text-orange-600">BYGGTJENESTER</span></div>
-            <div class="hidden md:flex space-x-6 font-medium">
-                <a href="#hjem" class="hover:text-orange-600">Hjem</a>
-                <a href="#tjenester" class="hover:text-orange-600">Tjenester</a>
-                <a href="#om" class="hover:text-orange-600">Om oss</a>
-                <a href="#utleie" class="hover:text-orange-600">Utleie</a>
-                <a href="#kontakt" class="bg-orange-600 text-white px-4 py-2 rounded hover:bg-orange-700">Kontakt</a>
+    <nav class="bg-white shadow-sm sticky top-0 z-50 border-b-2 border-[var(--hoved-farge)]">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="logo.png" alt="Edvardsen Byggtjenester Logo" class="h-12 w-auto">
+                <div class="hidden sm:block font-bold text-xl tracking-tight text-[var(--hoved-farge)] uppercase">
+                    Edvardsen <span class="text-[var(--kontrast-farge)]">Byggtjenester</span>
+                </div>
+            </div>
+            
+            <div class="hidden md:flex space-x-8 font-semibold text-sm uppercase tracking-wide">
+                <a href="#tjenester" class="hover:text-[var(--kontrast-farge)] transition">Tjenester</a>
+                <a href="#om" class="hover:text-[var(--kontrast-farge)] transition">Om oss</a>
+                <a href="#kontakt" class="text-[var(--hoved-farge)] border-2 border-[var(--hoved-farge)] px-4 py-1 rounded hover:bg-[var(--hoved-farge)] hover:text-white transition">Kontakt</a>
             </div>
         </div>
     </nav>
 
-    <header id="hjem" class="relative bg-blue-900 text-white py-20 px-4">
-        <div class="max-w-4xl mx-auto text-center">
-            <h1 class="text-4xl md:text-6xl font-bold mb-4">Tømrer og grunnarbeid i Vestby og omegn</h1>
-            <p class="text-xl mb-8 text-blue-100">Praktisk håndverk, ryddig gjennomføring og tydelig kommunikasjon – fra første befaring til ferdig resultat.</p>
-            <div class="flex flex-col md:flex-row justify-center gap-4">
-                <a href="tel:90056314" class="bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition">
-                    Ring 900 56 314
+    <header class="relative bg-[var(--hoved-farge)] text-white py-24 px-4 overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <svg width="100%" height="100%"><rect width="100%" height="100%" fill="url(#grid)" /></svg>
+        </div>
+        
+        <div class="relative max-w-4xl mx-auto text-center">
+            <span class="inline-block bg-[var(--kontrast-farge)] text-white text-xs font-bold px-3 py-1 rounded-full mb-4 uppercase tracking-widest">Vestby & Omegn</span>
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">Tømrer og grunnarbeid som varer</h1>
+            <p class="text-xl mb-10 text-blue-50 max-w-2xl mx-auto font-light">
+                Praktisk håndverk og ryddig gjennomføring. Du snakker direkte med meg, Kim-Roger, fra start til slutt.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="tel:90056314" class="bg-[var(--kontrast-farge)] hover:scale-105 transform transition shadow-lg text-white font-bold py-4 px-10 rounded-md text-lg">
+                    <i class="fas fa-phone-alt mr-2"></i> Ring 900 56 314
                 </a>
-                <a href="#kontakt" class="bg-white hover:bg-gray-100 text-blue-900 font-bold py-3 px-8 rounded-lg text-lg transition">
-                    Be om befaring
+                <a href="#kontakt" class="bg-white hover:bg-gray-100 text-[var(--hoved-farge)] font-bold py-4 px-10 rounded-md text-lg transition">
+                    Be om tilbud
                 </a>
             </div>
         </div>
     </header>
 
-    <section class="py-16 max-w-6xl mx-auto px-4">
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="bg-white p-8 rounded-xl shadow-sm border-t-4 border-orange-500 text-center">
-                <i class="fas fa-broom text-3xl text-orange-500 mb-4"></i>
-                <h3 class="text-xl font-bold mb-2">Ryddig gjennomføring</h3>
-                <p class="text-gray-600">Tydelige avtaler og orden på plassen gjennom hele prosjektet.</p>
-            </div>
-            <div class="bg-white p-8 rounded-xl shadow-sm border-t-4 border-orange-500 text-center">
-                <i class="fas fa-lightbulb text-3xl text-orange-500 mb-4"></i>
-                <h3 class="text-xl font-bold mb-2">Praktiske løsninger</h3>
-                <p class="text-gray-600">Jeg sier ifra hvis jeg ser en bedre eller mer varig løsning.</p>
-            </div>
-            <div class="bg-white p-8 rounded-xl shadow-sm border-t-4 border-orange-500 text-center">
-                <i class="fas fa-user-check text-3xl text-orange-500 mb-4"></i>
-                <h3 class="text-xl font-bold mb-2">Direkte kontakt</h3>
-                <p class="text-gray-600">Du snakker direkte med meg, Kim-Roger, ingen mellomledd.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="tjenester" class="bg-gray-100 py-16 px-4">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl font-bold text-center mb-12">Mine Tjenester</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="flex gap-4">
-                    <div class="bg-blue-900 text-white p-3 rounded-lg h-fit text-xl">🏠</div>
-                    <div>
-                        <h4 class="font-bold text-xl mb-2">Tømrerarbeid</h4>
-                        <p>Små og mellomstore prosjekter for private. Alt fra rehabilitering til nybygging av mindre konstruksjoner.</p>
-                    </div>
+    <section class="py-20 max-w-6xl mx-auto px-4">
+        <div class="grid md:grid-cols-3 gap-12">
+            <div class="group text-center">
+                <div class="w-16 h-16 bg-blue-50 text-[var(--hoved-farge)] rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-[var(--hoved-farge)] group-hover:text-white transition-all duration-300">
+                    <i class="fas fa-tools text-2xl"></i>
                 </div>
-                <div class="flex gap-4">
-                    <div class="bg-blue-900 text-white p-3 rounded-lg h-fit text-xl">🚜</div>
-                    <div>
-                        <h4 class="font-bold text-xl mb-2">Grunnarbeid</h4>
-                        <p>Solid grunnarbeid som varer. Jeg har fokus på kvalitet og riktig fremdrift fra start.</p>
-                    </div>
+                <h3 class="text-xl font-bold mb-3">Skikkelig håndverk</h3>
+                <p class="text-gray-600 leading-relaxed">Med hjerte for faget leverer jeg løsninger som er bygget for å vare i mange år.</p>
+            </div>
+            <div class="group text-center">
+                <div class="w-16 h-16 bg-blue-50 text-[var(--hoved-farge)] rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-[var(--hoved-farge)] group-hover:text-white transition-all duration-300">
+                    <i class="fas fa-comments text-2xl"></i>
                 </div>
+                <h3 class="text-xl font-bold mb-3">Tydelig kommunikasjon</h3>
+                <p class="text-gray-600 leading-relaxed">Ingen ubehagelige overraskelser. Vi holder en åpen dialog gjennom hele prosjektet.</p>
+            </div>
+            <div class="group text-center">
+                <div class="w-16 h-16 bg-blue-50 text-[var(--hoved-farge)] rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-[var(--hoved-farge)] group-hover:text-white transition-all duration-300">
+                    <i class="fas fa-hard-hat text-2xl"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Orden på plassen</h3>
+                <p class="text-gray-600 leading-relaxed">En ryddig byggeplass gir bedre effektivitet og et tryggere resultat for alle.</p>
             </div>
         </div>
     </section>
 
-    <section id="utleie" class="py-16 px-4 max-w-4xl mx-auto">
-        <div class="bg-blue-50 border border-blue-100 rounded-2xl p-8 flex flex-col md:flex-row items-center gap-8">
-            <div class="text-3xl">🛠️</div>
-            <div>
-                <h2 class="text-2xl font-bold mb-2">Utleie (under arbeid)</h2>
-                <p class="mb-4">Jeg bygger opp en utleiedel. Foreløpig er noe varmeutstyr tilgjengelig, og flere produkter kommer fortløpende.</p>
-                <a href="mailto:kim.ebt@outlook.com" class="text-blue-900 font-bold hover:underline">Ta kontakt for info om utstyr &rarr;</a>
-            </div>
-        </div>
-    </section>
-
-    <footer id="kontakt" class="bg-gray-900 text-gray-300 py-16 px-4">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
-            <div>
-                <h3 class="text-white font-bold text-xl mb-4">Edvardsen Byggtjenester</h3>
-                <p>Org.nr: 936 481 612 MVA</p>
-                <p>Karen Bachs vei 23, 1542 Vestby</p>
-            </div>
-            <div>
-                <h3 class="text-white font-bold text-xl mb-4">Kontakt</h3>
-                <p class="flex items-center gap-2 mb-2"><i class="fas fa-phone text-orange-500"></i> 900 56 314</p>
-                <p class="flex items-center gap-2"><i class="fas fa-envelope text-orange-500"></i> kim.ebt@outlook.com</p>
-            </div>
-            <div>
-                <h3 class="text-white font-bold text-xl mb-4">Område</h3>
-                <p>Jeg tar oppdrag i Vestby, Follo, Akershus og Østfold.</p>
-            </div>
-        </div>
-        <div class="max-w-6xl mx-auto mt-12 pt-8 border-t border-gray-800 text-sm text-center">
-            <p>&copy; 2026 Edvardsen Byggtjenester | <a href="#" class="hover:text-white">Personvern</a> | <a href="#" class="hover:text-white">Cookies</a></p>
-        </div>
-    </footer>
-
-</body>
+    </body>
 </html>
