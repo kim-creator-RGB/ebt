@@ -1,118 +1,86 @@
 <!DOCTYPE html>
-
 <html lang="no">
 <head>
-<title>Om oss | Edvardsen Byggtjenester</title>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="#ffffff" name="theme-color"/>
-<link href="/assets/logo.png" rel="icon" type="image/png"/>
-<link href="/css/style.css" rel="stylesheet"/>
-<meta content="Tømrerarbeid og grunnarbeid i Akershus og Østfold. Ryddig jobb, god dialog og skikkelig håndverk." name="description"/>
-<meta content="Edvardsen Byggtjenester" property="og:title"/>
-<meta content="Tømrerarbeid og grunnarbeid i Akershus og Østfold." property="og:description"/>
-<meta content="/assets/logo.png" property="og:image"/>
-<meta content="website" property="og:type"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Om Oss | Edvardsen Byggtjenester</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .hero-dark { 
+            background-color: #000000; 
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23111111' fill-opacity='0.5'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); 
+        }
+        .text-ebt-green { color: #00E676; }
+        .bg-ebt-green { background-color: #00E676; }
+        .border-ebt-green { border-color: #00E676; }
+    </style>
 </head>
-<body>
-<header class="header">
-<div class="container nav">
-<a aria-label="Gå til forsiden" class="brand" href="/index.html">
-<span class="brand-mark"><img alt="Edvardsen Byggtjenester logo" src="/assets/logo.png"/></span>
-<span class="brand-text">
-<span class="brand-title">Edvardsen Byggtjenester</span>
-<span class="brand-sub">Tømrer • Grunnarbeid • Utleie</span>
-</span>
-</a>
-<button aria-expanded="false" aria-label="Åpne meny" class="nav-toggle">
-<span></span><span></span><span></span>
-</button>
-<nav aria-label="Hovedmeny" class="nav-links">
-<a href="/index.html">Hjem</a>
-<div class="dropdown">
-<button aria-expanded="false" aria-haspopup="true" class="dropbtn" type="button">Tjenester</button>
-<div class="dropdown-menu" role="menu">
-<a href="/tomrertjenester.html" role="menuitem">Tømrertjenester</a>
-<a href="/grunnarbeid.html" role="menuitem">Grunnarbeid</a>
-<a href="/utleie.html" role="menuitem">Utleie</a>
-</div>
-</div>
-<a href="/referanser.html">Referanser</a>
-<a href="/om-oss.html">Om oss</a>
-<a href="/utleie.html">Utleie</a>
-<a class="btn" href="/kontakt.html">Kontakt</a>
-</nav>
-</div>
-</header>
-<div aria-label="Cookie-innstillinger" aria-live="polite" class="cookie-banner" id="cookieBanner" role="dialog">
-<div class="container cookie-inner">
-<div>
-<div class="cookie-title">Cookies</div>
-<div class="muted">Vi bruker kun nødvendige cookies for at siden skal fungere. Ingen sporing/annonsering er i bruk.</div>
-</div>
-<div class="cookie-actions">
-<button class="btn btn-ghost" id="cookieClose">Ok</button>
-<a class="btn btn-ghost" href="/cookies.html">Les mer</a>
-</div>
-</div>
-</div>
-<main>
-<section class="pagehead with-bg" style="--bgimg:url(/assets/img/bg/bg_tomrer.jpg);">
-<div class="container">
-<h1>Om oss</h1>
-</div>
-</section>
-<section class="section">
-<div class="container grid-2">
-<div class="card">
-<h2>Kim-Roger Edvardsen</h2>
-<p class="muted">Jeg driver Edvardsen Byggtjenester fra Vestby.</p>
-<p>Jeg er utdannet tømrer med mesterbrev og har flere års erfaring i bransjen. Jeg liker å jobbe ryddig og strukturert, og er opptatt av at kunden skjønner hva som skal gjøres før vi starter.</p>
-<p>Hvis jeg ser noe som kan bli en utfordring, sier jeg ifra – så slipper vi overraskelser senere.</p>
-</div>
-<div class="card">
-<h2>Hvor jeg jobber</h2>
-<p>Fra Moss til Sofiemyr – Vestby, Nordre Follo, Follo, Akershus og Østfold</p>
-<p class="muted">Adresse: Karen Bachs vei 23, 1542 Vestby</p>
-<div class="cta">
-<a class="btn" href="/kontakt.html">Kontakt</a>
-<a class="btn btn-ghost" href="tel:+4790056314">Ring</a>
-</div>
-</div>
-</div>
-</section>
-</main>
-<footer class="footer">
-<div class="container footer-grid">
-<div>
-<div class="footer-brand">Edvardsen Byggtjenester</div>
-<div class="muted">Org.nr: 936 481 612 MVA</div>
-<div class="muted">Karen Bachs vei 23, 1542 Vestby</div>
-</div>
-<div>
-<div class="footer-title">Kontakt</div>
-<div><a href="tel:+4790056314">900 56 314</a></div>
-<div><a href="mailto:kim.ebt@outlook.com">kim.ebt@outlook.com</a></div>
-<div class="muted">Område: Østfold, Akershus og Follo</div>
-</div>
-<div>
-<div class="footer-title">Navigasjon</div>
-<div><a href="/index.html">Hjem</a></div>
-<div><a href="/tjenester.html">Tjenester</a></div>
-<div><a href="/om-oss.html">Om oss</a></div>
-<div><a href="/kontakt.html">Kontakt</a></div>
-</div>
-<div>
-<div class="footer-title">Lovpålagt</div>
-<div><a href="/personvern.html">Personvern</a></div>
-<div><a href="/cookies.html">Cookies</a></div>
-<div><a href="/vilkar-utleie.html">Vilkår utleie</a></div>
-</div>
-</div>
-<div class="container footer-bottom">
-<span class="muted">© 2026 Edvardsen Byggtjenester</span>
-</div>
-</footer>
-<script defer="" src="/js/main.js"></script>
-</body>
-</html>
+<body class="bg-slate-50 text-slate-900">
+
+    <nav class="bg-black sticky top-0 z-50 border-b-2 border-ebt-green">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="/assets/logo.png" alt="EBT Logo" class="h-12 w-auto">
+                <span class="text-white font-black uppercase italic hidden sm:block">Edvardsen <span class="text-ebt-green underline">Bygg</span></span>
+            </a>
+            <div class="flex space-x-4 md:space-x-6 font-bold text-slate-200 text-xs md:text-sm uppercase italic">
+                <a href="tomrertjenester.html" class="hover:text-ebt-green transition">Tømrer</a>
+                <a href="grunnarbeid.html" class="hover:text-ebt-green transition">Grunnarbeid</a>
+                <a href="om-oss.html" class="text-ebt-green underline">Om oss</a>
+                <a href="kontakt.html" class="bg-ebt-green text-black px-4 py-1 rounded">Kontakt</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-dark text-white py-16 px-4 border-b-8 border-ebt-green">
+        <div class="max-w-7xl mx-auto">
+            <h1 class="text-5xl font-black uppercase italic leading-tight text-ebt-green">Om EBT</h1>
+            <p class="text-xl text-slate-300 font-bold uppercase italic tracking-widest mt-2">Din lokale samarbeidspartner i Vestby</p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto py-16 px-4">
+        <div class="grid md:grid-cols-2 gap-16 items-center">
+            
+            <div class="space-y-6">
+                <div class="flex items-center gap-4">
+                    <div class="h-10 w-2 bg-black"></div>
+                    <h2 class="text-4xl font-black uppercase italic">Kvalitet og Trygghet</h2>
+                </div>
+                
+                <p class="text-lg leading-relaxed text-slate-700">
+                    Edvardsen Byggtjenester (EBT) ble startet med et ønske om å tilby skikkelig håndverk og personlig service i Vestby og omegn. Jeg tar på meg alt fra mindre tømrer- og grunnarbeidsoppdrag til utleie av utstyr.
+                </p>
+
+                <p class="text-lg leading-relaxed text-slate-700">
+                    For meg er den gode dialogen med kunden det viktigste. Du skal være trygg på at jobben blir utført som avtalt, til rett tid og med et resultat som varer i mange år.
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                    <div class="bg-white p-6 border-l-4 border-ebt-green shadow-md">
+                        <h4 class="font-black uppercase italic text-sm mb-2">Lokalkjent</h4>
+                        <p class="text-sm text-slate-600">Basert i Vestby, med fokus på Follo, Østfold og Akershus.</p>
+                    </div>
+                    <div class="bg-white p-6 border-l-4 border-ebt-green shadow-md">
+                        <h4 class="font-black uppercase italic text-sm mb-2">Allsidig</h4>
+                        <p class="text-sm text-slate-600">Kombinerer tømrerarbeid med graving og grunnarbeid.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative">
+                <div class="bg-black rounded-sm overflow-hidden border-4 border-white shadow-2xl aspect-[4/5] relative">
+                    <div class="absolute inset-0 flex items-center justify-center text-slate-700 font-black italic text-center p-8">
+                        Last opp profilbilde.jpg her for å vise hvem som driver EBT
+                    </div>
+                    <img src="profilbilde.jpg" alt="Kim Edvardsen" class="w-full h-full object-cover relative z-10" onerror="this.style.display='none'">
+                </div>
+                <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-ebt-green -z-10"></div>
+            </div>
+        </div>
+
+        <section class="mt-24 bg-black text-white p-12 rounded-sm shadow-2xl">
+            <h3 class="text-3xl font-black uppercase italic text
