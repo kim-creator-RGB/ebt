@@ -3,116 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tømrer | Edvardsen Byggtjenester</title>
+    <title>Tømrertjenester | Edvardsen Byggtjenester</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Inter', sans-serif; }
-        .hero-dark { background-color: #000000; background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23111111' fill-opacity='0.5'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+        .hero-dark { 
+            background-color: #000000; 
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23111111' fill-opacity='0.5'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); 
+        }
         .text-ebt-green { color: #00E676; }
         .bg-ebt-green { background-color: #00E676; }
         .border-ebt-green { border-color: #00E676; }
-        /* Placeholder stil hvis bilde mangler */
-        .img-container { background-color: #1a1a1a; position: relative; overflow: hidden; }
-        .img-container img { width: 100%; height: 100%; object-fit: cover; position: relative; z-index: 2; }
-        .img-placeholder { 
-            position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
-            display: flex; items-center; justify-center; color: #333; font-weight: 900; 
-            font-style: italic; text-transform: uppercase; font-size: 0.75rem; z-index: 1; text-align: center; padding: 10px;
-        }
     </style>
 </head>
-<body class="bg-slate-50">
+<body class="bg-slate-50 text-slate-900">
 
-<nav class="bg-black sticky top-0 z-50 border-b-2 border-ebt-green">
+    <nav class="bg-black sticky top-0 z-50 border-b-2 border-ebt-green">
         <div class="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center">
-            <div class="flex items-center gap-2 sm:gap-4">
+            <div class="flex items-center gap-2">
                 <a href="index.html" class="flex items-center gap-2">
                     <img src="/assets/logo.png" alt="EBT Logo" class="h-8 sm:h-10 w-auto">
-                    <span class="text-white font-black uppercase italic hidden md:block text-sm">
-                        Edvardsen <span class="text-ebt-green underline">Byggtjenester</span>
-                    </span>
-                </a>
-                <div class="h-8 w-px bg-slate-700 hidden xs:block"></div>
-                <img src="/assets/mesterlogo.png" alt="Mester i byggfag" class="h-8 sm:h-10 w-auto opacity-90">
-            </div>
-            <div class="flex space-x-2 sm:space-x-4 font-bold text-slate-200 text-[10px] sm:text-xs md:text-sm uppercase italic">
-                <a href="tomrertjenester.html" class="hover:text-ebt-green transition py-2">Tømrer</a>
-                <a href="grunnarbeid.html" class="hover:text-ebt-green transition py-2">Grunn</a>
-                <a href="utleie.html" class="hover:text-ebt-green transition py-2">Utleie</a>
-                <a href="kontakt.html" class="bg-ebt-green text-black px-2 sm:px-4 py-1 rounded self-center">Kontakt</a>
-            </div>
-        </div>
-    </nav>
-
-    <header class="hero-dark text-white py-16 px-4 border-b-8 border-ebt-green">
-        <div class="max-w-7xl mx-auto text-right">
-            <h1 class="text-5xl font-black uppercase italic leading-tight text-ebt-green">Tømrertjenester</h1>
-            <p class="text-xl text-slate-300 font-bold uppercase italic tracking-widest mt-2">Kvalitetshåndverk fra A til Å</p>
-        </div>
-    </header>
-
-    <main class="max-w-7xl mx-auto py-16 px-4">
-        
-        <section class="mb-20">
-            <div class="flex items-center gap-4 mb-8">
-                <div class="h-10 w-2 bg-black"></div>
-                <h2 class="text-4xl font-black uppercase italic text-slate-900 underline decoration-ebt-green">Terrasser & Uteplass</h2>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-10">
-                <div class="space-y-4">
-                    <p class="text-lg text-slate-600 font-medium">Jeg bygger solide terrasser, plattinger og levegger tilpasset din tomt. Fokus er alltid på solid bæring og pene detaljer.</p>
-                    <ul class="space-y-2 font-bold italic text-slate-800 uppercase text-sm pt-4">
-                        <li><i class="fas fa-hammer text-ebt-green mr-2"></i> Skreddersydde terrasser</li>
-                        <li><i class="fas fa-hammer text-ebt-green mr-2"></i> Trapper og rekkverk</li>
-                        <li><i class="fas fa-hammer text-ebt-green mr-2"></i> Levegger og pergola</li>
-                    </ul>
-                </div>
-                
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="img-container aspect-square rounded border-2 border-black bg-slate-200 overflow-hidden relative">
-                        <div class="img-placeholder">Last opp terrasse1.jpg</div>
-                        <img src="Terrasse 1.jpg" class="w-full h-full object-cover relative z-10" onerror="this.style.display='none'">
-                    </div>
-                    <div class="img-container aspect-square rounded border-2 border-black bg-slate-200 overflow-hidden relative">
-                        <div class="img-placeholder">Last opp terrasse2.jpg</div>
-                        <img src="Terrasse 2.jpg" class="w-full h-full object-cover relative z-10" onerror="this.style.display='none'">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="mb-20">
-            <div class="flex items-center gap-4 mb-8">
-                <div class="h-10 w-2 bg-black"></div>
-                <h2 class="text-4xl font-black uppercase italic text-slate-900 underline decoration-ebt-green">Rehabilitering</h2>
-            </div>
-            
-            <div class="grid md:grid-cols-2 gap-10">
-                <div class="grid grid-cols-2 gap-4 order-2 md:order-1">
-                    <div class="img-container aspect-square rounded border-2 border-black bg-slate-200 overflow-hidden relative">
-                        <div class="img-placeholder">Last opp rehabil1.jpg</div>
-                        <img src="tomrer_for_1.jpg" class="w-full h-full object-cover relative z-10" onerror="this.style.display='none'">
-                    </div>
-                    <div class="img-container aspect-square rounded border-2 border-black bg-slate-200 overflow-hidden relative">
-                        <div class="img-placeholder">Last opp rehabil2.jpg</div>
-                        <img src="tomrer_slutt_2.jpg" class="w-full h-full object-cover relative z-10" onerror="this.style.display='none'">
-                    </div>
-                </div>
-                
-                <div class="space-y-4 order-1 md:order-2">
-                    <p class="text-lg text-slate-600 font-medium">Trenger huset en oppgradering? Jeg utfører bytte av kledning, vinduer og dører, samt etterisolering for bedre bokomfort.</p>
-                    <ul class="space-y-2 font-bold italic text-slate-800 uppercase text-sm pt-4">
-                        <li><i class="fas fa-tools text-ebt-green mr-2"></i> Bytte av utvendig panel</li>
-                        <li><i class="fas fa-tools text-ebt-green mr-2"></i> Utskifting av vinduer/dører</li>
-                        <li><i class="fas fa-tools text-ebt-green mr-2"></i> Innvendig oppussing</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-    </main>
-</body>
-</html>
+                    <span class="text-white font-black uppercase italic hidden md:
