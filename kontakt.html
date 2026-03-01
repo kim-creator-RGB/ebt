@@ -20,7 +20,7 @@
 </head>
 <body class="bg-slate-50 text-slate-900">
 
-   <nav class="bg-black sticky top-0 z-50 border-b-2 border-ebt-green">
+    <nav class="bg-black sticky top-0 z-50 border-b-2 border-ebt-green">
         <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
             <a href="index.html" class="flex items-center gap-3">
                 <img src="/assets/logo.png" alt="EBT Logo" class="h-12 w-auto">
@@ -40,8 +40,8 @@
 
     <header class="hero-dark text-white py-16 px-4 border-b-8 border-ebt-green">
         <div class="max-w-7xl mx-auto">
-            <h1 class="text-5xl font-black uppercase italic leading-tight text-ebt-green">Kontakt Meg</h1>
-            <p class="text-xl text-slate-300 font-bold uppercase italic tracking-widest mt-2">Gratis befaring og uforpliktende tilbud</p>
+            <h1 class="text-5xl font-black uppercase italic leading-tight text-ebt-green">Kontakt Oss</h1>
+            <p class="text-xl text-slate-300 font-bold uppercase italic tracking-widest mt-2">Vi svarer så raskt vi kan</p>
         </div>
     </header>
 
@@ -50,84 +50,34 @@
             
             <div class="space-y-8">
                 <div>
-                    <h2 class="text-3xl font-black uppercase italic mb-4">La oss ta en prat</h2>
-                    <p class="text-lg text-slate-600">
-                        Jeg holder til i Vestby og tar på meg oppdrag i hele Follo, Akershus og Østfold. 
-                        Ring meg gjerne direkte eller fyll ut skjemaet, så svarer jeg så fort jeg er nede fra stigen!
+                    <h2 class="text-3xl font-black uppercase italic mb-4 text-black">Ta kontakt for en prat</h2>
+                    <p class="text-lg text-slate-600 font-medium">
+                        Uansett om du trenger hjelp med en terrasse, graving av en drensgrøft eller vil leie en dieselvarmer, er vi her for å hjelpe deg i Vestby og omegn.
                     </p>
                 </div>
 
-                <div class="bg-black text-white p-8 rounded shadow-2xl border-l-8 border-ebt-green space-y-6">
-                    <div class="flex items-center gap-4">
-                        <div class="bg-ebt-green p-3 rounded text-black">
-                            <i class="fas fa-phone-alt"></i>
-                        </div>
+                <div class="grid gap-4">
+                    <a href="tel:90056314" class="flex items-center gap-6 p-6 bg-black text-white rounded-sm border-l-8 border-ebt-green hover:bg-slate-900 transition shadow-lg">
+                        <div class="text-ebt-green text-3xl"><i class="fas fa-phone-alt"></i></div>
                         <div>
-                            <p class="text-xs uppercase font-black text-ebt-green">Ring meg</p>
-                            <a href="tel:90056314" class="text-xl font-black hover:underline">900 56 314</a>
+                            <p class="text-xs font-bold uppercase tracking-widest opacity-70">Ring oss direkte</p>
+                            <p class="text-2xl font-black italic">900 56 314</p>
                         </div>
-                    </div>
-                    
-                    <div class="flex items-center gap-4">
-                        <div class="bg-ebt-green p-3 rounded text-black">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div>
-                            <p class="text-xs uppercase font-black text-ebt-green">E-post</p>
-                            <a href="mailto:kim.ebt@outlook.com" class="text-xl font-black hover:underline">kim.ebt@outlook.com</a>
-                        </div>
-                    </div>
+                    </a>
 
-                    <div class="flex items-center gap-4">
-                        <div class="bg-ebt-green p-3 rounded text-black">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
+                    <a href="mailto:kim.ebt@outlook.com" class="flex items-center gap-6 p-6 bg-white text-black rounded-sm border-l-8 border-black hover:border-ebt-green transition shadow-lg border-2 border-slate-100">
+                        <div class="text-black text-3xl"><i class="fas fa-envelope"></i></div>
                         <div>
-                            <p class="text-xs uppercase font-black text-ebt-green">Adresse</p>
-                            <p class="text-xl font-black">Karen Bachs vei 23, 1542 Vestby</p>
+                            <p class="text-xs font-bold uppercase tracking-widest text-slate-400">Send oss e-post</p>
+                            <p class="text-xl font-black italic">kim.ebt@outlook.com</p>
                         </div>
-                    </div>
+                    </a>
                 </div>
 
-                <div class="pt-4">
-                    <p class="text-sm font-bold uppercase italic text-slate-400">Org.nr: 936 481 612 MVA</p>
+                <div class="pt-6 border-t border-slate-200">
+                    <p class="text-sm font-black uppercase italic text-slate-400">Besøksadresse:</p>
+                    <p class="font-bold text-black">Karen Bachs vei 23, 1542 Vestby</p>
                 </div>
             </div>
 
-            <div class="bg-white p-8 shadow-xl rounded border-2 border-slate-100">
-                <form class="space-y-4">
-                    <div>
-                        <label class="block text-xs font-black uppercase italic mb-1">Ditt Navn</label>
-                        <input type="text" placeholder="Navn Navnesen" class="w-full p-4 bg-slate-50 border-2 border-slate-200 focus:border-ebt-green outline-none transition font-bold">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-black uppercase italic mb-1">Telefon / E-post</label>
-                        <input type="text" placeholder="Hvor kan jeg nå deg?" class="w-full p-4 bg-slate-50 border-2 border-slate-200 focus:border-ebt-green outline-none transition font-bold">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-black uppercase italic mb-1">Hva trenger du hjelp med?</label>
-                        <select class="w-full p-4 bg-slate-50 border-2 border-slate-200 focus:border-ebt-green outline-none transition font-bold">
-                            <option>Tømrertjenester</option>
-                            <option>Grunnarbeid / Graving</option>
-                            <option>Utleie av utstyr</option>
-                            <option>Annet</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label class="block text-xs font-black uppercase italic mb-1">Melding</label>
-                        <textarea rows="4" placeholder="Beskriv gjerne prosjektet kort..." class="w-full p-4 bg-slate-50 border-2 border-slate-200 focus:border-ebt-green outline-none transition font-bold"></textarea>
-                    </div>
-                    <button type="submit" class="w-full bg-black text-ebt-green font-black py-4 uppercase italic hover:bg-ebt-green hover:text-black transition shadow-lg text-lg">Send Henvendelse</button>
-                </form>
-            </div>
-
-        </div>
-    </main>
-
-    <footer class="bg-black text-slate-500 py-10 px-4 border-t-4 border-ebt-green text-center">
-        <p class="font-black uppercase italic text-white mb-2">Edvardsen Byggtjenester</p>
-        <p class="text-xs">Kvalitetshåndverk i Vestby og omegn</p>
-    </footer>
-
-</body>
-</html>
+            <div class="bg-white p-8 shadow-2xl rounded-sm border-
