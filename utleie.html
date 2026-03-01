@@ -1,38 +1,51 @@
-<main class="max-w-7xl mx-auto py-10 px-4">
-    <div class="flex flex-col md:grid md:grid-cols-2 gap-8">
-        <div class="space-y-6">
-            <h2 class="text-3xl font-black uppercase italic border-l-8 border-ebt-green pl-4">Utleie</h2>
-            <p class="text-slate-700">Vi leier ut profesjonelt utstyr for varme og tørk til både private og bedrifter.</p>
-            <a href="tel:90056314" class="inline-block bg-black text-ebt-green font-black px-6 py-3 rounded uppercase italic w-full text-center md:w-auto">Ring for booking</a>
-        </div>
-        
-        <div class="bg-white p-6 shadow-xl border-t-4 border-black">
-            <h3 class="font-black uppercase italic mb-4">Utstyr inne nå:</h3>
-            <ul class="space-y-4">
-                <li class="flex items-center gap-3 font-bold italic text-sm"><i class="fas fa-check text-ebt-green"></i> Dieselvarmere</li>
-                <li class="flex items-center gap-3 font-bold italic text-sm"><i class="fas fa-check text-ebt-green"></i> Elektriske byggtørkere</li>
-                <li class="flex items-center gap-3 font-bold italic text-sm"><i class="fas fa-check text-ebt-green"></i> Diverse småverktøy</li>
-            </ul>
-        </div>
-    </div>
-</main>
-<nav class="bg-black sticky top-0 z-50 border-b-2 border-ebt-green">
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utleie | Edvardsen Byggtjenester</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .hero-dark { 
+            background-color: #000000; 
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23111111' fill-opacity='0.5'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); 
+        }
+        .text-ebt-green { color: #00E676; }
+        .bg-ebt-green { background-color: #00E676; }
+        .border-ebt-green { border-color: #00E676; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <nav class="bg-black sticky top-0 z-50 border-b-2 border-ebt-green">
         <div class="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center">
-            <div class="flex items-center gap-2 sm:gap-4">
+            <div class="flex items-center gap-2">
                 <a href="index.html" class="flex items-center gap-2">
                     <img src="/assets/logo.png" alt="EBT Logo" class="h-8 sm:h-10 w-auto">
                     <span class="text-white font-black uppercase italic hidden md:block text-sm">
                         Edvardsen <span class="text-ebt-green underline">Byggtjenester</span>
                     </span>
                 </a>
-                <div class="h-8 w-px bg-slate-700 hidden xs:block"></div>
+                <div class="h-8 w-px bg-slate-700 hidden sm:block mx-2"></div>
                 <img src="/assets/mesterlogo.png" alt="Mester i byggfag" class="h-8 sm:h-10 w-auto opacity-90">
             </div>
-            <div class="flex space-x-2 sm:space-x-4 font-bold text-slate-200 text-[10px] sm:text-xs md:text-sm uppercase italic">
+            <div class="flex space-x-3 sm:space-x-4 font-bold text-slate-200 text-[10px] sm:text-xs uppercase italic">
                 <a href="tomrertjenester.html" class="hover:text-ebt-green transition py-2">Tømrer</a>
                 <a href="grunnarbeid.html" class="hover:text-ebt-green transition py-2">Grunn</a>
-                <a href="utleie.html" class="hover:text-ebt-green transition py-2">Utleie</a>
+                <a href="utleie.html" class="text-ebt-green underline py-2">Utleie</a>
                 <a href="kontakt.html" class="bg-ebt-green text-black px-2 sm:px-4 py-1 rounded self-center">Kontakt</a>
             </div>
         </div>
     </nav>
+
+    <header class="hero-dark text-white py-12 md:py-16 px-4 border-b-8 border-ebt-green">
+        <div class="max-w-7xl mx-auto text-center md:text-left">
+            <h1 class="text-4xl md:text-5xl font-black uppercase italic leading-tight text-ebt-green">Utleie</h1>
+            <p class="text-base md:text-xl text-slate-300 font-bold uppercase italic tracking-widest mt-2">Kvalitetsutstyr for varme og tørk</p>
+        </div>
+    </header>
+
+    <main
