@@ -17,16 +17,48 @@
         .bg-ebt-green { background-color: #00E676; }
         .border-ebt-green { border-color: #00E676; }
         
-        .img-container { background-color: #1a1a1a; position: relative; overflow: hidden; }
-        .img-container img { width: 100%; height: 100%; object-fit: cover; position: relative; z-index: 2; }
+        /* WOW EFFEKT FOR BILDE-CONTAINERE */
+        .img-container { 
+            background-color: #0f172a; 
+            position: relative; 
+            overflow: hidden; 
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 2px solid #334155;
+        }
+        .img-container:hover {
+            border-color: #00E676;
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px -10px rgba(0, 230, 118, 0.4);
+            z-index: 10;
+        }
+        .img-container img { 
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            position: relative; 
+            z-index: 2; 
+        }
         .img-placeholder { 
-            position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
-            display: flex; align-items: center; justify-content: center; color: #444; font-weight: 900; 
-            font-style: italic; text-transform: uppercase; font-size: 0.65rem; z-index: 1; text-align: center; padding: 10px;
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            color: #475569; 
+            font-weight: 900; 
+            font-style: italic; 
+            text-transform: uppercase; 
+            font-size: 0.65rem; 
+            z-index: 1; 
+            text-align: center; 
+            padding: 10px; 
         }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900">
+<body class="bg-slate-900 text-slate-100">
 
     <nav class="bg-black sticky top-0 z-50 border-b-2 border-ebt-green">
         <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
@@ -38,99 +70,125 @@
                     </span>
                 </a>
                 <div class="h-8 w-px bg-slate-700 hidden sm:block"></div>
-                <img src="/assets/mesterlogo.png" alt="Mesterbrev" class="h-8 sm:h-10 w-auto opacity-90">
+                <img src="/assets/mesterlogo.png" alt="Mesterbrev" class="h-8 sm:h-10 w-auto opacity-90" title="Mester i byggfag">
             </div>
             
             <div class="flex space-x-2 sm:space-x-4 md:space-x-6 font-bold text-slate-200 text-[9px] sm:text-xs md:text-sm uppercase italic">
                 <a href="tomrertjenester.html" class="text-ebt-green underline py-1">Tømrer</a>
                 <a href="grunnarbeid.html" class="hover:text-ebt-green transition py-1 whitespace-nowrap">Grunnarbeid</a>
                 <a href="utleie.html" class="hover:text-ebt-green transition py-1">Utleie</a>
+                <a href="om-oss.html" class="hover:text-ebt-green transition py-1">Om oss</a>
                 <a href="kontakt.html" class="bg-ebt-green text-black px-2 sm:px-4 py-1 rounded">Kontakt</a>
             </div>
         </div>
     </nav>
 
-    <header class="hero-dark text-white py-12 md:py-16 px-4 border-b-8 border-ebt-green text-center md:text-right">
+    <header class="hero-dark text-white py-12 md:py-20 px-4 border-b-8 border-ebt-green text-center md:text-right">
         <div class="max-w-7xl mx-auto">
-            <h1 class="text-3xl sm:text-4xl md:text-5xl font-black uppercase italic leading-tight text-ebt-green">Tømrertjenester</h1>
-            <p class="text-sm sm:text-base md:text-xl text-slate-300 font-bold uppercase italic tracking-widest mt-2">Kvalitetshåndverk fra A til Å</p>
+            <h1 class="text-4xl md:text-6xl font-black uppercase italic leading-tight text-ebt-green">Tømrertjenester</h1>
+            <p class="text-lg md:text-2xl text-slate-300 font-bold uppercase italic tracking-widest mt-2">Kvalitetshåndverk fra A til Å</p>
         </div>
     </header>
 
-    <main class="max-w-7xl mx-auto py-10 md:py-16 px-4">
+    <main class="max-w-7xl mx-auto py-12 md:py-20 px-4 space-y-24">
 
-        <section class="mb-16 md:mb-24">
-            <div class="flex items-center gap-4 mb-6 md:mb-8 text-left">
-                <div class="h-8 md:h-10 w-2 bg-black"></div>
-                <h2 class="text-2xl sm:text-3xl md:text-4xl font-black uppercase italic text-slate-900 underline decoration-ebt-green">Terrasser & Uteplass</h2>
+        <section>
+            <div class="flex items-center gap-4 mb-8">
+                <div class="h-10 w-2 bg-ebt-green shadow-[0_0_10px_rgba(0,230,118,0.5)]"></div>
+                <h2 class="text-3xl md:text-4xl font-black uppercase italic text-white underline decoration-ebt-green decoration-4 underline-offset-8">Terrasser & Uteplass</h2>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center text-center md:text-left">
-                <div class="space-y-4 text-left">
-                    <p class="text-base md:text-lg text-slate-700 font-semibold italic">Solide løsninger tilpasset din tomt.</p>
-                    <p class="text-sm md:text-base text-slate-600 leading-relaxed">Jeg bygger solide terrasser, plattinger og levegger. Mitt fokus er alltid på solid bæring og pene detaljer som varer i mange år.</p>
-                    <ul class="space-y-2 font-bold italic text-slate-800 uppercase text-xs md:text-sm pt-4">
-                        <li><i class="fas fa-hammer text-ebt-green mr-2"></i> Skreddersydde terrasser</li>
-                        <li><i class="fas fa-hammer text-ebt-green mr-2"></i> Trapper og rekkverk</li>
-                        <li><i class="fas fa-hammer text-ebt-green mr-2"></i> Levegger og pergola</li>
-                    </ul>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <p class="text-xl text-slate-100 font-bold italic">Solide løsninger tilpasset din tomt.</p>
+                    <p class="text-lg text-slate-300 leading-relaxed italic">
+                        Jeg bygger solide terrasser, plattinger og levegger. Mitt fokus er alltid på solid bæring og pene detaljer som varer i mange år i det norske klimaet.
+                    </p>
+                    <div class="grid grid-cols-1 gap-3 pt-4">
+                        <div class="flex items-center gap-3 bg-slate-950 p-3 border-l-4 border-ebt-green">
+                            <i class="fas fa-hammer text-ebt-green"></i>
+                            <span class="font-black uppercase italic text-xs tracking-wider">Skreddersydde terrasser</span>
+                        </div>
+                        <div class="flex items-center gap-3 bg-slate-950 p-3 border-l-4 border-white">
+                            <i class="fas fa-hammer text-white"></i>
+                            <span class="font-black uppercase italic text-xs tracking-wider">Trapper og rekkverk</span>
+                        </div>
+                        <div class="flex items-center gap-3 bg-slate-950 p-3 border-l-4 border-ebt-green">
+                            <i class="fas fa-hammer text-ebt-green"></i>
+                            <span class="font-black uppercase italic text-xs tracking-wider">Levegger og pergola</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="grid grid-cols-2 gap-3 md:gap-4">
-                    <div class="img-container aspect-square rounded border-2 border-black">
-                        <div class="img-placeholder text-[10px]">Terrasse 1</div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="img-container aspect-square rounded-sm shadow-2xl">
+                        <div class="img-placeholder">Terrasse under konstruksjon</div>
                         <img src="Terrasse 1.jpg" alt="Terrasse arbeid" onerror="this.style.display='none'">
                     </div>
-                    <div class="img-container aspect-square rounded border-2 border-black">
-                        <div class="img-placeholder text-[10px]">Terrasse 2</div>
+                    <div class="img-container aspect-square rounded-sm shadow-2xl">
+                        <div class="img-placeholder">Ferdigstilt resultat</div>
                         <img src="Terrasse 2.jpg" alt="Ferdig terrasse" onerror="this.style.display='none'">
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="mb-16 md:mb-24">
-            <div class="flex items-center gap-4 mb-6 md:mb-8 text-left">
-                <div class="h-8 md:h-10 w-2 bg-black"></div>
-                <h2 class="text-2xl sm:text-3xl md:text-4xl font-black uppercase italic text-slate-900 underline decoration-ebt-green">Rehabilitering</h2>
+        <section>
+            <div class="flex items-center gap-4 mb-8 md:justify-end">
+                <h2 class="text-3xl md:text-4xl font-black uppercase italic text-white underline decoration-white decoration-4 underline-offset-8">Rehabilitering</h2>
+                <div class="h-10 w-2 bg-white"></div>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center text-center md:text-left">
-                <div class="grid grid-cols-2 gap-3 md:gap-4 order-2 md:order-1">
-                    <div class="img-container aspect-square rounded border-2 border-black">
-                        <div class="img-placeholder text-[10px]">Rehabil 1</div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="grid grid-cols-2 gap-4 order-2 md:order-1">
+                    <div class="img-container aspect-square rounded-sm shadow-2xl">
+                        <div class="img-placeholder">Før oppgradering</div>
                         <img src="tomrer_for_1.jpg" alt="Før rehabilitering" onerror="this.style.display='none'">
                     </div>
-                    <div class="img-container aspect-square rounded border-2 border-black">
-                        <div class="img-placeholder text-[10px]">Rehabil 2</div>
+                    <div class="img-container aspect-square rounded-sm shadow-2xl">
+                        <div class="img-placeholder">Etter rehabilitering</div>
                         <img src="tomrer_slutt_2.jpg" alt="Etter rehabilitering" onerror="this.style.display='none'">
                     </div>
                 </div>
 
-                <div class="space-y-4 order-1 md:order-2 text-left">
-                    <p class="text-base md:text-lg text-slate-700 font-semibold italic">Trenger huset en oppgradering?</p>
-                    <p class="text-sm md:text-base text-slate-600 leading-relaxed">Jeg utfører bytte av kledning, vinduer og dører, samt etterisolering for bedre bokomfort og lavere strømregning.</p>
-                    <ul class="space-y-2 font-bold italic text-slate-800 uppercase text-xs md:text-sm pt-4">
-                        <li><i class="fas fa-tools text-ebt-green mr-2"></i> Bytte av utvendig panel</li>
-                        <li><i class="fas fa-tools text-ebt-green mr-2"></i> Utskifting av vinduer/dører</li>
-                        <li><i class="fas fa-tools text-ebt-green mr-2"></i> Innvendig oppussing</li>
-                    </ul>
+                <div class="space-y-6 order-1 md:order-2 md:text-right">
+                    <p class="text-xl text-slate-100 font-bold italic">Trenger huset en oppgradering?</p>
+                    <p class="text-lg text-slate-300 leading-relaxed italic">
+                        Jeg utfører bytte av kledning, vinduer og dører, samt etterisolering for bedre bokomfort og lavere strømregning.
+                    </p>
+                    <div class="flex flex-col md:items-end gap-3 pt-4 text-left md:text-right">
+                        <div class="w-full md:w-auto flex items-center gap-3 bg-slate-950 p-3 border-r-4 border-ebt-green px-6">
+                            <span class="font-black uppercase italic text-xs tracking-wider">Bytte av utvendig panel</span>
+                            <i class="fas fa-tools text-ebt-green"></i>
+                        </div>
+                        <div class="w-full md:w-auto flex items-center gap-3 bg-slate-950 p-3 border-r-4 border-white px-6">
+                            <span class="font-black uppercase italic text-xs tracking-wider">Utskifting av vinduer/dører</span>
+                            <i class="fas fa-tools text-white"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <div class="bg-black p-8 md:p-12 text-center rounded-sm shadow-2xl border-t-8 border-ebt-green mt-10">
-            <h3 class="text-white text-xl md:text-2xl font-black uppercase italic mb-6">Planlegger du et byggeprosjekt?</h3>
-            <a href="tel:90056314" class="inline-block w-full sm:w-auto bg-ebt-green text-black font-black px-8 md:px-12 py-4 rounded uppercase italic text-lg md:text-xl hover:bg-white transition shadow-lg">
+        <div class="bg-slate-950 p-10 text-center rounded-sm border-b-8 border-ebt-green shadow-2xl relative overflow-hidden group mt-10">
+            <div class="absolute inset-0 bg-ebt-green opacity-5 group-hover:opacity-10 transition-opacity"></div>
+            <h3 class="text-white text-2xl md:text-3xl font-black uppercase italic mb-8 relative z-10">Planlegger du et byggeprosjekt?</h3>
+            <a href="tel:90056314" class="inline-block bg-ebt-green text-black font-black px-12 py-5 rounded-sm uppercase italic text-xl hover:bg-white transition w-full sm:w-auto shadow-lg relative z-10">
                 <i class="fas fa-phone-alt mr-2"></i> Ring 900 56 314
             </a>
         </div>
 
     </main>
 
-    <footer class="bg-black text-slate-500 py-10 px-4 border-t-4 border-ebt-green text-center">
-        <p class="font-black uppercase italic text-white mb-2 text-sm sm:text-base">Edvardsen Byggtjenester</p>
-        <p class="text-[10px] sm:text-xs tracking-widest uppercase italic">Org.nr: 936 481 612 MVA | Vestby</p>
+    <footer class="bg-black text-slate-500 py-12 px-4 border-t-8 border-ebt-green text-center">
+        <div class="max-w-7xl mx-auto">
+            <p class="font-black uppercase italic text-white mb-4 text-xl tracking-wider text-center">Edvardsen Byggtjenester</p>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-4 text-[10px] md:text-xs uppercase font-bold tracking-widest italic text-white">
+                <span>Vestby Kommune</span>
+                <span class="hidden md:block">|</span>
+                <span>Org.nr: 936 481 612 MVA</span>
+            </div>
+        </div>
     </footer>
 
 </body>
