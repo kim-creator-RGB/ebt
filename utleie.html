@@ -1,16 +1,87 @@
-<main class="max-w-7xl mx-auto py-20 px-4 text-center">
-    <h1 class="text-4xl font-black uppercase italic mb-10">Utleie av utstyr</h1>
-    
-    <div class="bg-blue-50 border-4 border-dashed border-blue-200 p-10 rounded-xl mb-12 italic">
-        <p class="text-blue-900 font-bold">Jeg bygger opp en utleieavdeling. Foreløpig har vi varmeutstyr tilgjengelig, og mer kommer!</p>
-    </div>
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utleie | Edvardsen Byggtjenester</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .sub-header {
+            background-color: #000000;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23111111' fill-opacity='0.5'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .text-ebt-green { color: #00E676; }
+        .bg-ebt-green { background-color: #00E676; }
+        .border-ebt-green { border-color: #00E676; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
 
-    <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white shadow-md border-b-4 border-orange-600 p-6">
-            <div class="h-40 bg-slate-100 flex items-center justify-center mb-4 italic text-slate-400">Bilde kommer</div>
-            <h3 class="font-black uppercase mb-2">Varmeovn 3,3 kW</h3>
-            <p class="text-orange-600 font-black text-xl mb-4">40 kr / dag</p>
-            <a href="kontakt.html" class="block bg-slate-900 text-white py-2 font-bold uppercase text-sm italic">Leie nå</a>
+    <nav class="bg-black sticky top-0 z-50 shadow-md border-b-2 border-ebt-green">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="/assets/logo.png" alt="EBT Logo" class="h-14 w-auto">
+                <div class="flex flex-col leading-none">
+                    <span class="text-xl font-black text-white uppercase tracking-tight">Edvardsen</span>
+                    <span class="text-xs font-bold text-ebt-green tracking-widest uppercase">Byggtjenester</span>
+                </div>
+            </a>
+            <div class="hidden md:flex space-x-6 items-center font-bold text-slate-200">
+                <a href="tomrertjenester.html" class="hover:text-ebt-green transition text-sm uppercase">Tømrer</a>
+                <a href="grunnarbeid.html" class="hover:text-ebt-green transition text-sm uppercase">Grunnarbeid</a>
+                <a href="utleie.html" class="text-ebt-green transition text-sm uppercase">Utleie</a>
+                <a href="kontakt.html" class="bg-ebt-green text-black px-5 py-2 rounded font-extrabold hover:bg-white transition text-sm uppercase">Kontakt</a>
+            </div>
         </div>
+    </nav>
+
+    <header class="sub-header text-white py-20 px-4 border-b-8 border-ebt-green">
+        <div class="max-w-7xl mx-auto">
+            <h1 class="text-5xl md:text-6xl font-black uppercase italic leading-none">Utleie av utstyr</h1>
+            <p class="text-ebt-green font-black mt-4 uppercase tracking-[0.2em] italic">Profesjonelt utstyr til dine prosjekter</p>
         </div>
-</main>
+    </header>
+
+    <main class="max-w-7xl mx-auto py-20 px-4">
+        
+        <div class="bg-black text-white p-8 rounded-lg mb-16 border-l-8 border-ebt-green italic font-medium">
+            Vi bygger opp vår utleiepark fortløpende. Ta kontakt for leie av varmeutstyr eller spør om vi har fått inn det du trenger!
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-10">
+            <div class="bg-white border-2 border-slate-100 shadow-xl rounded-sm group hover:border-ebt-green transition-all">
+                <div class="bg-slate-100 h-64 flex items-center justify-center text-slate-400 font-black italic">BILDE KOMMER</div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-black uppercase italic mb-2">Varmeovn 3,3 kW</h3>
+                    <p class="text-slate-500 font-medium mb-6 italic text-sm italic">Effektiv byggvarmer for mindre rom og tørking.</p>
+                    <div class="flex justify-between items-center border-t-2 border-slate-50 pt-6">
+                        <span class="text-2xl font-black">40,- <span class="text-xs uppercase italic text-slate-400">/ dag</span></span>
+                        <a href="kontakt.html" class="bg-black text-ebt-green px-4 py-2 font-black uppercase text-xs italic rounded-sm hover:bg-ebt-green hover:text-black transition">Leie nå</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white border-2 border-slate-100 shadow-xl rounded-sm group hover:border-ebt-green transition-all">
+                <div class="bg-slate-100 h-64 flex items-center justify-center text-slate-400 font-black italic">BILDE KOMMER</div>
+                <div class="p-8">
+                    <h3 class="text-2xl font-black uppercase italic mb-2">Dieselvarmer</h3>
+                    <p class="text-slate-500 font-medium mb-6 italic text-sm italic">Kraftig oppvarming for større bygg eller uteplasser.</p>
+                    <div class="flex justify-between items-center border-t-2 border-slate-50 pt-6">
+                        <span class="text-2xl font-black">100,- <span class="text-xs uppercase italic text-slate-400">/ dag</span></span>
+                        <a href="kontakt.html" class="bg-black text-ebt-green px-4 py-2 font-black uppercase text-xs italic rounded-sm hover:bg-ebt-green hover:text-black transition">Leie nå</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-20 text-center">
+            <a href="vilkar-utleie.html" class="text-slate-400 font-bold uppercase text-xs hover:text-ebt-green transition underline tracking-widest italic">Se gjeldende leievilkår</a>
+        </div>
+    </main>
+
+    <footer class="bg-black text-slate-400 py-12 px-4 border-t-4 border-ebt-green">
+        <div class="max-w-7xl mx-auto text-center">
+            <p class="text-white font-black uppercase italic mb-2">Edvardsen Byggtjenester</p
