@@ -17,15 +17,14 @@
         .bg-ebt-green { background-color: #00E676; }
         .border-ebt-green { border-color: #00E676; }
         
-        /* WOW EFFEKT CSS FOR SERTIFISERINGER */
         .info-card {
             transition: all 0.3s ease-in-out;
-            border: 1px solid #334155; /* slate-700 subtil kant */
+            border: 1px solid #334155;
         }
         .info-card:hover {
             transform: translateY(-3px);
-            border-color: #00E676; /* Green border on hover */
-            box-shadow: 0 5px 20px -5px rgba(0, 230, 118, 0.2); /* Green glow */
+            border-color: #00E676;
+            box-shadow: 0 5px 20px -5px rgba(0, 230, 118, 0.2);
         }
     </style>
 </head>
@@ -48,43 +47,47 @@
                 <a href="tomrertjenester.html" class="hover:text-ebt-green transition py-1">Tømrer</a>
                 <a href="grunnarbeid.html" class="hover:text-ebt-green transition py-1 whitespace-nowrap">Grunnarbeid</a>
                 <a href="utleie.html" class="hover:text-ebt-green transition py-1">Utleie</a>
-                <a href="om-oss.html" class="text-ebt-green underline py-1 hover:text-white transition">Om oss</a>
+                <a href="om-oss.html" class="text-ebt-green underline py-1">Om oss</a>
                 <a href="kontakt.html" class="bg-ebt-green text-black px-2 sm:px-4 py-1 rounded">Kontakt</a>
             </div>
         </div>
     </nav>
 
-    <header class="hero-dark text-white py-12 md:py-20 px-4 border-b-8 border-ebt-green">
-        <div class="max-w-7xl mx-auto text-center md:text-right">
-            <h1 class="text-4xl md:text-6xl font-black uppercase italic leading-tight text-ebt-green">Faglig Kompetanse</h1>
-            <p class="text-lg md:text-xl text-slate-300 font-bold uppercase italic tracking-widest mt-2">Mester i byggfag & Maskinfører</p>
+    <header class="hero-dark text-white py-12 md:py-20 px-6 border-b-8 border-ebt-green text-left">
+        <div class="max-w-7xl mx-auto">
+            <h1 class="text-4xl md:text-6xl font-black uppercase italic leading-tight text-ebt-green pr-10">Faglig Kompetanse</h1>
+            <p class="text-sm md:text-2xl text-slate-300 font-bold uppercase italic tracking-widest mt-2 pr-10">Mester i byggfag & Maskinfører</p>
         </div>
     </header>
 
     <main class="max-w-7xl mx-auto py-12 md:py-20 px-4">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-start">
 
             <div class="space-y-6">
                 <div class="flex items-center gap-4 text-left">
-                    <div class="h-10 w-2 bg-ebt-green"></div>
-                    <h2 class="text-3xl md:text-4xl font-black uppercase italic">Om Edvardsen Byggtjenester</h2>
+                    <div class="h-10 w-2 bg-ebt-green shadow-[0_0_10px_rgba(0,230,118,0.5)]"></div>
+                    <h2 class="text-2xl md:text-4xl font-black uppercase italic pr-4 text-white underline decoration-ebt-green decoration-4 underline-offset-8">Din lokale fagmann</h2>
                 </div>
 
-                <p class="text-lg md:text-xl leading-relaxed text-slate-100 font-bold italic text-left">
-                    Kim-Roger Edvardsen – Innehaver og din lokale fagmann i Vestby.
+                <p class="text-xl leading-relaxed text-slate-100 font-bold italic">
+                    Jeg heter Kim-Roger Edvardsen, og er tømrermester med mange års erfaring fra byggebransjen.
                 </p>
 
-                <div class="prose prose-slate prose-invert prose-lg text-slate-300 leading-relaxed text-left">
+                <div class="prose prose-slate prose-invert prose-lg text-slate-300 leading-relaxed italic">
                     <p>
-                        Edvardsen Byggtjenester ble etablert for å tilby en kombinasjon av solid tømrerhåndverk og maskinelt grunnarbeid. Som utdannet <strong>Mester i byggfag</strong> har jeg den faglige tyngden som kreves for å sikre kvalitet i alle ledd av prosjektet ditt.
+                        Gjennom mitt eget firma, <strong>Edvardsen Byggtjenester</strong>, tar jeg på meg både store og små oppdrag – alt fra komplette byggeprosjekter og rehabilitering til de mindre fiksejobbene som gjør hverdagen din litt enklere.
                     </p>
 
                     <p>
-                        Med over 10 års erfaring, inkludert roller som faglig leder og prosjektleder, forstår jeg viktigheten av god planlegging, ryddig kommunikasjon og økonomisk ansvar. Jeg har også kompetansebevis på gravemaskin (M2), hjullaster (M4) og dumper (M6), noe som gjør at jeg kan håndtere hele prosessen fra utgraving til ferdig bygg.
+                        Som utdannet <strong>Mester i byggfag</strong> og med kompetansebevis på gravemaskin, hjullaster og dumper, har jeg den faglige tyngden som kreves for å sikre kvalitet i alle ledd. Enten det er snakk om tømrerarbeid, mindre graveoppdrag eller vaktmestertjenester, legger jeg stor vekt på nøyaktighet og solid håndverk.
+                    </p>
+                    
+                    <p>
+                        Uansett type oppdrag er målet mitt alltid det samme: et godt utført arbeid og en fornøyd kunde. Jeg holder til i <strong>Vestby</strong> og tar på meg oppdrag i hele nærområdet.
                     </p>
                 </div>
 
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-6 text-left">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-6">
                     <div class="info-card bg-slate-950 p-6 border-b-4 border-ebt-green shadow-xl flex gap-4 items-start">
                         <div class="text-ebt-green text-2xl pt-1"><i class="fas fa-certificate"></i></div>
                         <div>
@@ -92,28 +95,38 @@
                             <ul class="text-[10px] text-slate-400 space-y-1.5 font-bold uppercase italic">
                                 <li>• Mesterbrev i byggfag</li>
                                 <li>• Maskinfører M2, M4, M6</li>
-                                <li>• Sertifisert for arbeid i høyden</li>
+                                <li>• Arbeid i høyden</li>
                             </ul>
                         </div>
                     </div>
                     <div class="info-card bg-slate-950 p-6 border-b-4 border-white shadow-xl flex gap-4 items-start">
-                        <div class="text-white text-2xl pt-1"><i class="fas fa-star"></i></div>
+                        <div class="text-white text-2xl pt-1"><i class="fas fa-hammer"></i></div>
                         <div>
-                            <h4 class="font-black uppercase italic text-xs mb-2 text-white">Verdier</h4>
-                            <p class="text-[10px] text-slate-400 font-bold uppercase italic leading-relaxed">Strukturert, løsningsorientert og alltid fokus på kundens behov.</p>
+                            <h4 class="font-black uppercase italic text-xs mb-2 text-white">Tjenester</h4>
+                            <ul class="text-[10px] text-slate-400 space-y-1.5 font-bold uppercase italic">
+                                <li>• Bygg & Rehabilitering</li>
+                                <li>• Graveoppdrag</li>
+                                <li>• Vaktmestertjenester</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
+                
+                <div class="pt-8">
+                    <a href="kontakt.html" class="inline-block bg-ebt-green text-black font-black px-8 py-4 rounded-sm uppercase italic hover:bg-white transition shadow-lg">
+                        Kontakt for gratis befaring
+                    </a>
+                </div>
             </div>
 
-            <div class="relative mt-10 md:mt-0 text-left">
+            <div class="relative mt-10 md:mt-0">
                 <div class="bg-black rounded-sm overflow-hidden border-4 border-white shadow-2xl aspect-[4/5] relative">
                     <img src="profilbilde.jpg" alt="Kim-Roger Edvardsen" class="w-full h-full object-cover relative z-10" onerror="this.style.display='none'">
                     <div class="absolute inset-0 flex items-center justify-center text-slate-500 font-black italic text-center p-8 text-sm">
                         Last opp profilbilde.jpg her
                     </div>
                 </div>
-                <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-ebt-green -z-10 animate-pulse"></div>
+                <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-ebt-green -z-10 opacity-50"></div>
             </div>
         </div>
     </main>
@@ -121,9 +134,13 @@
     <footer class="bg-black text-slate-500 py-12 px-4 border-t-8 border-ebt-green text-center">
         <div class="max-w-7xl mx-auto flex flex-col items-center gap-6">
             <img src="/assets/mesterlogo.png" alt="Mesterbrev" class="h-10 w-auto grayscale brightness-200 opacity-50">
-            <div class="text-center">
-                <p class="font-black uppercase italic text-white mb-2 text-lg">Edvardsen Byggtjenester</p>
-                <p class="text-[10px] sm:text-xs tracking-widest uppercase text-slate-400">Org.nr: 936 481 612 MVA | Karen Bachs vei 23, 1542 Vestby</p>
+            <div class="text-center text-white">
+                <p class="font-black uppercase italic mb-2 text-lg tracking-wider">Edvardsen Byggtjenester</p>
+                <div class="flex flex-col md:flex-row justify-center items-center gap-2 md:gap-4 text-[10px] sm:text-xs uppercase font-bold italic text-slate-400">
+                    <span>Vestby Kommune</span>
+                    <span class="hidden md:block">|</span>
+                    <span>Org.nr: 936 481 612 MVA</span>
+                </div>
             </div>
         </div>
     </footer>
