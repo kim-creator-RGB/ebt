@@ -73,20 +73,20 @@
                 <img src="/assets/mesterlogo.png" alt="Mesterbrev" class="h-8 sm:h-10 w-auto opacity-90" title="Mester i byggfag">
             </div>
             
-            <div class="flex space-x-2 sm:space-x-4 md:space-x-6 font-bold text-slate-200 text-[9px] sm:text-xs md:text-sm uppercase italic">
+            <div class="flex space-x-2 sm:space-x-4 md:space-x-6 font-bold text-slate-200 text-[9px] sm:text-xs md:text-sm uppercase italic items-center">
                 <a href="tomrertjenester.html" class="hover:text-ebt-green transition py-1">Tømrer</a>
                 <a href="grunnarbeid.html" class="text-ebt-green underline py-1 whitespace-nowrap">Grunnarbeid</a>
                 <a href="utleie.html" class="hover:text-ebt-green transition py-1">Utleie</a>
-                <a href="om-oss.html" class="hover:text-ebt-green transition py-1">Om oss</a>
-                <a href="kontakt.html" class="bg-ebt-green text-black px-2 sm:px-4 py-1 rounded">Kontakt</a>
+                <a href="om-oss.html" class="hover:text-ebt-green transition py-1 whitespace-nowrap">Om oss</a>
+                <a href="kontakt.html" class="bg-ebt-green text-black px-2 sm:px-4 py-1.5 rounded shadow-md ml-1">Kontakt</a>
             </div>
         </div>
     </nav>
 
     <header class="hero-dark text-white py-12 md:py-20 px-4 border-b-8 border-ebt-green text-center md:text-left">
         <div class="max-w-7xl mx-auto">
-            <h1 class="text-4xl md:text-6xl font-black uppercase italic leading-tight text-ebt-green">Grunnarbeid</h1>
-            <p class="text-lg md:text-2xl text-slate-300 font-bold uppercase italic tracking-widest mt-2">Graving • Drenering • Planering</p>
+            <h1 class="text-4xl md:text-6xl font-black uppercase italic leading-tight text-ebt-green pr-4 md:pr-10">Grunnarbeid</h1>
+            <p class="text-lg md:text-2xl text-slate-300 font-bold uppercase italic tracking-widest mt-2 pr-4 md:pr-10">Graving • Drenering • Planering</p>
         </div>
     </header>
 
@@ -161,8 +161,38 @@
                 <span class="hidden md:block">|</span>
                 <span>Org.nr: 936 481 612 MVA</span>
             </div>
+            
+            <div class="mt-8 flex justify-center items-center gap-4">
+                <a href="personvern.html" class="text-[10px] text-slate-400 hover:text-white underline transition">Personvernerklæring</a>
+            </div>
+            <p class="mt-4 text-[10px] opacity-50 text-slate-400">© 2026 Edvardsen Byggtjenester. Designet for profesjonelle resultater.</p>
         </div>
     </footer>
+
+    <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-black border-t-4 border-green-500 p-4 z-[100] hidden">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+            <p class="text-xs sm:text-sm text-slate-300 italic font-medium text-center md:text-left">
+                Vi bruker enkle informasjonskapsler for å sikre at nettsiden fungerer optimalt. 
+                Ved å bruke siden godtar du vår <a href="personvern.html" class="underline text-white">personvernerklæring</a>.
+            </p>
+            <button onclick="acceptCookies()" class="bg-green-500 text-black px-6 py-2 font-black uppercase italic text-sm rounded shadow-lg hover:bg-white transition">
+                OK, skjønner!
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function acceptCookies() {
+            localStorage.setItem('cookiesAccepted', 'true');
+            document.getElementById('cookie-banner').classList.add('hidden');
+        }
+
+        window.onload = function() {
+            if (!localStorage.getItem('cookiesAccepted')) {
+                document.getElementById('cookie-banner').classList.remove('hidden');
+            }
+        }
+    </script>
 
 </body>
 </html>
