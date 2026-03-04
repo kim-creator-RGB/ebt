@@ -51,6 +51,7 @@
 
     <nav class="bg-black sticky top-0 z-50 border-b-2 border-ebt-green">
         <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+            
             <div class="flex items-center gap-2">
                 <a href="index.html" class="flex items-center">
                     <img src="/assets/logo.png" alt="EBT Logo" class="h-8 sm:h-10 md:h-12 w-auto">
@@ -58,26 +59,27 @@
                         Edvardsen <span class="text-ebt-green underline">Byggtjenester</span>
                     </span>
                 </a>
+                
                 <div class="h-8 w-px bg-slate-700 hidden sm:block mx-2"></div>
                 <img src="/assets/mesterlogo.png" alt="Mesterbrev" class="h-10 sm:h-14 w-auto opacity-100 brightness-0 invert hidden sm:block" title="Mester i byggfag">
             </div>
             
-            <div class="flex space-x-2 sm:space-x-4 md:space-x-6 font-bold text-slate-200 text-[10px] sm:text-xs md:text-sm uppercase italic">
+            <div class="flex space-x-2 sm:space-x-4 md:space-x-6 font-bold text-slate-200 text-[9px] sm:text-xs md:text-sm uppercase italic items-center">
                 <a href="tomrertjenester.html" class="text-ebt-green underline py-1">Tømrer</a>
                 <a href="grunnarbeid.html" class="hover:text-ebt-green transition py-1 whitespace-nowrap">Grunnarbeid</a>
                 <a href="utleie.html" class="hover:text-ebt-green transition py-1">Utleie</a>
-                <a href="om-oss.html" class="hover:text-ebt-green transition py-1 hidden xs:block">Om oss</a>
-                <a href="kontakt.html" class="bg-ebt-green text-black px-2 sm:px-4 py-1 rounded shadow-md">Kontakt</a>
+                <a href="om-oss.html" class="hover:text-ebt-green transition py-1 whitespace-nowrap">Om oss</a>
+                <a href="kontakt.html" class="bg-ebt-green text-black px-2 sm:px-4 py-1.5 rounded shadow-md ml-1">Kontakt</a>
             </div>
         </div>
     </nav>
 
    <header class="hero-dark text-white py-12 md:py-20 px-6 border-b-8 border-ebt-green text-left">
         <div class="max-w-7xl mx-auto">
-            <h1 class="text-[32px] sm:text-4xl md:text-6xl font-black uppercase italic leading-tight text-ebt-green pr-10">
+            <h1 class="text-[32px] sm:text-4xl md:text-6xl font-black uppercase italic leading-tight text-ebt-green pr-4 md:pr-10">
                 Tømrertjenester
             </h1>
-            <p class="text-xs sm:text-sm md:text-2xl text-slate-300 font-bold uppercase italic tracking-widest mt-2 pr-10">
+            <p class="text-xs sm:text-sm md:text-2xl text-slate-300 font-bold uppercase italic tracking-widest mt-2 pr-4 md:pr-10">
                 Kvalitetshåndverk fra A til Å
             </p>
         </div>
@@ -169,12 +171,42 @@
         <div class="max-w-7xl mx-auto">
             <p class="font-black uppercase italic text-white mb-4 text-xl tracking-wider">Edvardsen Byggtjenester</p>
             <div class="flex flex-col md:flex-row justify-center items-center gap-4 text-xs uppercase font-bold tracking-widest italic text-white">
-                <span>Vestby Kommune</span>
+                <span>Karen Bachs vei 23, 1542 Vestby</span>
                 <span class="hidden md:block">|</span>
                 <span>Org.nr: 936 481 612 MVA</span>
             </div>
+            
+            <div class="mt-8 flex justify-center items-center gap-4">
+                <a href="personvern.html" class="text-[10px] text-slate-400 hover:text-white underline transition">Personvernerklæring</a>
+            </div>
+            <p class="mt-4 text-[10px] opacity-50 text-slate-400">© 2026 Edvardsen Byggtjenester. Designet for profesjonelle resultater.</p>
         </div>
     </footer>
+
+    <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-black border-t-4 border-green-500 p-4 z-[100] hidden">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+            <p class="text-xs sm:text-sm text-slate-300 italic font-medium text-center md:text-left">
+                Vi bruker enkle informasjonskapsler for å sikre at nettsiden fungerer optimalt. 
+                Ved å bruke siden godtar du vår <a href="personvern.html" class="underline text-white">personvernerklæring</a>.
+            </p>
+            <button onclick="acceptCookies()" class="bg-green-500 text-black px-6 py-2 font-black uppercase italic text-sm rounded shadow-lg hover:bg-white transition">
+                OK, skjønner!
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function acceptCookies() {
+            localStorage.setItem('cookiesAccepted', 'true');
+            document.getElementById('cookie-banner').classList.add('hidden');
+        }
+
+        window.onload = function() {
+            if (!localStorage.getItem('cookiesAccepted')) {
+                document.getElementById('cookie-banner').classList.remove('hidden');
+            }
+        }
+    </script>
 
 </body>
 </html>
