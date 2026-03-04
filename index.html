@@ -22,28 +22,29 @@
   <style>
     body { font-family: 'Inter', sans-serif; }
 
-    .hero-dark {
-      background: radial-gradient(1000px 500px at 50% 0%, rgba(0,230,118,0.12), transparent 60%),
-                  linear-gradient(180deg, rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
-                  url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23111111' fill-opacity='0.6'%3E%3Cpath d='M38 36v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM38 6V2h-2v4h-4v2h4v4h2V8h4V6h-4zM8 36v-4H6v4H2v2h4v4h2v-4h4v-2H8zM8 6V2H6v4H2v2h4v4h2V8h4V6H8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-      background-color: #000;
+    .hero-dark{
+      background:
+        radial-gradient(1000px 500px at 50% 0%, rgba(0,230,118,0.12), transparent 60%),
+        linear-gradient(180deg, rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
+        url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23111111' fill-opacity='0.6'%3E%3Cpath d='M38 36v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM38 6V2h-2v4h-4v2h4v4h2V8h4V6h-4zM8 36v-4H6v4H2v2h4v4h2v-4h4v-2H8zM8 6V2H6v4H2v2h4v4h2V8h4V6H8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      background-color:#000;
     }
 
     .text-ebt-green { color: #00E676; }
     .bg-ebt-green { background-color: #00E676; }
     .border-ebt-green { border-color: #00E676; }
 
-    .card {
+    .card{
       border: 1px solid #334155;
       transition: all .25s ease;
     }
-    .card:hover {
+    .card:hover{
       transform: translateY(-4px);
       border-color: #00E676;
       box-shadow: 0 16px 40px -18px rgba(0, 230, 118, .35);
     }
 
-    .glass {
+    .glass{
       background: rgba(2, 6, 23, 0.55);
       border: 1px solid rgba(148, 163, 184, 0.25);
       backdrop-filter: blur(10px);
@@ -53,7 +54,7 @@
 
 <body class="bg-slate-900 text-slate-100">
 
-  <!-- TOP BAR (ekstra konvertering på mobil) -->
+  <!-- TOP BAR -->
   <div class="bg-black/60 border-b border-slate-800">
     <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between text-[11px] sm:text-xs">
       <div class="text-slate-300 flex items-center gap-2">
@@ -66,6 +67,7 @@
     </div>
   </div>
 
+  <!-- NAV (uten Referanser) -->
   <nav class="bg-black sticky top-0 z-50 border-b-2 border-ebt-green">
     <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
       <div class="flex items-center gap-3">
@@ -83,7 +85,6 @@
         <a href="tomrertjenester.html" class="hover:text-ebt-green transition py-1">Tømrer</a>
         <a href="grunnarbeid.html" class="hover:text-ebt-green transition py-1 whitespace-nowrap">Grunnarbeid</a>
         <a href="utleie.html" class="hover:text-ebt-green transition py-1">Utleie</a>
-        <a href="referanser.html" class="hover:text-ebt-green transition py-1">Referanser</a>
         <a href="om-oss.html" class="hover:text-ebt-green transition py-1 whitespace-nowrap">Om oss</a>
         <a href="kontakt.html" class="bg-ebt-green text-black px-3 sm:px-4 py-2 rounded shadow-md ml-1 hover:bg-white transition">
           Kontakt
@@ -104,7 +105,6 @@
             Tømrer • Grunnarbeid • Utleie i Vestby & omegn
           </p>
 
-          <!-- TRUST STRIP -->
           <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-3 text-left">
             <div class="glass rounded p-4">
               <div class="text-ebt-green font-black uppercase italic text-xs">Ryddig prosess</div>
@@ -120,7 +120,6 @@
             </div>
           </div>
 
-          <!-- CTA -->
           <div class="mt-10 flex flex-col sm:flex-row justify-center md:justify-start gap-4">
             <a href="kontakt.html" class="bg-ebt-green text-black font-black px-8 py-5 rounded uppercase italic text-lg hover:bg-white transition shadow-lg">
               Be om befaring
@@ -135,7 +134,6 @@
           </p>
         </div>
 
-        <!-- HERO SIDE CARD -->
         <div class="md:col-span-5">
           <div class="bg-slate-950/70 border border-slate-800 rounded p-6 md:p-8 shadow-2xl">
             <div class="flex items-center gap-3">
@@ -159,8 +157,8 @@
             </ul>
 
             <div class="mt-7 grid grid-cols-2 gap-3">
-              <a href="referanser.html" class="text-center bg-black/60 border border-slate-700 rounded py-3 font-black uppercase italic text-sm hover:border-ebt-green hover:text-ebt-green transition">
-                Se prosjekter
+              <a href="kontakt.html" class="text-center bg-black/60 border border-slate-700 rounded py-3 font-black uppercase italic text-sm hover:border-ebt-green hover:text-ebt-green transition">
+                Spørsmål?
               </a>
               <a href="kontakt.html" class="text-center bg-ebt-green text-black rounded py-3 font-black uppercase italic text-sm hover:bg-white transition">
                 Kontakt
@@ -173,9 +171,9 @@
     </div>
   </header>
 
-  <!-- SERVICES -->
   <main class="max-w-7xl mx-auto py-14 md:py-20 px-4 space-y-16">
 
+    <!-- SERVICES -->
     <section>
       <div class="flex items-end justify-between gap-6 mb-8">
         <div>
@@ -223,53 +221,74 @@
       </div>
     </section>
 
-    <!-- PROJECTS / GALLERY (bytt ut img src med dine ekte bilder) -->
+    <!-- PROJECTS / GALLERY (uten referanser-lenker) -->
     <section>
       <div class="flex items-end justify-between gap-6 mb-8">
         <div>
-          <h2 class="text-3xl md:text-4xl font-black uppercase italic">Utførte prosjekter</h2>
-          <p class="text-slate-400 italic mt-2">Ekte bilder. Ekte jobber. (Bytt ut med dine prosjektbilder.)</p>
+          <h2 class="text-3xl md:text-4xl font-black uppercase italic">Eksempler på arbeid</h2>
+          <p class="text-slate-400 italic mt-2">Noen jobber vi har utført (flere kommer).</p>
         </div>
-        <a href="referanser.html" class="inline-flex items-center gap-2 text-ebt-green font-black uppercase italic text-sm border-b-4 border-ebt-green pb-1 hover:text-white transition">
-          Se alle <i class="fas fa-arrow-right"></i>
-        </a>
       </div>
 
+      <!-- Juster høyde her hvis du vil: h-36 / h-44 / h-52 -->
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <a href="referanser.html" class="card rounded overflow-hidden bg-slate-950">
-         <img
-  src="/Drenering_vestby_2.JPG"
-  alt="Drenering og isolering av grunnmur"
-  class="w-full h-full object-cover aspect-square"
-/>
+        <div class="card rounded overflow-hidden bg-slate-950">
+          <div class="h-44 sm:h-52 md:h-56">
+            <img
+              src="/Drenering_vestby_2.JPG"
+              alt="Drenering og isolering av grunnmur"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
           </div>
-        </a>
-        <img
-  src="/planering_etter_1.jpg"
-  alt="Drenering og isolering av grunnmur"
-  class="w-full h-full object-cover aspect-square"
-/>
+        </div>
+
+        <div class="card rounded overflow-hidden bg-slate-950">
+          <div class="h-44 sm:h-52 md:h-56">
+            <img
+              src="/planering_etter_1.jpg"
+              alt="Planering av uteområde og hage"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
           </div>
-        </a>
-        <img
-  src="/Trapp_vestby_2.jpg"
-  alt="Drenering og isolering av grunnmur"
-  class="w-full h-full object-cover aspect-square"
-/>
+        </div>
+
+        <div class="card rounded overflow-hidden bg-slate-950">
+          <div class="h-44 sm:h-52 md:h-56">
+            <img
+              src="/Trapp_vestby_2.jpg"
+              alt="Terrasse og trapp bygget av tømrer"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
           </div>
-        </a>
-        <img
-  src="/tomrer_vestby_2.jpg"
-  alt="Drenering og isolering av grunnmur"
-  class="w-full h-full object-cover aspect-square"
-/>
+        </div>
+
+        <div class="card rounded overflow-hidden bg-slate-950">
+          <div class="h-44 sm:h-52 md:h-56">
+            <img
+              src="/tomrer_vestby_2.jpg"
+              alt="Innvendig tømrerarbeid og oppussing"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
           </div>
-        </a>
-      <img
-  src="/tomrer_vestby_slutt_2.jpg"
-  alt="Drenering og isolering av grunnmur"
-  class="w-full h-full object-cover aspect-square"
-/>
+        </div>
+      </div>
+
+      <!-- Hvis du vil ha med et 5. bilde, kan du bruke denne ekstra raden -->
+      <div class="mt-4">
+        <div class="card rounded overflow-hidden bg-slate-950">
+          <div class="h-44 sm:h-52 md:h-56">
+            <img
+              src="/tomrer_vestby_slutt_2.jpg"
+              alt="Ferdig resultat etter oppussing"
+              class="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
+        </div>
       </div>
 
       <div class="mt-8 bg-slate-950 border border-slate-800 rounded p-8 text-center">
