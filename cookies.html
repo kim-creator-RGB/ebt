@@ -2,24 +2,25 @@
 <html lang="no">
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-M43SBMDNYW"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M43SBMDNYW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
 
-  gtag('js', new Date());
+    gtag('js', new Date());
 
-  /* Standard: ingen analyse før samtykke */
-  gtag('consent', 'default', {
-    analytics_storage: 'denied',
-    ad_storage: 'denied',
-    ad_user_data: 'denied',
-    ad_personalization: 'denied',
-    wait_for_update: 500
-  });
+    /* Standard: ingen analyse før samtykke */
+    gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      wait_for_update: 500
+    });
 
-  gtag('config', 'G-M43SBMDNYW');
-</script>
+    gtag('config', 'G-M43SBMDNYW');
+  </script>
+
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Cookies | Edvardsen Byggtjenester</title>
@@ -37,12 +38,14 @@
 
   <style>
     body { font-family: 'Inter', sans-serif; }
+
     .hero-dark {
       background-color: #000000;
       background-image:
         radial-gradient(900px 400px at 50% 0%, rgba(0,230,118,0.10), transparent 60%),
         url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23111111' fill-opacity='0.5'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     }
+
     .text-ebt-green { color: #00E676; }
     .bg-ebt-green { background-color: #00E676; }
     .border-ebt-green { border-color: #00E676; }
@@ -52,6 +55,7 @@
       border: 1px solid #1e293b;
       transition: all 0.25s ease;
     }
+
     .info-card:hover {
       border-color: #00E676;
       box-shadow: 0 10px 30px -10px rgba(0, 230, 118, 0.25);
@@ -109,7 +113,8 @@
       </div>
       <p class="text-slate-300 leading-relaxed">
         Cookies (informasjonskapsler) er små tekstfiler som lagres i nettleseren din når du besøker en nettside.
-        De brukes ofte for å få nettsiden til å fungere riktig, huske valg du har gjort, og forbedre brukeropplevelsen.
+        De brukes for å få nettsiden til å fungere riktig, huske valg du har gjort, og – dersom du samtykker –
+        samle inn statistikk som hjelper oss å forbedre nettsiden.
       </p>
     </section>
 
@@ -123,16 +128,24 @@
         <div>
           <h3 class="text-lg font-black uppercase italic text-white mb-2">Nødvendige cookies</h3>
           <p>
-            Vi bruker kun nødvendige cookies for at nettsiden skal fungere teknisk som den skal.
-            Dette kan for eksempel være for å huske at du har lukket cookie-banneret.
+            Vi bruker nødvendige cookies for at nettsiden skal fungere teknisk som den skal.
+            Dette kan for eksempel være for å huske valget ditt i cookie-banneret.
           </p>
         </div>
 
         <div>
-          <h3 class="text-lg font-black uppercase italic text-white mb-2">Ingen markedsføring eller sporing</h3>
+          <h3 class="text-lg font-black uppercase italic text-white mb-2">Analyse</h3>
           <p>
-            Per nå bruker vi ikke analyseverktøy, annonseringscookies eller andre sporingsverktøy som samler inn
-            unødvendige personopplysninger om besøkende.
+            Hvis du samtykker, bruker vi Google Analytics for å samle inn anonymisert statistikk om hvordan nettsiden brukes,
+            for eksempel hvilke sider som besøkes, hvor lenge besøket varer, og hvilke enheter som brukes.
+            Dette hjelper oss å forbedre nettsiden og innholdet vårt.
+          </p>
+        </div>
+
+        <div>
+          <h3 class="text-lg font-black uppercase italic text-white mb-2">Ingen markedsføring</h3>
+          <p>
+            Vi bruker ikke annonseringscookies eller personlig tilpasset markedsføring på nettsiden.
           </p>
         </div>
       </div>
@@ -145,8 +158,8 @@
       </div>
       <ul class="space-y-3 text-slate-300">
         <li><i class="fas fa-check text-ebt-green mr-2"></i>For at nettsiden skal fungere stabilt</li>
-        <li><i class="fas fa-check text-ebt-green mr-2"></i>For å huske enkle brukerinnstillinger</li>
-        <li><i class="fas fa-check text-ebt-green mr-2"></i>For å gi en bedre brukeropplevelse</li>
+        <li><i class="fas fa-check text-ebt-green mr-2"></i>For å huske brukerens samtykkevalg</li>
+        <li><i class="fas fa-check text-ebt-green mr-2"></i>For å forbedre nettsiden gjennom anonymisert statistikk, dersom du samtykker</li>
       </ul>
     </section>
 
@@ -156,8 +169,8 @@
         <h2 class="text-2xl md:text-3xl font-black uppercase italic text-white">Hvordan kan du administrere cookies?</h2>
       </div>
       <p class="text-slate-300 leading-relaxed">
-        Du kan selv slette eller blokkere cookies i nettleseren din når som helst. Merk at enkelte funksjoner på
-        nettsider kan fungere dårligere dersom alle cookies blokkeres.
+        Du kan når som helst endre eller trekke tilbake samtykket ditt ved å slette cookies i nettleseren din og besøke siden på nytt.
+        Du kan også blokkere cookies i nettleseren, men enkelte funksjoner på nettsider kan da fungere dårligere.
       </p>
     </section>
 
@@ -201,26 +214,72 @@
   <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-black border-t-4 border-green-500 p-4 z-[100] hidden">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
       <p class="text-xs sm:text-sm text-slate-300 italic font-medium text-center md:text-left">
-        Vi bruker kun nødvendige informasjonskapsler for at nettsiden skal fungere som den skal.
+        Vi bruker nødvendige informasjonskapsler for at nettsiden skal fungere, og – hvis du samtykker –
+        Google Analytics for anonym statistikk og forbedring av nettsiden.
         Les mer i vår <a href="cookies.html" class="underline text-white">cookie-informasjon</a>.
       </p>
-      <button onclick="acceptCookies()" class="bg-green-500 text-black px-6 py-2 font-black uppercase italic text-sm rounded shadow-lg hover:bg-white transition">
-        OK, skjønner!
-      </button>
+
+      <div class="flex flex-col sm:flex-row gap-3">
+        <button onclick="rejectCookies()" class="bg-slate-700 text-white px-6 py-2 font-black uppercase italic text-sm rounded shadow-lg hover:bg-slate-600 transition">
+          Avslå
+        </button>
+
+        <button onclick="acceptCookies()" class="bg-green-500 text-black px-6 py-2 font-black uppercase italic text-sm rounded shadow-lg hover:bg-white transition">
+          Godta
+        </button>
+      </div>
     </div>
   </div>
 
   <script>
     function acceptCookies() {
-      localStorage.setItem('cookiesAccepted', 'true');
+      localStorage.setItem('cookieChoice', 'accepted');
+
+      gtag('consent', 'update', {
+        analytics_storage: 'granted',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied'
+      });
+
+      document.getElementById('cookie-banner').classList.add('hidden');
+    }
+
+    function rejectCookies() {
+      localStorage.setItem('cookieChoice', 'rejected');
+
+      gtag('consent', 'update', {
+        analytics_storage: 'denied',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied'
+      });
+
       document.getElementById('cookie-banner').classList.add('hidden');
     }
 
     window.onload = function() {
-      if (!localStorage.getItem('cookiesAccepted')) {
-        document.getElementById('cookie-banner').classList.remove('hidden');
+      const choice = localStorage.getItem('cookieChoice');
+      const banner = document.getElementById('cookie-banner');
+
+      if (!choice) {
+        banner.classList.remove('hidden');
+      } else if (choice === 'accepted') {
+        gtag('consent', 'update', {
+          analytics_storage: 'granted',
+          ad_storage: 'denied',
+          ad_user_data: 'denied',
+          ad_personalization: 'denied'
+        });
+      } else {
+        gtag('consent', 'update', {
+          analytics_storage: 'denied',
+          ad_storage: 'denied',
+          ad_user_data: 'denied',
+          ad_personalization: 'denied'
+        });
       }
-    }
+    };
   </script>
 </body>
 </html>
