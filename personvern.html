@@ -1,55 +1,252 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-M43SBMDNYW"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M43SBMDNYW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-M43SBMDNYW');
+  </script>
 
-  gtag('config', 'G-M43SBMDNYW');
-</script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personvern | Edvardsen Byggtjenester</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
-    <style>body { font-family: 'Inter', sans-serif; }</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Personvern | Edvardsen Byggtjenester</title>
+  <meta name="theme-color" content="#0f172a" />
+  <meta name="description" content="Personvernerklæring for Edvardsen Byggtjenester. Informasjon om hvilke personopplysninger som samles inn og hvordan de behandles." />
+  <meta property="og:title" content="Personvern | Edvardsen Byggtjenester" />
+  <meta property="og:description" content="Informasjon om personvern og behandling av personopplysninger." />
+  <meta property="og:image" content="/assets/logo.png" />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" type="image/png" href="/assets/logo.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+
+    .hero-dark {
+      background-color: #000000;
+      background-image:
+        radial-gradient(900px 400px at 50% 0%, rgba(0,230,118,0.10), transparent 60%),
+        url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23111111' fill-opacity='0.5'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    .text-ebt-green { color: #00E676; }
+    .bg-ebt-green { background-color: #00E676; }
+    .border-ebt-green { border-color: #00E676; }
+
+    .info-card {
+      background: #020617;
+      border: 1px solid #1e293b;
+      transition: all 0.25s ease;
+    }
+
+    .info-card:hover {
+      border-color: #00E676;
+      box-shadow: 0 10px 30px -10px rgba(0, 230, 118, 0.25);
+    }
+  </style>
 </head>
+
 <body class="bg-slate-900 text-slate-100">
-    <main class="max-w-3xl mx-auto py-20 px-6">
-        <h1 class="text-4xl font-black uppercase italic text-ebt-green mb-8 text-green-400">Personvernerklæring</h1>
-        
-        <div class="space-y-8 text-slate-300 leading-relaxed">
-            <section>
-                <h2 class="text-xl font-bold text-white uppercase italic">1. Behandlingsansvarlig</h2>
-                <p>Edvardsen Byggtjenester (Org.nr: 936 481 612) er ansvarlig for håndtering av personopplysninger som samles inn via denne nettsiden.</p>
-            </section>
 
-            <section>
-                <h2 class="text-xl font-bold text-white uppercase italic">2. Opplysninger som samles inn</h2>
-                <p>Vi samler kun inn opplysninger du selv oppgir ved kontakt, som:</p>
-                <ul class="list-disc ml-6 mt-2">
-                    <li>Navn</li>
-                    <li>Telefonnummer</li>
-                    <li>E-postadresse</li>
-                    <li>Adresse for befaring</li>
-                </ul>
-            </section>
+  <!-- NAV -->
+  <nav class="bg-black sticky top-0 z-50 border-b-2 border-ebt-green">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="flex items-center gap-2 sm:gap-4">
+        <a href="index.html" class="flex items-center gap-2 sm:gap-3">
+          <img src="/assets/logo.png" alt="EBT Logo" class="h-8 sm:h-10 md:h-12 w-auto">
+          <span class="text-white font-black uppercase italic hidden lg:block text-sm">
+            Edvardsen <span class="text-ebt-green underline">Byggtjenester</span>
+          </span>
+        </a>
+        <div class="h-8 w-px bg-slate-700 hidden sm:block"></div>
+        <img src="/assets/mesterlogo.png" alt="Mesterbrev" class="h-8 sm:h-10 w-auto opacity-90" title="Mester i byggfag">
+      </div>
 
-            <section>
-                <h2 class="text-xl font-bold text-white uppercase italic">3. Formål</h2>
-                <p>Opplysningene brukes utelukkende for å kunne besvare dine henvendelser, gi pristilbud og gjennomføre avtalte tømrertjenester.</p>
-            </section>
+      <div class="flex space-x-2 sm:space-x-4 md:space-x-6 font-bold text-slate-200 text-[9px] sm:text-xs md:text-sm uppercase italic items-center">
+        <a href="tomrertjenester.html" class="hover:text-ebt-green transition py-1">Tømrer</a>
+        <a href="grunnarbeid.html" class="hover:text-ebt-green transition py-1 whitespace-nowrap">Grunnarbeid</a>
+        <a href="utleie.html" class="hover:text-ebt-green transition py-1">Utleie</a>
+        <a href="om-oss.html" class="hover:text-ebt-green transition py-1 whitespace-nowrap">Om oss</a>
+        <a href="kontakt.html" class="bg-ebt-green text-black px-2 sm:px-4 py-1.5 rounded shadow-md ml-1 border-2 border-transparent hover:bg-white transition">
+          Kontakt
+        </a>
+      </div>
+    </div>
+  </nav>
 
-            <section>
-                <h2 class="text-xl font-bold text-white uppercase italic">4. Lagring og sletting</h2>
-                <p>Vi lagrer dine opplysninger så lenge det er nødvendig for å oppfylle vår avtale med deg, eller så lenge lovverket (f.eks. bokføringsloven) krever det. Du har rett til å be om innsyn eller sletting av dine data når som helst.</p>
-            </section>
+  <!-- HERO -->
+  <header class="hero-dark text-white py-12 md:py-20 px-4 border-b-8 border-ebt-green">
+    <div class="max-w-7xl mx-auto text-center md:text-left">
+      <h1 class="text-4xl md:text-6xl font-black uppercase italic leading-tight text-ebt-green">
+        Personvern
+      </h1>
+      <p class="text-lg md:text-xl text-slate-300 font-bold uppercase italic tracking-widest mt-2">
+        Informasjon om hvordan vi behandler personopplysninger
+      </p>
+    </div>
+  </header>
 
-            <a href="index.html" class="inline-block mt-10 text-green-400 underline font-bold">← Tilbake til forsiden</a>
-        </div>
-    </main>
+  <!-- CONTENT -->
+  <main class="max-w-5xl mx-auto py-12 md:py-20 px-4 space-y-8">
+
+    <section class="info-card rounded p-6 md:p-8">
+      <div class="flex items-center gap-4 mb-4">
+        <div class="h-10 w-2 bg-ebt-green shadow-[0_0_10px_rgba(0,230,118,0.5)]"></div>
+        <h2 class="text-2xl md:text-3xl font-black uppercase italic text-white">Behandlingsansvarlig</h2>
+      </div>
+      <p class="text-slate-300 leading-relaxed">
+        Edvardsen Byggtjenester er behandlingsansvarlig for personopplysninger som samles inn via nettsiden.
+      </p>
+      <div class="mt-4 space-y-2 text-slate-200">
+        <div><strong>Firmanavn:</strong> Edvardsen Byggtjenester</div>
+        <div><strong>Org.nr:</strong> 936 481 612 MVA</div>
+        <div><strong>Adresse:</strong> Karen Bachs vei 23, 1542 Vestby</div>
+        <div><strong>E-post:</strong> <a href="mailto:kim.ebt@outlook.com" class="hover:text-ebt-green transition">kim.ebt@outlook.com</a></div>
+        <div><strong>Telefon:</strong> <a href="tel:+4790056314" class="hover:text-ebt-green transition">900 56 314</a></div>
+      </div>
+    </section>
+
+    <section class="info-card rounded p-6 md:p-8">
+      <div class="flex items-center gap-4 mb-4">
+        <div class="h-10 w-2 bg-ebt-green shadow-[0_0_10px_rgba(0,230,118,0.5)]"></div>
+        <h2 class="text-2xl md:text-3xl font-black uppercase italic text-white">Hvilke opplysninger vi samler inn</h2>
+      </div>
+      <p class="text-slate-300 leading-relaxed mb-4">
+        Vi samler i hovedsak kun inn personopplysninger som du selv oppgir når du kontakter oss.
+      </p>
+      <ul class="space-y-3 text-slate-300">
+        <li><i class="fas fa-check text-ebt-green mr-2"></i>Navn</li>
+        <li><i class="fas fa-check text-ebt-green mr-2"></i>Telefonnummer</li>
+        <li><i class="fas fa-check text-ebt-green mr-2"></i>E-postadresse</li>
+        <li><i class="fas fa-check text-ebt-green mr-2"></i>Adresse eller sted for befaring/prosjekt</li>
+        <li><i class="fas fa-check text-ebt-green mr-2"></i>Opplysninger du selv sender i melding, skjema eller e-post</li>
+      </ul>
+    </section>
+
+    <section class="info-card rounded p-6 md:p-8">
+      <div class="flex items-center gap-4 mb-4">
+        <div class="h-10 w-2 bg-ebt-green shadow-[0_0_10px_rgba(0,230,118,0.5)]"></div>
+        <h2 class="text-2xl md:text-3xl font-black uppercase italic text-white">Hva opplysningene brukes til</h2>
+      </div>
+      <ul class="space-y-3 text-slate-300">
+        <li><i class="fas fa-check text-ebt-green mr-2"></i>Besvare henvendelser og forespørsler</li>
+        <li><i class="fas fa-check text-ebt-green mr-2"></i>Gi tilbud og planlegge befaring</li>
+        <li><i class="fas fa-check text-ebt-green mr-2"></i>Gjennomføre avtalte tjenester eller utleie</li>
+        <li><i class="fas fa-check text-ebt-green mr-2"></i>Administrasjon, kundekontakt og oppfølging</li>
+        <li><i class="fas fa-check text-ebt-green mr-2"></i>Oppfylle lovpålagte krav, som for eksempel regnskaps- og bokføringsregler</li>
+      </ul>
+    </section>
+
+    <section class="info-card rounded p-6 md:p-8">
+      <div class="flex items-center gap-4 mb-4">
+        <div class="h-10 w-2 bg-ebt-green shadow-[0_0_10px_rgba(0,230,118,0.5)]"></div>
+        <h2 class="text-2xl md:text-3xl font-black uppercase italic text-white">Analyse og statistikk</h2>
+      </div>
+      <p class="text-slate-300 leading-relaxed">
+        Nettsiden bruker Google Analytics for å samle inn statistikk om bruk av nettsiden, for eksempel hvilke sider som besøkes,
+        hvor lenge besøk varer, og hvilke enheter som brukes. Dette hjelper oss å forstå hvordan nettsiden fungerer og hvordan vi kan forbedre den.
+      </p>
+      <p class="text-slate-300 leading-relaxed mt-4">
+        Opplysningene brukes til analyseformål og ikke for å identifisere deg personlig i vanlig kundebehandling.
+      </p>
+    </section>
+
+    <section class="info-card rounded p-6 md:p-8">
+      <div class="flex items-center gap-4 mb-4">
+        <div class="h-10 w-2 bg-ebt-green shadow-[0_0_10px_rgba(0,230,118,0.5)]"></div>
+        <h2 class="text-2xl md:text-3xl font-black uppercase italic text-white">Lagring og sletting</h2>
+      </div>
+      <p class="text-slate-300 leading-relaxed">
+        Vi lagrer personopplysninger så lenge det er nødvendig for å følge opp forespørsler, levere tjenester,
+        håndtere kundeforhold eller oppfylle lovpålagte krav. Opplysninger som ikke lenger er nødvendige, slettes eller anonymiseres.
+      </p>
+    </section>
+
+    <section class="info-card rounded p-6 md:p-8">
+      <div class="flex items-center gap-4 mb-4">
+        <div class="h-10 w-2 bg-ebt-green shadow-[0_0_10px_rgba(0,230,118,0.5)]"></div>
+        <h2 class="text-2xl md:text-3xl font-black uppercase italic text-white">Dine rettigheter</h2>
+      </div>
+      <p class="text-slate-300 leading-relaxed mb-4">
+        Du har rett til å be om:
+      </p>
+      <ul class="space-y-3 text-slate-300">
+        <li><i class="fas fa-check text-ebt-green mr-2"></i>Innsyn i hvilke opplysninger vi har om deg</li>
+        <li><i class="fas fa-check text-ebt-green mr-2"></i>Rettelse av feilaktige opplysninger</li>
+        <li><i class="fas fa-check text-ebt-green mr-2"></i>Sletting av opplysninger når det er mulig</li>
+        <li><i class="fas fa-check text-ebt-green mr-2"></i>Begrensning av behandling i enkelte tilfeller</li>
+      </ul>
+      <p class="text-slate-300 leading-relaxed mt-4">
+        Ta kontakt dersom du ønsker innsyn eller har spørsmål om hvordan opplysninger behandles.
+      </p>
+    </section>
+
+    <section class="info-card rounded p-6 md:p-8">
+      <div class="flex items-center gap-4 mb-4">
+        <div class="h-10 w-2 bg-ebt-green shadow-[0_0_10px_rgba(0,230,118,0.5)]"></div>
+        <h2 class="text-2xl md:text-3xl font-black uppercase italic text-white">Kontakt</h2>
+      </div>
+      <p class="text-slate-300 leading-relaxed">
+        Har du spørsmål om personvern eller behandling av personopplysninger, kan du kontakte oss:
+      </p>
+      <div class="mt-4 space-y-2 text-slate-200 font-medium">
+        <div><i class="fas fa-phone-alt text-ebt-green mr-2"></i><a href="tel:+4790056314" class="hover:text-ebt-green transition">900 56 314</a></div>
+        <div><i class="fas fa-envelope text-ebt-green mr-2"></i><a href="mailto:kim.ebt@outlook.com" class="hover:text-ebt-green transition">kim.ebt@outlook.com</a></div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-black text-slate-500 py-12 px-4 border-t-8 border-ebt-green text-center">
+    <div class="max-w-7xl mx-auto">
+      <p class="font-black uppercase italic text-white mb-4 text-xl tracking-wider text-center">Edvardsen Byggtjenester</p>
+      <div class="flex flex-col md:flex-row justify-center items-center gap-4 text-[10px] md:text-xs uppercase font-bold tracking-widest italic text-white">
+        <span>Karen Bachs vei 23, 1542 Vestby</span>
+        <span class="hidden md:block">|</span>
+        <span>Org.nr: 936 481 612 MVA</span>
+      </div>
+
+      <div class="mt-8 flex justify-center items-center gap-4">
+        <a href="personvern.html" class="text-[10px] text-slate-400 hover:text-white underline transition">Personvernerklæring</a>
+        <a href="cookies.html" class="text-[10px] text-slate-400 hover:text-white underline transition">Cookies</a>
+        <a href="vilkar-utleie.html" class="text-[10px] text-slate-400 hover:text-white underline transition">Vilkår utleie</a>
+      </div>
+
+      <p class="mt-4 text-[10px] opacity-50 text-slate-400">© 2026 Edvardsen Byggtjenester</p>
+    </div>
+  </footer>
+
+  <!-- COOKIE BANNER -->
+  <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-black border-t-4 border-green-500 p-4 z-[100] hidden">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <p class="text-xs sm:text-sm text-slate-300 italic font-medium text-center md:text-left">
+        Vi bruker enkle informasjonskapsler og analyseverktøy for å forbedre nettsiden.
+        Les mer i vår <a href="cookies.html" class="underline text-white">cookie-informasjon</a>.
+      </p>
+      <button onclick="acceptCookies()" class="bg-green-500 text-black px-6 py-2 font-black uppercase italic text-sm rounded shadow-lg hover:bg-white transition">
+        OK, skjønner!
+      </button>
+    </div>
+  </div>
+
+  <script>
+    function acceptCookies() {
+      localStorage.setItem('cookiesAccepted', 'true');
+      document.getElementById('cookie-banner').classList.add('hidden');
+    }
+
+    window.onload = function() {
+      if (!localStorage.getItem('cookiesAccepted')) {
+        document.getElementById('cookie-banner').classList.remove('hidden');
+      }
+    }
+  </script>
 </body>
 </html>
