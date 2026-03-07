@@ -2,24 +2,25 @@
 <html lang="no">
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-M43SBMDNYW"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M43SBMDNYW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
 
-  gtag('js', new Date());
+    gtag('js', new Date());
 
-  /* Standard: ingen analyse før samtykke */
-  gtag('consent', 'default', {
-    analytics_storage: 'denied',
-    ad_storage: 'denied',
-    ad_user_data: 'denied',
-    ad_personalization: 'denied',
-    wait_for_update: 500
-  });
+    /* Standard: ingen analyse før samtykke */
+    gtag('consent', 'default', {
+      analytics_storage: 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied',
+      wait_for_update: 500
+    });
 
-  gtag('config', 'G-M43SBMDNYW');
-</script>
+    gtag('config', 'G-M43SBMDNYW');
+  </script>
+
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Personvern | Edvardsen Byggtjenester</title>
@@ -64,7 +65,6 @@
 
 <body class="bg-slate-900 text-slate-100">
 
-  <!-- NAV -->
   <nav class="bg-black sticky top-0 z-50 border-b-2 border-ebt-green">
     <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
       <div class="flex items-center gap-2 sm:gap-4">
@@ -90,7 +90,6 @@
     </div>
   </nav>
 
-  <!-- HERO -->
   <header class="hero-dark text-white py-12 md:py-20 px-4 border-b-8 border-ebt-green">
     <div class="max-w-7xl mx-auto text-center md:text-left">
       <h1 class="text-4xl md:text-6xl font-black uppercase italic leading-tight text-ebt-green">
@@ -102,7 +101,6 @@
     </div>
   </header>
 
-  <!-- CONTENT -->
   <main class="max-w-5xl mx-auto py-12 md:py-20 px-4 space-y-8">
 
     <section class="info-card rounded p-6 md:p-8">
@@ -159,7 +157,7 @@
         <h2 class="text-2xl md:text-3xl font-black uppercase italic text-white">Analyse og statistikk</h2>
       </div>
       <p class="text-slate-300 leading-relaxed">
-        Nettsiden bruker Google Analytics for å samle inn statistikk om bruk av nettsiden, for eksempel hvilke sider som besøkes,
+        Hvis du samtykker, bruker nettsiden Google Analytics for å samle inn statistikk om bruk av nettsiden, for eksempel hvilke sider som besøkes,
         hvor lenge besøk varer, og hvilke enheter som brukes. Dette hjelper oss å forstå hvordan nettsiden fungerer og hvordan vi kan forbedre den.
       </p>
       <p class="text-slate-300 leading-relaxed mt-4">
@@ -213,7 +211,6 @@
 
   </main>
 
-  <!-- FOOTER -->
   <footer class="bg-black text-slate-500 py-12 px-4 border-t-8 border-ebt-green text-center">
     <div class="max-w-7xl mx-auto">
       <p class="font-black uppercase italic text-white mb-4 text-xl tracking-wider text-center">Edvardsen Byggtjenester</p>
@@ -237,26 +234,72 @@
   <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-black border-t-4 border-green-500 p-4 z-[100] hidden">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
       <p class="text-xs sm:text-sm text-slate-300 italic font-medium text-center md:text-left">
-        Vi bruker enkle informasjonskapsler og analyseverktøy for å forbedre nettsiden.
+        Vi bruker nødvendige informasjonskapsler for at nettsiden skal fungere, og – hvis du samtykker –
+        Google Analytics for anonym statistikk og forbedring av nettsiden.
         Les mer i vår <a href="cookies.html" class="underline text-white">cookie-informasjon</a>.
       </p>
-      <button onclick="acceptCookies()" class="bg-green-500 text-black px-6 py-2 font-black uppercase italic text-sm rounded shadow-lg hover:bg-white transition">
-        OK, skjønner!
-      </button>
+
+      <div class="flex flex-col sm:flex-row gap-3">
+        <button onclick="rejectCookies()" class="bg-slate-700 text-white px-6 py-2 font-black uppercase italic text-sm rounded shadow-lg hover:bg-slate-600 transition">
+          Avslå
+        </button>
+
+        <button onclick="acceptCookies()" class="bg-green-500 text-black px-6 py-2 font-black uppercase italic text-sm rounded shadow-lg hover:bg-white transition">
+          Godta
+        </button>
+      </div>
     </div>
   </div>
 
   <script>
     function acceptCookies() {
-      localStorage.setItem('cookiesAccepted', 'true');
+      localStorage.setItem('cookieChoice', 'accepted');
+
+      gtag('consent', 'update', {
+        analytics_storage: 'granted',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied'
+      });
+
+      document.getElementById('cookie-banner').classList.add('hidden');
+    }
+
+    function rejectCookies() {
+      localStorage.setItem('cookieChoice', 'rejected');
+
+      gtag('consent', 'update', {
+        analytics_storage: 'denied',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied'
+      });
+
       document.getElementById('cookie-banner').classList.add('hidden');
     }
 
     window.onload = function() {
-      if (!localStorage.getItem('cookiesAccepted')) {
-        document.getElementById('cookie-banner').classList.remove('hidden');
+      const choice = localStorage.getItem('cookieChoice');
+      const banner = document.getElementById('cookie-banner');
+
+      if (!choice) {
+        banner.classList.remove('hidden');
+      } else if (choice === 'accepted') {
+        gtag('consent', 'update', {
+          analytics_storage: 'granted',
+          ad_storage: 'denied',
+          ad_user_data: 'denied',
+          ad_personalization: 'denied'
+        });
+      } else {
+        gtag('consent', 'update', {
+          analytics_storage: 'denied',
+          ad_storage: 'denied',
+          ad_user_data: 'denied',
+          ad_personalization: 'denied'
+        });
       }
-    }
+    };
   </script>
 </body>
 </html>
