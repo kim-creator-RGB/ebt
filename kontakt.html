@@ -80,7 +80,7 @@
     </header>
 
     <main class="max-w-7xl mx-auto py-12 md:py-20 px-4">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
 
             <div class="space-y-8">
                 <div>
@@ -124,13 +124,48 @@
                 </div>
             </div>
 
-            <div class="relative group hidden md:block">
-                <div class="absolute -inset-1 bg-ebt-green opacity-20 blur-xl group-hover:opacity-40 transition duration-1000"></div>
-                <div class="relative bg-slate-950 p-10 border-2 border-slate-800 shadow-2xl text-center">
-                    <div class="text-ebt-green text-6xl mb-6"><i class="fas fa-tools"></i></div>
-                    <h3 class="text-2xl font-black uppercase italic text-white mb-4">Løsningsorientert?</h3>
-                    <p class="text-slate-400 mb-8 font-medium italic">Jeg ser muligheter der andre ser problemer. Kontakt meg for en uforpliktende prat om hvordan vi kan løse ditt prosjekt på best mulig måte.</p>
-                    <div class="h-1 w-20 bg-ebt-green mx-auto"></div>
+            <div class="space-y-6">
+                <div class="relative group hidden md:block">
+                    <div class="absolute -inset-1 bg-ebt-green opacity-20 blur-xl group-hover:opacity-40 transition duration-1000"></div>
+                    <div class="relative bg-slate-950 p-10 border-2 border-slate-800 shadow-2xl text-center">
+                        <div class="text-ebt-green text-6xl mb-6"><i class="fas fa-tools"></i></div>
+                        <h3 class="text-2xl font-black uppercase italic text-white mb-4">Løsningsorientert?</h3>
+                        <p class="text-slate-400 mb-8 font-medium italic">Jeg ser muligheter der andre ser problemer. Kontakt meg for en uforpliktende prat om hvordan vi kan løse ditt prosjekt på best mulig måte.</p>
+                        <div class="h-1 w-20 bg-ebt-green mx-auto"></div>
+                    </div>
+                </div>
+
+                <div class="bg-slate-950 p-6 md:p-8 border border-slate-800 shadow-2xl">
+                    <h3 class="text-2xl font-black uppercase italic text-white mb-2">Send en forespørsel</h3>
+                    <p class="text-slate-400 italic mb-6">Send gjerne bilde og kort beskrivelse av jobben – så kan jeg gi en raskere vurdering.</p>
+
+                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-5">
+                        <div>
+                            <label for="name" class="block text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">Navn</label>
+                            <input id="name" name="name" type="text" required class="w-full bg-slate-900 border border-slate-700 text-white px-4 py-3 outline-none focus:border-ebt-green">
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label for="phone" class="block text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">Telefon</label>
+                                <input id="phone" name="phone" type="tel" class="w-full bg-slate-900 border border-slate-700 text-white px-4 py-3 outline-none focus:border-ebt-green">
+                            </div>
+
+                            <div>
+                                <label for="email" class="block text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">E-post</label>
+                                <input id="email" name="email" type="email" required class="w-full bg-slate-900 border border-slate-700 text-white px-4 py-3 outline-none focus:border-ebt-green">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">Hva trenger du hjelp til?</label>
+                            <textarea id="message" name="message" rows="5" required class="w-full bg-slate-900 border border-slate-700 text-white px-4 py-3 outline-none focus:border-ebt-green"></textarea>
+                        </div>
+
+                        <button type="submit" class="bg-ebt-green text-black px-8 py-3 font-black uppercase italic shadow-lg hover:bg-white transition">
+                            Send forespørsel
+                        </button>
+                    </form>
                 </div>
             </div>
             
