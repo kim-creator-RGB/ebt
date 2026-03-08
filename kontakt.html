@@ -139,7 +139,9 @@
                     <h3 class="text-2xl font-black uppercase italic text-white mb-2">Send en forespørsel</h3>
                     <p class="text-slate-400 italic mb-6">Send gjerne bilde og kort beskrivelse av jobben – så kan jeg gi en raskere vurdering.</p>
 
-                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-5">
+                    <form action="https://formspree.io/f/xbdzljdq" method="POST" class="space-y-5">
+                        <input type="hidden" name="_next" value="takk.html">
+
                         <div>
                             <label for="name" class="block text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">Navn</label>
                             <input id="name" name="name" type="text" required class="w-full bg-slate-900 border border-slate-700 text-white px-4 py-3 outline-none focus:border-ebt-green">
@@ -162,9 +164,13 @@
                             <textarea id="message" name="message" rows="5" required class="w-full bg-slate-900 border border-slate-700 text-white px-4 py-3 outline-none focus:border-ebt-green"></textarea>
                         </div>
 
-                        <button type="submit" class="bg-ebt-green text-black px-8 py-3 font-black uppercase italic shadow-lg hover:bg-white transition">
+                        <button type="submit" class="bg-ebt-green text-black px-8 py-3 font-black uppercase italic shadow-lg hover:bg-white transition w-full">
                             Send forespørsel
                         </button>
+
+                        <p class="text-xs text-slate-500 italic">
+                            Svar som regel innen 24 timer.
+                        </p>
                     </form>
                 </div>
             </div>
