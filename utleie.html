@@ -6,10 +6,8 @@
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
-
       gtag('js', new Date());
 
-      /* Standard: ingen analyse før samtykke */
       gtag('consent', 'default', {
         analytics_storage: 'denied',
         ad_storage: 'denied',
@@ -26,14 +24,16 @@
     <title>Utleie | Edvardsen Byggtjenester</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">
 
     <style>
         body { font-family: 'Inter', sans-serif; }
-        .hero-dark { 
-            background-color: #000000; 
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23111111' fill-opacity='0.5'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); 
+
+        .hero-dark {
+            background-color: #000000;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23111111' fill-opacity='0.5'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
+
         .text-ebt-green { color: #00E676; }
         .bg-ebt-green { background-color: #00E676; }
         .border-ebt-green { border-color: #00E676; }
@@ -42,9 +42,31 @@
             transition: all 0.3s ease-in-out;
             border: 1px solid #334155;
         }
+
         .equipment-card:hover {
             border-color: #00E676;
-            box-shadow: 0 10px 30px -10px rgba(0, 230, 118, 0.2);
+            box-shadow: 0 10px 30px -10px rgba(0, 230, 118, 0.20);
+            transform: translateY(-4px);
+        }
+
+        .equipment-image {
+            aspect-ratio: 4 / 3;
+            width: 100%;
+            object-fit: cover;
+            border-bottom: 1px solid #1e293b;
+        }
+
+        .spec-pill {
+            display: inline-block;
+            padding: 0.35rem 0.65rem;
+            border: 1px solid #334155;
+            border-radius: 9999px;
+            font-size: 0.7rem;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #cbd5e1;
+            background: #020617;
         }
     </style>
 </head>
@@ -62,7 +84,7 @@
                 <div class="h-8 w-px bg-slate-700 hidden sm:block"></div>
                 <img src="/assets/mesterlogo.png" alt="Mesterbrev" class="h-8 sm:h-10 w-auto opacity-90" title="Mester i byggfag">
             </div>
-            
+
             <div class="flex space-x-2 sm:space-x-4 md:space-x-6 font-bold text-slate-200 text-[9px] sm:text-xs md:text-sm uppercase italic items-center">
                 <a href="tomrertjenester.html" class="hover:text-ebt-green transition py-1">Tømrer</a>
                 <a href="grunnarbeid.html" class="hover:text-ebt-green transition py-1 whitespace-nowrap">Grunnarbeid</a>
@@ -74,94 +96,239 @@
     </nav>
 
     <header class="hero-dark text-white py-12 md:py-20 px-4 border-b-8 border-ebt-green">
-        <div class="max-w-7xl mx-auto text-center md:text-right">
-            <h1 class="text-4xl md:text-6xl font-black uppercase italic leading-tight text-ebt-green">Utleie av verktøy</h1>
-            <p class="text-lg md:text-xl text-slate-300 font-bold uppercase italic tracking-widest mt-2">
-                Kvalitetsutstyr for tørk og varme
-            </p>
-        </div>
-    </header>
-
-    <main class="max-w-7xl mx-auto py-12 md:py-20 px-4">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-
-            <div class="space-y-6">
-                <div class="flex items-center gap-4">
-                    <div class="h-10 w-2 bg-ebt-green"></div>
-                    <h2 class="text-3xl md:text-4xl font-black uppercase italic">Varme og tørk</h2>
-                </div>
-
-                <p class="text-lg text-slate-300 leading-relaxed font-medium">
-                    Har du behov for midlertidig oppvarming eller tørking av bygg? Jeg leier ut driftssikkert utstyr som sørger for gode arbeidsforhold, selv på de kaldeste dagene.
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+            <div class="text-center md:text-left">
+                <p class="text-sm md:text-base uppercase tracking-[0.25em] text-slate-400 font-bold italic mb-4">
+                    Utleie i Vestby og omegn
+                </p>
+                <h1 class="text-4xl md:text-6xl font-black uppercase italic leading-tight text-ebt-green">
+                    Utleie av verktøy og varmeutstyr
+                </h1>
+                <p class="text-base md:text-xl text-slate-300 font-medium mt-5 max-w-2xl">
+                    Driftssikkert utstyr for byggtørk, oppvarming, ventilasjon og sliping. Perfekt for nybygg, rehabilitering og mindre prosjekter.
                 </p>
 
-                <p class="text-slate-400">
-                    I tillegg til varmeutstyr har jeg diverse mindre håndverktøy tilgjengelig for utleie. Ta kontakt for en hyggelig prat om hva du trenger til ditt prosjekt.
-                </p>
-
-                <div class="bg-black text-white p-6 rounded-sm italic border-l-4 border-ebt-green shadow-xl">
-                    Vi holder til i Vestby og tilbyr fleksible leieavtaler for både korte og lengre oppdrag.
-                </div>
-
-                <div class="pt-4 flex flex-col sm:flex-row gap-4">
-                    <a href="kontakt.html" class="inline-block bg-ebt-green text-black font-black px-8 py-4 uppercase italic hover:bg-white transition shadow-lg w-full sm:w-auto text-center">
-                        Sjekk tilgjengelighet her
+                <div class="pt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="kontakt.html" class="inline-block bg-ebt-green text-black font-black px-8 py-4 uppercase italic hover:bg-white transition shadow-lg text-center">
+                        Sjekk tilgjengelighet
                     </a>
-                    <a href="vilkar-utleie.html" class="inline-block bg-white text-black font-black px-8 py-4 uppercase italic hover:bg-ebt-green transition shadow-lg w-full sm:w-auto text-center">
+                    <a href="vilkar-utleie.html" class="inline-block border-2 border-white text-white font-black px-8 py-4 uppercase italic hover:bg-white hover:text-black transition shadow-lg text-center">
                         Se vilkår
                     </a>
                 </div>
             </div>
 
-            <div class="equipment-card bg-slate-950 p-6 md:p-10 border-b-8 border-white shadow-2xl">
-                <h3 class="text-xl font-black uppercase italic mb-8 border-b-2 border-ebt-green pb-2 inline-block">Tilgjengelig nå:</h3>
-
-                <div class="space-y-8">
-                    <div class="flex gap-5 group">
-                        <div class="text-ebt-green text-3xl transition-transform group-hover:scale-110">
-                            <i class="fas fa-fire-alt"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-black uppercase italic text-white text-lg">Dieselvarmer</h4>
-                            <p class="text-sm text-slate-400 leading-relaxed">
-                                Kraftig varmer som er perfekt for garasjer, nybygg eller større telt.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="flex gap-5 group">
-                        <div class="text-ebt-green text-3xl transition-transform group-hover:scale-110">
-                            <i class="fas fa-bolt"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-black uppercase italic text-white text-lg">Byggtørkere</h4>
-                            <p class="text-sm text-slate-400 leading-relaxed">
-                                Effektive elektriske ovner (2kW / 3kW / 9kW) for mindre rom og punktoppvarming.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="flex gap-5 group">
-                        <div class="text-ebt-green text-3xl transition-transform group-hover:scale-110">
-                            <i class="fas fa-tools"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-black uppercase italic text-white text-lg">Diverse småverktøy</h4>
-                            <p class="text-sm text-slate-400 leading-relaxed">
-                                Mangler du et spesifikt verktøy? Spør meg, så ser vi om jeg har det inne i parken.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="mt-12 pt-6 border-t border-slate-800">
-                    <p class="text-[10px] text-ebt-green italic uppercase font-black tracking-widest flex items-center gap-2">
-                        <span class="h-2 w-2 bg-ebt-green rounded-full animate-pulse"></span>
-                        Kommer snart: Avfuktere og uttrekksvifter.
-                    </p>
-                </div>
+            <div class="bg-slate-950 border border-slate-700 rounded-sm overflow-hidden shadow-2xl">
+                <img src="/assets/utleie.vestby.varmovn 3.3kw.JPG" alt="Byggvarmer 3,3 kW til utleie" class="w-full h-[280px] md:h-[360px] object-cover">
             </div>
         </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto py-12 md:py-20 px-4">
+
+        <section class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start mb-16">
+            <div class="lg:col-span-2">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="h-10 w-2 bg-ebt-green"></div>
+                    <h2 class="text-3xl md:text-4xl font-black uppercase italic">Utstyr tilgjengelig for utleie</h2>
+                </div>
+
+                <p class="text-lg text-slate-300 leading-relaxed font-medium max-w-3xl">
+                    Her finner du utstyr som passer godt til tørking, oppvarming, luftflytting og sliping på byggeplass eller under oppussing. Alt utstyr er valgt for praktisk bruk og stabil drift.
+                </p>
+            </div>
+
+            <div class="bg-black text-white p-6 rounded-sm italic border-l-4 border-ebt-green shadow-xl">
+                Vi holder til i Vestby og tilbyr fleksible leieavtaler for både korte og lengre oppdrag.
+            </div>
+        </section>
+
+        <section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+
+            <!-- Giraffsliper -->
+            <article class="equipment-card bg-slate-950 overflow-hidden shadow-xl">
+                <img src="/assets/utleie.vestby.giraffsliper.jpg" alt="Bosch giraffsliper til utleie" class="equipment-image">
+                <div class="p-6">
+                    <div class="flex items-start justify-between gap-4 mb-4">
+                        <h3 class="text-xl font-black uppercase italic text-white">Giraffsliper</h3>
+                        <span class="spec-pill">Slip / puss</span>
+                    </div>
+
+                    <p class="text-slate-300 text-sm leading-relaxed mb-5">
+                        Praktisk langhalssliper for vegg og tak. God løsning for sparkling, pussing og jevning av flater før maling.
+                    </p>
+
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="spec-pill">Bosch</span>
+                        <span class="spec-pill">Tak og vegg</span>
+                        <span class="spec-pill">Proffutstyr</span>
+                    </div>
+
+                    <a href="kontakt.html" class="inline-block w-full text-center bg-ebt-green text-black font-black px-6 py-3 uppercase italic hover:bg-white transition">
+                        Spør om leie
+                    </a>
+                </div>
+            </article>
+
+            <!-- Lensepumpe -->
+            <article class="equipment-card bg-slate-950 overflow-hidden shadow-xl">
+                <img src="/assets/utleie.vestby.lensepumpe.JPG" alt="Lensepumpe til utleie" class="equipment-image">
+                <div class="p-6">
+                    <div class="flex items-start justify-between gap-4 mb-4">
+                        <h3 class="text-xl font-black uppercase italic text-white">Lensepumpe</h3>
+                        <span class="spec-pill">Vannhåndtering</span>
+                    </div>
+
+                    <p class="text-slate-300 text-sm leading-relaxed mb-5">
+                        Robust pumpe for tømming av vann i kjeller, byggegrop eller andre områder med behov for rask drenering.
+                    </p>
+
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="spec-pill">Byggstrøm</span>
+                        <span class="spec-pill">Effektiv</span>
+                        <span class="spec-pill">Klar for byggplass</span>
+                    </div>
+
+                    <a href="kontakt.html" class="inline-block w-full text-center bg-ebt-green text-black font-black px-6 py-3 uppercase italic hover:bg-white transition">
+                        Spør om leie
+                    </a>
+                </div>
+            </article>
+
+            <!-- Varmovn 2kW -->
+            <article class="equipment-card bg-slate-950 overflow-hidden shadow-xl">
+                <img src="/assets/utleie.vestby.varmovn 2 kw.JPG" alt="Byggvarmer 2 kW til utleie" class="equipment-image">
+                <div class="p-6">
+                    <div class="flex items-start justify-between gap-4 mb-4">
+                        <h3 class="text-xl font-black uppercase italic text-white">Byggvarmer 2 kW</h3>
+                        <span class="spec-pill">Oppvarming</span>
+                    </div>
+
+                    <p class="text-slate-300 text-sm leading-relaxed mb-5">
+                        Elektrisk varmeovn som passer godt til mindre rom, punktoppvarming og tørking ved lettere arbeider.
+                    </p>
+
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="spec-pill">2 kW</span>
+                        <span class="spec-pill">Justerbar effekt</span>
+                        <span class="spec-pill">Kompakt</span>
+                    </div>
+
+                    <a href="kontakt.html" class="inline-block w-full text-center bg-ebt-green text-black font-black px-6 py-3 uppercase italic hover:bg-white transition">
+                        Spør om leie
+                    </a>
+                </div>
+            </article>
+
+            <!-- Varmovn 3.3kW -->
+            <article class="equipment-card bg-slate-950 overflow-hidden shadow-xl">
+                <img src="/assets/utleie.vestby.varmovn 3.3kw.JPG" alt="Byggvarmer 3,3 kW til utleie" class="equipment-image">
+                <div class="p-6">
+                    <div class="flex items-start justify-between gap-4 mb-4">
+                        <h3 class="text-xl font-black uppercase italic text-white">Byggvarmer 3,3 kW</h3>
+                        <span class="spec-pill">Oppvarming</span>
+                    </div>
+
+                    <p class="text-slate-300 text-sm leading-relaxed mb-5">
+                        Kraftigere elektrisk byggvarmer for raskere oppvarming av arbeidsområder, tørk og kalde soner på byggeplass.
+                    </p>
+
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="spec-pill">3,3 kW</span>
+                        <span class="spec-pill">Trinnløs justering</span>
+                        <span class="spec-pill">Stabil drift</span>
+                    </div>
+
+                    <a href="kontakt.html" class="inline-block w-full text-center bg-ebt-green text-black font-black px-6 py-3 uppercase italic hover:bg-white transition">
+                        Spør om leie
+                    </a>
+                </div>
+            </article>
+
+            <!-- Ventilasjonsvifte -->
+            <article class="equipment-card bg-slate-950 overflow-hidden shadow-xl">
+                <img src="/assets/utleie.vestby.ventilasjonsvifte.JPG" alt="Ventilasjonsvifte til utleie" class="equipment-image">
+                <div class="p-6">
+                    <div class="flex items-start justify-between gap-4 mb-4">
+                        <h3 class="text-xl font-black uppercase italic text-white">Ventilasjonsvifte</h3>
+                        <span class="spec-pill">Luftflytting</span>
+                    </div>
+
+                    <p class="text-slate-300 text-sm leading-relaxed mb-5">
+                        Egnet for sirkulasjon av luft, tørkearbeid og ventilering av arbeidsområder ved bygg og rehabilitering.
+                    </p>
+
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="spec-pill">Typhoon blower</span>
+                        <span class="spec-pill">God luftstrøm</span>
+                        <span class="spec-pill">Bygg og tørk</span>
+                    </div>
+
+                    <a href="kontakt.html" class="inline-block w-full text-center bg-ebt-green text-black font-black px-6 py-3 uppercase italic hover:bg-white transition">
+                        Spør om leie
+                    </a>
+                </div>
+            </article>
+
+            <!-- Ekstra kontaktkort -->
+            <article class="equipment-card bg-black border-ebt-green overflow-hidden shadow-xl flex flex-col justify-between">
+                <div class="p-6 md:p-8">
+                    <div class="text-ebt-green text-3xl mb-4">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3 class="text-2xl font-black uppercase italic text-white mb-4">
+                        Trenger du noe annet?
+                    </h3>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                        Jeg har også tilgang på diverse mindre verktøy og utstyr. Ta kontakt, så finner vi en løsning som passer prosjektet ditt.
+                    </p>
+
+                    <ul class="space-y-3 text-sm text-slate-300">
+                        <li class="flex items-center gap-3">
+                            <span class="h-2 w-2 bg-ebt-green rounded-full"></span>
+                            Fleksibel leieperiode
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="h-2 w-2 bg-ebt-green rounded-full"></span>
+                            For privat og bedrift
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="h-2 w-2 bg-ebt-green rounded-full"></span>
+                            Henting etter avtale i Vestby
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="px-6 pb-6 md:px-8 md:pb-8">
+                    <a href="kontakt.html" class="inline-block w-full text-center bg-ebt-green text-black font-black px-6 py-3 uppercase italic hover:bg-white transition">
+                        Kontakt for forespørsel
+                    </a>
+                </div>
+            </article>
+        </section>
+
+        <section class="mt-16 bg-slate-950 border border-slate-800 p-8 md:p-10 shadow-xl">
+            <div class="grid md:grid-cols-2 gap-10 items-center">
+                <div>
+                    <h2 class="text-3xl font-black uppercase italic mb-4">Praktisk informasjon</h2>
+                    <p class="text-slate-300 leading-relaxed mb-4">
+                        Utstyret leies ut etter tilgjengelighet. For pris, varighet og reservasjon er det best å ta kontakt direkte.
+                    </p>
+                    <p class="text-slate-400 leading-relaxed">
+                        Oppgi gjerne hvilket utstyr du trenger, hvor lenge du ønsker å leie, og når du ønsker å hente det.
+                    </p>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="kontakt.html" class="inline-block bg-ebt-green text-black font-black px-8 py-4 uppercase italic hover:bg-white transition shadow-lg text-center">
+                        Send forespørsel
+                    </a>
+                    <a href="vilkar-utleie.html" class="inline-block bg-white text-black font-black px-8 py-4 uppercase italic hover:bg-ebt-green transition shadow-lg text-center">
+                        Les vilkår
+                    </a>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer class="bg-black text-slate-500 py-12 px-4 border-t-8 border-ebt-green text-center">
@@ -205,27 +372,23 @@
     <script>
         function acceptCookies() {
             localStorage.setItem('cookieChoice', 'accepted');
-
             gtag('consent', 'update', {
                 analytics_storage: 'granted',
                 ad_storage: 'denied',
                 ad_user_data: 'denied',
                 ad_personalization: 'denied'
             });
-
             document.getElementById('cookie-banner').classList.add('hidden');
         }
 
         function rejectCookies() {
             localStorage.setItem('cookieChoice', 'rejected');
-
             gtag('consent', 'update', {
                 analytics_storage: 'denied',
                 ad_storage: 'denied',
                 ad_user_data: 'denied',
                 ad_personalization: 'denied'
             });
-
             document.getElementById('cookie-banner').classList.add('hidden');
         }
 
