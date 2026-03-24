@@ -54,8 +54,6 @@
         .equipment-image {
             width: 100%;
             height: 260px;
-            object-fit: cover;
-            object-position: top;
             border-bottom: 1px solid #1e293b;
             background: #0f172a;
         }
@@ -64,7 +62,16 @@
             object-fit: contain;
             object-position: center;
             padding: 1rem;
-            background: #0f172a;
+        }
+
+        .equipment-image-center {
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .equipment-image-top {
+            object-fit: cover;
+            object-position: top;
         }
 
         .spec-pill {
@@ -84,6 +91,40 @@
             border: 1px solid #1e293b;
             background: rgba(15, 23, 42, 0.75);
             backdrop-filter: blur(6px);
+        }
+
+        .detail-box {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #1e293b;
+        }
+
+        .detail-title {
+            font-size: 0.75rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            font-style: italic;
+            letter-spacing: 0.08em;
+            color: #00E676;
+            margin-bottom: 0.75rem;
+        }
+
+        .detail-text {
+            font-size: 0.875rem;
+            line-height: 1.65;
+            color: #cbd5e1;
+        }
+
+        .detail-list {
+            margin-top: 0.75rem;
+            display: grid;
+            gap: 0.35rem;
+            font-size: 0.8rem;
+            color: #94a3b8;
+        }
+
+        .detail-list strong {
+            color: #e2e8f0;
         }
     </style>
 </head>
@@ -183,6 +224,7 @@
 
         <section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
 
+            <!-- Giraffsliper -->
             <article class="equipment-card bg-slate-950 overflow-hidden shadow-xl">
                 <img src="/assets/utleie.vestby.giraffsliper.jpg" alt="Bosch giraffsliper til utleie" class="equipment-image equipment-image-contain">
                 <div class="p-6">
@@ -195,20 +237,36 @@
                         Praktisk langhalssliper for vegg og tak. God løsning for sparkling, pussing og jevning av flater før maling.
                     </p>
 
-                    <div class="flex flex-wrap gap-2 mb-6">
+                    <div class="flex flex-wrap gap-2 mb-4">
                         <span class="spec-pill">Bosch</span>
                         <span class="spec-pill">Tak og vegg</span>
                         <span class="spec-pill">Proffutstyr</span>
                     </div>
 
-                    <a href="kontakt.html" class="inline-block w-full text-center bg-ebt-green text-black font-black px-6 py-3 uppercase italic hover:bg-white transition">
+                    <div class="detail-box">
+                        <h4 class="detail-title">Detaljer</h4>
+                        <p class="detail-text">
+                            Giraffsliperen er egnet for sliping av gipsvegger og tak, og har funksjoner som gjør arbeidet lettere ved både sparkling, pussing og overflatebehandling.
+                        </p>
+                        <div class="detail-list">
+                            <p><strong>Effekt:</strong> 550 W</p>
+                            <p><strong>Slipeskive:</strong> 215 mm</p>
+                            <p><strong>Slipeskivepapir:</strong> 225 mm</p>
+                            <p><strong>Hastighet:</strong> 340–910 o/min</p>
+                            <p><strong>Vekt:</strong> 4,8 kg</p>
+                            <p><strong>Inkludert:</strong> koffert, sandpapir, myk skive og kabelklemmer</p>
+                        </div>
+                    </div>
+
+                    <a href="kontakt.html" class="inline-block w-full text-center bg-ebt-green text-black font-black px-6 py-3 uppercase italic hover:bg-white transition mt-6">
                         Spør om leie
                     </a>
                 </div>
             </article>
 
+            <!-- Lensepumpe -->
             <article class="equipment-card bg-slate-950 overflow-hidden shadow-xl">
-                <img src="/assets/utleie.vestby.lensepumpe.JPG" alt="Lensepumpe til utleie" class="equipment-image">
+                <img src="/assets/utleie.vestby.lensepumpe.JPG" alt="Lensepumpe til utleie" class="equipment-image equipment-image-center">
                 <div class="p-6">
                     <div class="flex items-start justify-between gap-4 mb-4">
                         <h3 class="text-xl font-black uppercase italic text-white">Lensepumpe</h3>
@@ -219,20 +277,36 @@
                         Robust pumpe for tømming av vann i kjeller, byggegrop eller andre områder med behov for rask drenering.
                     </p>
 
-                    <div class="flex flex-wrap gap-2 mb-6">
-                        <span class="spec-pill">Byggstrøm</span>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="spec-pill">Vanflytting</span>
                         <span class="spec-pill">Effektiv</span>
                         <span class="spec-pill">Klar for byggplass</span>
                     </div>
 
-                    <a href="kontakt.html" class="inline-block w-full text-center bg-ebt-green text-black font-black px-6 py-3 uppercase italic hover:bg-white transition">
+                    <div class="detail-box">
+                        <h4 class="detail-title">Teknisk info</h4>
+                        <p class="detail-text">
+                            Kraftig lensepumpe for effektiv tømming av vann på byggeplass, i kjeller eller andre områder der vann må fjernes raskt.
+                        </p>
+                        <div class="detail-list">
+                            <p><strong>Effekt:</strong> 500 W</p>
+                            <p><strong>Spenning:</strong> 230V / 50Hz</p>
+                            <p><strong>Kapasitet:</strong> opptil 210 l/min</p>
+                            <p><strong>Løftehøyde:</strong> opptil 12 m</p>
+                            <p><strong>Utløpsdiameter:</strong> 50 mm</p>
+                            <p><strong>Vekt:</strong> ca. 12,5 kg</p>
+                        </div>
+                    </div>
+
+                    <a href="kontakt.html" class="inline-block w-full text-center bg-ebt-green text-black font-black px-6 py-3 uppercase italic hover:bg-white transition mt-6">
                         Spør om leie
                     </a>
                 </div>
             </article>
 
+            <!-- Varmovn 2kW -->
             <article class="equipment-card bg-slate-950 overflow-hidden shadow-xl">
-                <img src="/assets/utleie.vestby.varmovn 2 kw.JPG" alt="Byggvarmer 2 kW til utleie" class="equipment-image">
+                <img src="/assets/utleie.vestby.varmovn 2 kw.JPG" alt="Byggvarmer 2 kW til utleie" class="equipment-image equipment-image-top">
                 <div class="p-6">
                     <div class="flex items-start justify-between gap-4 mb-4">
                         <h3 class="text-xl font-black uppercase italic text-white">Byggvarmer 2 kW</h3>
@@ -243,20 +317,33 @@
                         Elektrisk varmeovn som passer godt til mindre rom, punktoppvarming og tørking ved lettere arbeider.
                     </p>
 
-                    <div class="flex flex-wrap gap-2 mb-6">
+                    <div class="flex flex-wrap gap-2 mb-4">
                         <span class="spec-pill">2 kW</span>
                         <span class="spec-pill">Justerbar effekt</span>
                         <span class="spec-pill">Kompakt</span>
                     </div>
 
-                    <a href="kontakt.html" class="inline-block w-full text-center bg-ebt-green text-black font-black px-6 py-3 uppercase italic hover:bg-white transition">
+                    <div class="detail-box">
+                        <h4 class="detail-title">Bruksområde</h4>
+                        <p class="detail-text">
+                            Egnet for mindre rom, tørking og generell oppvarming på byggeplass eller ved oppussing. En praktisk løsning når du trenger rask og enkel varme.
+                        </p>
+                        <div class="detail-list">
+                            <p><strong>Effekt:</strong> 2 kW</p>
+                            <p><strong>Bruk:</strong> punktoppvarming og tørk</p>
+                            <p><strong>Fordel:</strong> kompakt og enkel å flytte</p>
+                        </div>
+                    </div>
+
+                    <a href="kontakt.html" class="inline-block w-full text-center bg-ebt-green text-black font-black px-6 py-3 uppercase italic hover:bg-white transition mt-6">
                         Spør om leie
                     </a>
                 </div>
             </article>
 
+            <!-- Varmovn 3.3kW -->
             <article class="equipment-card bg-slate-950 overflow-hidden shadow-xl">
-                <img src="/assets/utleie.vestby.varmovn 3.3kw.JPG" alt="Byggvarmer 3,3 kW til utleie" class="equipment-image">
+                <img src="/assets/utleie.vestby.varmovn 3.3kw.JPG" alt="Byggvarmer 3,3 kW til utleie" class="equipment-image equipment-image-top">
                 <div class="p-6">
                     <div class="flex items-start justify-between gap-4 mb-4">
                         <h3 class="text-xl font-black uppercase italic text-white">Byggvarmer 3,3 kW</h3>
@@ -267,20 +354,33 @@
                         Kraftigere elektrisk byggvarmer for raskere oppvarming av arbeidsområder, tørk og kalde soner på byggeplass.
                     </p>
 
-                    <div class="flex flex-wrap gap-2 mb-6">
+                    <div class="flex flex-wrap gap-2 mb-4">
                         <span class="spec-pill">3,3 kW</span>
                         <span class="spec-pill">Trinnløs justering</span>
                         <span class="spec-pill">Stabil drift</span>
                     </div>
 
-                    <a href="kontakt.html" class="inline-block w-full text-center bg-ebt-green text-black font-black px-6 py-3 uppercase italic hover:bg-white transition">
+                    <div class="detail-box">
+                        <h4 class="detail-title">Bruksområde</h4>
+                        <p class="detail-text">
+                            Passer godt når du trenger mer varmeeffekt på byggeplass, i garasje, nybygg eller ved tørking i kjøligere perioder.
+                        </p>
+                        <div class="detail-list">
+                            <p><strong>Effekt:</strong> 3,3 kW</p>
+                            <p><strong>Bruk:</strong> oppvarming og byggtørk</p>
+                            <p><strong>Fordel:</strong> høyere kapasitet og jevn varme</p>
+                        </div>
+                    </div>
+
+                    <a href="kontakt.html" class="inline-block w-full text-center bg-ebt-green text-black font-black px-6 py-3 uppercase italic hover:bg-white transition mt-6">
                         Spør om leie
                     </a>
                 </div>
             </article>
 
+            <!-- Ventilasjonsvifte -->
             <article class="equipment-card bg-slate-950 overflow-hidden shadow-xl">
-                <img src="/assets/utleie.vestby.ventilasjonsvifte.JPG" alt="Ventilasjonsvifte til utleie" class="equipment-image">
+                <img src="/assets/utleie.vestby.ventilasjonsvifte.JPG" alt="Ventilasjonsvifte til utleie" class="equipment-image equipment-image-center">
                 <div class="p-6">
                     <div class="flex items-start justify-between gap-4 mb-4">
                         <h3 class="text-xl font-black uppercase italic text-white">Ventilasjonsvifte</h3>
@@ -291,18 +391,31 @@
                         Egnet for sirkulasjon av luft, tørkearbeid og ventilering av arbeidsområder ved bygg og rehabilitering.
                     </p>
 
-                    <div class="flex flex-wrap gap-2 mb-6">
+                    <div class="flex flex-wrap gap-2 mb-4">
                         <span class="spec-pill">Typhoon blower</span>
                         <span class="spec-pill">God luftstrøm</span>
                         <span class="spec-pill">Bygg og tørk</span>
                     </div>
 
-                    <a href="kontakt.html" class="inline-block w-full text-center bg-ebt-green text-black font-black px-6 py-3 uppercase italic hover:bg-white transition">
+                    <div class="detail-box">
+                        <h4 class="detail-title">Bruksområde</h4>
+                        <p class="detail-text">
+                            Ventilasjonsviften brukes til luftflytting, ventilering og raskere tørk i rom, kjellere og bygg under arbeid.
+                        </p>
+                        <div class="detail-list">
+                            <p><strong>Bruk:</strong> ventilasjon, tørk og sirkulasjon</p>
+                            <p><strong>Fordel:</strong> enkel å plassere og flytte</p>
+                            <p><strong>Passer for:</strong> bygg, rehabilitering og oppussing</p>
+                        </div>
+                    </div>
+
+                    <a href="kontakt.html" class="inline-block w-full text-center bg-ebt-green text-black font-black px-6 py-3 uppercase italic hover:bg-white transition mt-6">
                         Spør om leie
                     </a>
                 </div>
             </article>
 
+            <!-- Kontaktkort -->
             <article class="equipment-card bg-black border-ebt-green overflow-hidden shadow-xl flex flex-col justify-between">
                 <div class="p-6 md:p-8">
                     <div class="text-ebt-green text-3xl mb-4">
