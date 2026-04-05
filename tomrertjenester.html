@@ -23,10 +23,60 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tømrer | Edvardsen Byggtjenester</title>
+
+    <title>Tømrertjenester i Vestby | Edvardsen Byggtjenester</title>
+    <meta name="description" content="Tømrertjenester i Vestby og omegn. Terrasser, tilbygg, rehabilitering, kledning og innvendig arbeid. Mester i byggfag. Ring 900 56 314 for befaring.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://edvardsenbyggtjenester.no/tomrertjenester.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="nb_NO">
+    <meta property="og:title" content="Tømrertjenester i Vestby | Edvardsen Byggtjenester">
+    <meta property="og:description" content="Terrasser, tilbygg, rehabilitering og innvendig tømrerarbeid i Vestby og omegn. Mester i byggfag med lang erfaring.">
+    <meta property="og:url" content="https://edvardsenbyggtjenester.no/tomrertjenester.html">
+    <meta property="og:site_name" content="Edvardsen Byggtjenester">
+    <meta property="og:image" content="https://edvardsenbyggtjenester.no/assets/logo.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tømrertjenester i Vestby | Edvardsen Byggtjenester">
+    <meta name="twitter:description" content="Terrasser, tilbygg, rehabilitering og innvendig tømrerarbeid i Vestby og omegn.">
+    <meta name="twitter:image" content="https://edvardsenbyggtjenester.no/assets/logo.png">
+
+    <link rel="icon" type="image/png" href="/assets/logo.png">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Edvardsen Byggtjenester",
+      "url": "https://edvardsenbyggtjenester.no/",
+      "image": "https://edvardsenbyggtjenester.no/assets/logo.png",
+      "telephone": "+4790056314",
+      "email": "kim.ebt@outlook.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Karen Bachs vei 23",
+        "postalCode": "1542",
+        "addressLocality": "Vestby",
+        "addressCountry": "NO"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Vestby" },
+        { "@type": "City", "name": "Moss" },
+        { "@type": "City", "name": "Ski" },
+        { "@type": "City", "name": "Ås" },
+        { "@type": "AdministrativeArea", "name": "Akershus" }
+      ],
+      "description": "Tømrertjenester i Vestby og omegn. Terrasser, tilbygg, rehabilitering og innvendig arbeid. Mester i byggfag."
+    }
+    </script>
 
     <style>
         body { font-family: 'Inter', sans-serif; }
@@ -90,7 +140,7 @@
             
             <div class="flex items-center gap-2">
                 <a href="index.html" class="flex items-center">
-                    <img src="/assets/logo.png" alt="EBT Logo" class="h-8 sm:h-10 md:h-12 w-auto">
+                    <img src="/assets/logo.png" alt="Edvardsen Byggtjenester logo" class="h-8 sm:h-10 md:h-12 w-auto">
                     <span class="text-white font-black uppercase italic hidden xl:block text-sm ml-3">
                         Edvardsen <span class="text-ebt-green underline">Byggtjenester</span>
                     </span>
@@ -101,7 +151,7 @@
             </div>
 
             <div class="flex space-x-2 sm:space-x-4 md:space-x-6 font-bold text-slate-200 text-[9px] sm:text-xs md:text-sm uppercase italic items-center">
-                <a href="tomrertjenester.html" class="text-ebt-green underline py-1">Tømrer</a>
+                <a href="tomrertjenester.html" class="text-ebt-green underline py-1" aria-current="page">Tømrer</a>
                 <a href="grunnarbeid.html" class="hover:text-ebt-green transition py-1 whitespace-nowrap">Grunnarbeid</a>
                 <a href="utleie.html" class="hover:text-ebt-green transition py-1">Utleie</a>
                 <a href="om-oss.html" class="hover:text-ebt-green transition py-1 whitespace-nowrap">Om oss</a>
@@ -112,17 +162,34 @@
 
     <header class="hero-dark text-white py-12 md:py-20 px-6 border-b-8 border-ebt-green">
         <div class="max-w-7xl mx-auto">
+            <p class="text-sm uppercase tracking-[0.25em] text-slate-400 font-bold italic mb-4">
+                Tømrer i Vestby og omegn
+            </p>
             <h1 class="text-[32px] sm:text-4xl md:text-6xl font-black uppercase italic leading-tight text-ebt-green pr-4 md:pr-10">
                 Tømrertjenester
             </h1>
             <p class="text-xs sm:text-sm md:text-2xl text-slate-300 font-bold uppercase italic tracking-widest mt-2 pr-4 md:pr-10">
                 Solid håndverk fra din lokale tømrermester
             </p>
+
+            <div class="mt-8 flex flex-col sm:flex-row gap-4">
+                <a href="tel:90056314" class="inline-flex items-center justify-center gap-3 bg-ebt-green text-black font-black px-8 py-4 uppercase italic hover:bg-white transition shadow-lg">
+                    <i class="fas fa-phone-alt"></i> Ring 900 56 314
+                </a>
+                <a href="kontakt.html" class="inline-block border-2 border-white text-white font-black px-8 py-4 uppercase italic hover:bg-white hover:text-black transition shadow-lg text-center">
+                    Be om befaring
+                </a>
+            </div>
+
+            <p class="mt-4 text-xs text-slate-500 italic">
+                Tips: Send gjerne bilde av jobben på SMS, så kan jeg gi raskere tilbakemelding.
+            </p>
         </div>
     </header>
 
     <main class="max-w-7xl mx-auto py-12 md:py-20 px-4 space-y-24">
 
+        <!-- Terrasser -->
         <section>
             <div class="flex items-center gap-4 mb-8">
                 <div class="h-10 w-2 bg-ebt-green shadow-[0_0_10px_rgba(0,230,118,0.5)]"></div>
@@ -153,16 +220,17 @@
                 <div class="grid grid-cols-2 gap-4">
                     <div class="img-container aspect-square rounded-sm shadow-2xl">
                         <div class="img-placeholder">Konstruksjon av bæring</div>
-                        <img src="Terrasse_vestby_1.jpg" alt="Terrasse arbeid under utførelse" onerror="this.style.display='none'">
+                        <img src="Terrasse_vestby_1.jpg" alt="Terrasse arbeid under utførelse i Vestby" onerror="this.style.display='none'">
                     </div>
                     <div class="img-container aspect-square rounded-sm shadow-2xl">
                         <div class="img-placeholder">Ferdigstilt terrasse</div>
-                        <img src="Trapp_vestby_2.jpg" alt="Ferdigstilt terrasse med pen finish" onerror="this.style.display='none'">
+                        <img src="Trapp_vestby_2.jpg" alt="Ferdigstilt terrasse med trapp i Vestby" onerror="this.style.display='none'">
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Rehabilitering -->
         <section>
             <div class="flex items-center gap-4 mb-8">
                 <div class="h-10 w-2 bg-white"></div>
@@ -179,7 +247,7 @@
                     </div>
                     <div class="img-container aspect-square rounded-sm shadow-2xl">
                         <div class="img-placeholder">Etter rehabilitering</div>
-                        <img src="tomrer_vestby_slutt_2.jpg" alt="Fasade etter bytte av kledning" onerror="this.style.display='none'">
+                        <img src="tomrer_vestby_slutt_2.jpg" alt="Fasade etter bytte av kledning i Vestby" onerror="this.style.display='none'">
                     </div>
                 </div>
 
@@ -203,17 +271,80 @@
             </div>
         </section>
 
-        <div class="bg-slate-950 p-10 text-center rounded-sm border-b-8 border-ebt-green shadow-2xl relative overflow-hidden group mt-10">
+        <!-- Innvendig arbeid – ny seksjon -->
+        <section>
+            <div class="flex items-center gap-4 mb-8">
+                <div class="h-10 w-2 bg-ebt-green shadow-[0_0_10px_rgba(0,230,118,0.5)]"></div>
+                <h2 class="text-2xl md:text-4xl font-black uppercase italic text-white underline decoration-ebt-green decoration-4 underline-offset-8">
+                    Innvendig arbeid
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <p class="text-xl text-slate-100 font-bold italic">Fra gulv til tak – ryddig og gjennomtenkt.</p>
+                    <p class="text-lg text-slate-300 leading-relaxed italic">
+                        Enten du skal pusse opp et rom, bygge nye vegger, bytte gulv eller ha nytt listverk – jeg tar på meg innvendige tømrerjobber av alle størrelser med fokus på detaljer og finish.
+                    </p>
+
+                    <div class="grid grid-cols-1 gap-3 pt-4">
+                        <div class="flex items-center gap-3 bg-slate-950 p-3 border-l-4 border-ebt-green">
+                            <i class="fas fa-layer-group text-ebt-green"></i>
+                            <span class="font-black uppercase italic text-xs tracking-wider">Gulv, vegger og tak</span>
+                        </div>
+                        <div class="flex items-center gap-3 bg-slate-950 p-3 border-l-4 border-white">
+                            <i class="fas fa-ruler-combined text-white"></i>
+                            <span class="font-black uppercase italic text-xs tracking-wider">Listverk og finish</span>
+                        </div>
+                        <div class="flex items-center gap-3 bg-slate-950 p-3 border-l-4 border-ebt-green">
+                            <i class="fas fa-th-large text-ebt-green"></i>
+                            <span class="font-black uppercase italic text-xs tracking-wider">Skillevegger og ombygging</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="img-container aspect-square rounded-sm shadow-2xl">
+                        <div class="img-placeholder">Innvendig tømrerarbeid</div>
+                        <img src="tomrer_vestby_slutt_2.jpg" alt="Innvendig tømrerarbeid og oppussing i Vestby" onerror="this.style.display='none'">
+                    </div>
+                    <div class="img-container aspect-square rounded-sm shadow-2xl">
+                        <div class="img-placeholder">Ferdigstilt rom</div>
+                        <img src="tomrer_for_1.jpg" alt="Ferdigstilt rom etter tømrerarbeid" onerror="this.style.display='none'">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lokal SEO-tekst -->
+        <section class="bg-black border border-slate-800 p-8 md:p-10 shadow-xl">
+            <div class="max-w-4xl">
+                <h2 class="text-2xl md:text-3xl font-black uppercase italic mb-4">Tømrer i Vestby og omegn</h2>
+                <p class="text-slate-300 leading-relaxed">
+                    Edvardsen Byggtjenester utfører tømrertjenester i Vestby, Moss, Ski, Ås og hele Follo-regionen.
+                    Som utdannet tømrermester tar jeg på meg alt fra terrasser og tilbygg til rehabilitering og innvendig arbeid –
+                    for både private og næringskunder. Ring for en uforpliktende befaring.
+                </p>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <div class="bg-slate-950 p-10 text-center rounded-sm border-b-8 border-ebt-green shadow-2xl relative overflow-hidden group">
             <div class="absolute inset-0 bg-ebt-green opacity-5 group-hover:opacity-10 transition-opacity"></div>
-            <h3 class="text-white text-2xl md:text-3xl font-black uppercase italic mb-8 relative z-10">
+            <h3 class="text-white text-2xl md:text-3xl font-black uppercase italic mb-4 relative z-10">
                 Planlegger du et byggeprosjekt?
             </h3>
             <p class="text-slate-400 mb-8 italic relative z-10">
                 Ta kontakt for en uforpliktende prat om ditt tømrerbehov.
             </p>
-            <a href="tel:90056314" class="inline-block bg-ebt-green text-black font-black px-12 py-5 rounded-sm uppercase italic text-xl hover:bg-white transition w-full sm:w-auto shadow-lg relative z-10">
-                <i class="fas fa-phone-alt mr-2"></i> Ring 900 56 314
-            </a>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 relative z-10">
+                <a href="tel:90056314" class="inline-block bg-ebt-green text-black font-black px-12 py-5 rounded-sm uppercase italic text-xl hover:bg-white transition shadow-lg">
+                    <i class="fas fa-phone-alt mr-2"></i> Ring 900 56 314
+                </a>
+                <a href="kontakt.html" class="inline-block bg-white text-black font-black px-12 py-5 rounded-sm uppercase italic text-xl hover:bg-ebt-green transition shadow-lg">
+                    Send forespørsel
+                </a>
+            </div>
         </div>
 
     </main>
@@ -232,7 +363,7 @@
                 <a href="cookies.html" class="text-[10px] text-slate-400 hover:text-white underline transition">Cookies</a>
                 <a href="vilkar-utleie.html" class="text-[10px] text-slate-400 hover:text-white underline transition">Vilkår utleie</a>
             </div>
-            <p class="mt-4 text-[10px] opacity-50 text-slate-400">© 2026 Edvardsen Byggtjenester. Designet for profesjonelle resultater.</p>
+            <p class="mt-4 text-[10px] opacity-50 text-slate-400">© 2026 Edvardsen Byggtjenester</p>
         </div>
     </footer>
 
@@ -249,7 +380,6 @@
                 <button onclick="rejectCookies()" class="bg-slate-700 text-white px-6 py-2 font-black uppercase italic text-sm rounded shadow-lg hover:bg-slate-600 transition">
                     Avslå
                 </button>
-
                 <button onclick="acceptCookies()" class="bg-green-500 text-black px-6 py-2 font-black uppercase italic text-sm rounded shadow-lg hover:bg-white transition">
                     Godta
                 </button>
@@ -257,30 +387,31 @@
         </div>
     </div>
 
+    <!-- Mobil ring-knapp -->
+    <a href="tel:90056314" class="sm:hidden fixed bottom-5 right-5 bg-ebt-green text-black font-black uppercase italic px-5 py-3 rounded-full shadow-2xl flex items-center gap-2 z-50">
+        <i class="fa-solid fa-phone"></i> Ring
+    </a>
+
     <script>
         function acceptCookies() {
             localStorage.setItem('cookieChoice', 'accepted');
-
             gtag('consent', 'update', {
                 analytics_storage: 'granted',
                 ad_storage: 'denied',
                 ad_user_data: 'denied',
                 ad_personalization: 'denied'
             });
-
             document.getElementById('cookie-banner').classList.add('hidden');
         }
 
         function rejectCookies() {
             localStorage.setItem('cookieChoice', 'rejected');
-
             gtag('consent', 'update', {
                 analytics_storage: 'denied',
                 ad_storage: 'denied',
                 ad_user_data: 'denied',
                 ad_personalization: 'denied'
             });
-
             document.getElementById('cookie-banner').classList.add('hidden');
         }
 
