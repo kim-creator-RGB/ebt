@@ -46,7 +46,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">
 
-    <!-- Structured data -->
+    <!-- Structured data – rettet telefonnummer -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -54,7 +54,7 @@
       "name": "Edvardsen Byggtjenester",
       "url": "https://edvardsenbyggtjenester.no/",
       "image": "https://edvardsenbyggtjenester.no/assets/logo.png",
-      "telephone": "+47XXXXXXXX",
+      "telephone": "+4790056314",
       "email": "kim.ebt@outlook.com",
       "address": {
         "@type": "PostalAddress",
@@ -187,7 +187,40 @@
             font-weight: 900;
             font-style: italic;
             text-transform: uppercase;
+            margin-bottom: 0.4rem;
+        }
+
+        .price-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.4rem;
             margin-bottom: 0.85rem;
+        }
+
+        .price-box {
+            background: #0f172a;
+            border: 1px solid #1e293b;
+            border-radius: 4px;
+            padding: 0.4rem 0.3rem;
+            text-align: center;
+        }
+
+        .price-box-label {
+            font-size: 0.6rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: #64748b;
+            display: block;
+        }
+
+        .price-box-amount {
+            font-size: 0.78rem;
+            font-weight: 900;
+            font-style: italic;
+            color: #00E676;
+            display: block;
+            margin-top: 0.15rem;
         }
 
         .price-subline {
@@ -238,14 +271,22 @@
                     Praktisk og driftssikkert utstyr for bygg, rehabilitering og oppussing. Her kan du leie varmeovner, ventilasjonsvifte, lensepumpe og giraffsliper til både små og større prosjekter.
                 </p>
 
+                <!-- Kontaktknapper synlig i hero -->
                 <div class="pt-8 flex flex-col sm:flex-row gap-4">
-                    <a href="kontakt.html" class="inline-block bg-ebt-green text-black font-black px-8 py-4 uppercase italic hover:bg-white transition shadow-lg text-center">
-                        Sjekk tilgjengelighet
+                    <a href="tel:90056314" class="inline-flex items-center justify-center gap-3 bg-ebt-green text-black font-black px-8 py-4 uppercase italic hover:bg-white transition shadow-lg">
+                        <i class="fas fa-phone-alt"></i> Ring 900 56 314
                     </a>
-                    <a href="vilkar-utleie.html" class="inline-block border-2 border-white text-white font-black px-8 py-4 uppercase italic hover:bg-white hover:text-black transition shadow-lg text-center">
+                    <a href="kontakt.html" class="inline-block border-2 border-white text-white font-black px-8 py-4 uppercase italic hover:bg-white hover:text-black transition shadow-lg text-center">
+                        Send forespørsel
+                    </a>
+                    <a href="vilkar-utleie.html" class="inline-block border-2 border-slate-600 text-slate-400 font-black px-8 py-4 uppercase italic hover:border-white hover:text-white transition shadow-lg text-center">
                         Se vilkår
                     </a>
                 </div>
+
+                <p class="mt-4 text-xs text-slate-500 italic">
+                    Tips: Send gjerne bilde/beskrivelse på SMS, så svarer jeg raskt på hva som passer.
+                </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-10">
@@ -304,9 +345,21 @@
                     </div>
 
                     <p class="price-line">Fra 249 kr / døgn</p>
-                    <p class="price-subline">
-                        Pakkepris ved leie av flere produkter • Helg og langtidsleie etter avtale
-                    </p>
+                    <div class="price-grid">
+                        <div class="price-box">
+                            <span class="price-box-label">Dag</span>
+                            <span class="price-box-amount">249 kr</span>
+                        </div>
+                        <div class="price-box">
+                            <span class="price-box-label">Helg</span>
+                            <span class="price-box-amount">399 kr</span>
+                        </div>
+                        <div class="price-box">
+                            <span class="price-box-label">Uke</span>
+                            <span class="price-box-amount">990 kr</span>
+                        </div>
+                    </div>
+                    <p class="price-subline">Pakkepris ved leie av flere produkter</p>
 
                     <p class="text-slate-300 text-sm leading-relaxed mb-5">
                         Praktisk langhalssliper for vegg og tak. God løsning for sparkling, pussing og jevning av flater før maling.
@@ -333,8 +386,8 @@
                         </div>
                     </div>
 
-                    <a href="kontakt.html" class="inline-block w-full text-center bg-ebt-green text-black font-black px-6 py-3 uppercase italic hover:bg-white transition mt-6">
-                        Spør om leie
+                    <a href="tel:90056314" class="inline-flex items-center justify-center gap-2 w-full text-center bg-ebt-green text-black font-black px-6 py-3 uppercase italic hover:bg-white transition mt-6">
+                        <i class="fas fa-phone-alt text-sm"></i> Ring for å booke
                     </a>
                 </div>
             </article>
@@ -349,9 +402,21 @@
                     </div>
 
                     <p class="price-line">Fra 299 kr / døgn</p>
-                    <p class="price-subline">
-                        Pakkepris ved leie av flere produkter • Helg og langtidsleie etter avtale
-                    </p>
+                    <div class="price-grid">
+                        <div class="price-box">
+                            <span class="price-box-label">Dag</span>
+                            <span class="price-box-amount">299 kr</span>
+                        </div>
+                        <div class="price-box">
+                            <span class="price-box-label">Helg</span>
+                            <span class="price-box-amount">499 kr</span>
+                        </div>
+                        <div class="price-box">
+                            <span class="price-box-label">Uke</span>
+                            <span class="price-box-amount">1190 kr</span>
+                        </div>
+                    </div>
+                    <p class="price-subline">Pakkepris ved leie av flere produkter</p>
 
                     <p class="text-slate-300 text-sm leading-relaxed mb-5">
                         Robust pumpe for tømming av vann i kjeller, byggegrop eller andre områder med behov for rask drenering.
@@ -379,8 +444,8 @@
                         </div>
                     </div>
 
-                    <a href="kontakt.html" class="inline-block w-full text-center bg-ebt-green text-black font-black px-6 py-3 uppercase italic hover:bg-white transition mt-6">
-                        Spør om leie
+                    <a href="tel:90056314" class="inline-flex items-center justify-center gap-2 w-full text-center bg-ebt-green text-black font-black px-6 py-3 uppercase italic hover:bg-white transition mt-6">
+                        <i class="fas fa-phone-alt text-sm"></i> Ring for å booke
                     </a>
                 </div>
             </article>
@@ -395,9 +460,21 @@
                     </div>
 
                     <p class="price-line">Fra 99 kr / døgn</p>
-                    <p class="price-subline">
-                        Pakkepris ved leie av flere produkter • Helg og langtidsleie etter avtale
-                    </p>
+                    <div class="price-grid">
+                        <div class="price-box">
+                            <span class="price-box-label">Dag</span>
+                            <span class="price-box-amount">99 kr</span>
+                        </div>
+                        <div class="price-box">
+                            <span class="price-box-label">Helg</span>
+                            <span class="price-box-amount">199 kr</span>
+                        </div>
+                        <div class="price-box">
+                            <span class="price-box-label">Uke</span>
+                            <span class="price-box-amount">449 kr</span>
+                        </div>
+                    </div>
+                    <p class="price-subline">Pakkepris ved leie av flere produkter</p>
 
                     <p class="text-slate-300 text-sm leading-relaxed mb-5">
                         Elektrisk varmeovn som passer godt til mindre rom, punktoppvarming og tørking ved lettere arbeider.
@@ -421,8 +498,8 @@
                         </div>
                     </div>
 
-                    <a href="kontakt.html" class="inline-block w-full text-center bg-ebt-green text-black font-black px-6 py-3 uppercase italic hover:bg-white transition mt-6">
-                        Spør om leie
+                    <a href="tel:90056314" class="inline-flex items-center justify-center gap-2 w-full text-center bg-ebt-green text-black font-black px-6 py-3 uppercase italic hover:bg-white transition mt-6">
+                        <i class="fas fa-phone-alt text-sm"></i> Ring for å booke
                     </a>
                 </div>
             </article>
@@ -437,9 +514,21 @@
                     </div>
 
                     <p class="price-line">Fra 139 kr / døgn</p>
-                    <p class="price-subline">
-                        Pakkepris ved leie av flere produkter • Helg og langtidsleie etter avtale
-                    </p>
+                    <div class="price-grid">
+                        <div class="price-box">
+                            <span class="price-box-label">Dag</span>
+                            <span class="price-box-amount">139 kr</span>
+                        </div>
+                        <div class="price-box">
+                            <span class="price-box-label">Helg</span>
+                            <span class="price-box-amount">249 kr</span>
+                        </div>
+                        <div class="price-box">
+                            <span class="price-box-label">Uke</span>
+                            <span class="price-box-amount">599 kr</span>
+                        </div>
+                    </div>
+                    <p class="price-subline">Pakkepris ved leie av flere produkter</p>
 
                     <p class="text-slate-300 text-sm leading-relaxed mb-5">
                         Kraftigere elektrisk byggvarmer for raskere oppvarming av arbeidsområder, tørk og kalde soner på byggeplass.
@@ -463,8 +552,8 @@
                         </div>
                     </div>
 
-                    <a href="kontakt.html" class="inline-block w-full text-center bg-ebt-green text-black font-black px-6 py-3 uppercase italic hover:bg-white transition mt-6">
-                        Spør om leie
+                    <a href="tel:90056314" class="inline-flex items-center justify-center gap-2 w-full text-center bg-ebt-green text-black font-black px-6 py-3 uppercase italic hover:bg-white transition mt-6">
+                        <i class="fas fa-phone-alt text-sm"></i> Ring for å booke
                     </a>
                 </div>
             </article>
@@ -479,9 +568,21 @@
                     </div>
 
                     <p class="price-line">Fra 199 kr / døgn</p>
-                    <p class="price-subline">
-                        Pakkepris ved leie av flere produkter • Helg og langtidsleie etter avtale
-                    </p>
+                    <div class="price-grid">
+                        <div class="price-box">
+                            <span class="price-box-label">Dag</span>
+                            <span class="price-box-amount">199 kr</span>
+                        </div>
+                        <div class="price-box">
+                            <span class="price-box-label">Helg</span>
+                            <span class="price-box-amount">329 kr</span>
+                        </div>
+                        <div class="price-box">
+                            <span class="price-box-label">Uke</span>
+                            <span class="price-box-amount">799 kr</span>
+                        </div>
+                    </div>
+                    <p class="price-subline">Pakkepris ved leie av flere produkter</p>
 
                     <p class="text-slate-300 text-sm leading-relaxed mb-5">
                         Egnet for sirkulasjon av luft, tørkearbeid og ventilering av arbeidsområder ved bygg og rehabilitering.
@@ -506,8 +607,8 @@
                         </div>
                     </div>
 
-                    <a href="kontakt.html" class="inline-block w-full text-center bg-ebt-green text-black font-black px-6 py-3 uppercase italic hover:bg-white transition mt-6">
-                        Spør om leie
+                    <a href="tel:90056314" class="inline-flex items-center justify-center gap-2 w-full text-center bg-ebt-green text-black font-black px-6 py-3 uppercase italic hover:bg-white transition mt-6">
+                        <i class="fas fa-phone-alt text-sm"></i> Ring for å booke
                     </a>
                 </div>
             </article>
@@ -525,7 +626,7 @@
                         Jeg har også tilgang på diverse mindre verktøy og utstyr. Ta kontakt, så finner vi en løsning som passer prosjektet ditt.
                     </p>
 
-                    <ul class="space-y-3 text-sm text-slate-300">
+                    <ul class="space-y-3 text-sm text-slate-300 mb-6">
                         <li class="flex items-center gap-3">
                             <span class="h-2 w-2 bg-ebt-green rounded-full"></span>
                             Fleksibel leieperiode
@@ -539,11 +640,20 @@
                             Henting etter avtale i Vestby
                         </li>
                     </ul>
+
+                    <!-- Telefonnummer synlig direkte -->
+                    <a href="tel:90056314" class="flex items-center gap-3 text-ebt-green font-black text-xl italic mb-2 hover:text-white transition">
+                        <i class="fas fa-phone-alt"></i> 900 56 314
+                    </a>
+                    <p class="text-slate-500 text-xs italic">Svarer raskt – gjerne på SMS også</p>
                 </div>
 
-                <div class="px-6 pb-6 md:px-8 md:pb-8">
-                    <a href="kontakt.html" class="inline-block w-full text-center bg-ebt-green text-black font-black px-6 py-3 uppercase italic hover:bg-white transition">
-                        Kontakt for forespørsel
+                <div class="px-6 pb-6 md:px-8 md:pb-8 flex flex-col gap-3">
+                    <a href="tel:90056314" class="inline-block w-full text-center bg-ebt-green text-black font-black px-6 py-3 uppercase italic hover:bg-white transition">
+                        <i class="fas fa-phone-alt mr-2"></i> Ring 900 56 314
+                    </a>
+                    <a href="kontakt.html" class="inline-block w-full text-center border border-slate-700 text-slate-300 font-black px-6 py-3 uppercase italic hover:border-ebt-green hover:text-ebt-green transition">
+                        Send forespørsel
                     </a>
                 </div>
             </article>
@@ -576,8 +686,8 @@
                 </div>
 
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="kontakt.html" class="inline-block bg-ebt-green text-black font-black px-8 py-4 uppercase italic hover:bg-white transition shadow-lg text-center">
-                        Send forespørsel
+                    <a href="tel:90056314" class="inline-flex items-center justify-center gap-3 bg-ebt-green text-black font-black px-8 py-4 uppercase italic hover:bg-white transition shadow-lg">
+                        <i class="fas fa-phone-alt"></i> Ring 900 56 314
                     </a>
                     <a href="vilkar-utleie.html" class="inline-block bg-white text-black font-black px-8 py-4 uppercase italic hover:bg-ebt-green transition shadow-lg text-center">
                         Les vilkår
@@ -616,13 +726,17 @@
                 <button onclick="rejectCookies()" class="bg-slate-700 text-white px-6 py-2 font-black uppercase italic text-sm rounded shadow-lg hover:bg-slate-600 transition">
                     Avslå
                 </button>
-
                 <button onclick="acceptCookies()" class="bg-green-500 text-black px-6 py-2 font-black uppercase italic text-sm rounded shadow-lg hover:bg-white transition">
                     Godta
                 </button>
             </div>
         </div>
     </div>
+
+    <!-- Mobile sticky call button -->
+    <a href="tel:90056314" class="sm:hidden fixed bottom-5 right-5 bg-ebt-green text-black font-black uppercase italic px-5 py-3 rounded-full shadow-2xl flex items-center gap-2">
+        <i class="fa-solid fa-phone"></i> Ring
+    </a>
 
     <script>
         function acceptCookies() {
