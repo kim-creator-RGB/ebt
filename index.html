@@ -73,6 +73,25 @@
       border: 1px solid rgba(148, 163, 184, 0.25);
       backdrop-filter: blur(10px);
     }
+
+    .rental-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.4rem 0;
+      border-bottom: 1px solid #1e293b;
+      font-size: 0.82rem;
+    }
+    .rental-item:last-child {
+      border-bottom: none;
+    }
+    .rental-price {
+      color: #00E676;
+      font-weight: 900;
+      font-style: italic;
+      white-space: nowrap;
+      margin-left: 0.5rem;
+    }
   </style>
 </head>
 
@@ -206,6 +225,7 @@
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+        <!-- Tømrer -->
         <div class="card bg-slate-950 border-b-8 border-white p-8 flex flex-col justify-between rounded">
           <div>
             <div class="text-4xl mb-6 text-ebt-green"><i class="fas fa-hammer"></i></div>
@@ -217,6 +237,7 @@
           </a>
         </div>
 
+        <!-- Grunnarbeid -->
         <div class="card bg-slate-950 border-b-8 border-white p-8 flex flex-col justify-between rounded">
           <div>
             <div class="text-4xl mb-6 text-ebt-green"><i class="fas fa-snowplow"></i></div>
@@ -228,13 +249,41 @@
           </a>
         </div>
 
-        <div class="card bg-slate-950 border-b-8 border-white p-8 flex flex-col justify-between rounded">
+        <!-- Utleie – OPPDATERT KORT -->
+        <div class="card bg-slate-950 border-b-8 border-ebt-green p-8 flex flex-col justify-between rounded">
           <div>
             <div class="text-4xl mb-6 text-ebt-green"><i class="fas fa-tools"></i></div>
-            <h3 class="text-2xl md:text-3xl font-black uppercase italic mb-4 text-white">Utleie</h3>
-            <p class="text-slate-300 mb-8 font-medium italic">Leie av dieselvarmere, verktøy og utstyr til ditt byggeprosjekt.</p>
+            <h3 class="text-2xl md:text-3xl font-black uppercase italic mb-3 text-white">Utleie</h3>
+            <p class="text-slate-400 text-xs uppercase italic font-bold tracking-widest mb-4">Vestby og omegn • Privat og bedrift</p>
+
+            <!-- Produktliste med priser -->
+            <div class="mb-5">
+              <div class="rental-item">
+                <span class="text-slate-300"><i class="fas fa-fire text-ebt-green mr-2 text-xs"></i>Byggvarmer 2 kW</span>
+                <span class="rental-price">fra 99 kr/dag</span>
+              </div>
+              <div class="rental-item">
+                <span class="text-slate-300"><i class="fas fa-fire text-ebt-green mr-2 text-xs"></i>Byggvarmer 3,3 kW</span>
+                <span class="rental-price">fra 139 kr/dag</span>
+              </div>
+              <div class="rental-item">
+                <span class="text-slate-300"><i class="fas fa-wind text-ebt-green mr-2 text-xs"></i>Ventilasjonsvifte</span>
+                <span class="rental-price">fra 199 kr/dag</span>
+              </div>
+              <div class="rental-item">
+                <span class="text-slate-300"><i class="fas fa-ruler-combined text-ebt-green mr-2 text-xs"></i>Giraffsliper</span>
+                <span class="rental-price">fra 249 kr/dag</span>
+              </div>
+              <div class="rental-item">
+                <span class="text-slate-300"><i class="fas fa-tint text-ebt-green mr-2 text-xs"></i>Lensepumpe</span>
+                <span class="rental-price">fra 299 kr/dag</span>
+              </div>
+            </div>
+
+            <p class="text-slate-500 text-xs italic">Pakkepris ved leie av flere. Helg og langtidsleie etter avtale.</p>
           </div>
-          <a href="utleie.html" class="inline-block font-black uppercase italic text-sm border-b-4 border-ebt-green pb-1 self-start text-ebt-green hover:text-white transition">
+
+          <a href="utleie.html" class="inline-block font-black uppercase italic text-sm border-b-4 border-ebt-green pb-1 self-start text-ebt-green hover:text-white transition mt-6">
             Se utleiepark <i class="fas fa-arrow-right ml-1"></i>
           </a>
         </div>
