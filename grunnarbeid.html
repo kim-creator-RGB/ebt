@@ -9,7 +9,6 @@
 
       gtag('js', new Date());
 
-      /* Standard: ingen analyse før samtykke */
       gtag('consent', 'default', {
         analytics_storage: 'denied',
         ad_storage: 'denied',
@@ -23,7 +22,57 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grunnarbeid | Edvardsen Byggtjenester</title>
+
+    <title>Grunnarbeid i Vestby | Edvardsen Byggtjenester</title>
+    <meta name="description" content="Grunnarbeid i Vestby og omegn. Graving, drenering og planering med egne maskiner. Mester i byggfag. Ring 900 56 314 for befaring.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://edvardsenbyggtjenester.no/grunnarbeid.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="nb_NO">
+    <meta property="og:title" content="Grunnarbeid i Vestby | Edvardsen Byggtjenester">
+    <meta property="og:description" content="Graving, drenering og planering i Vestby og omegn. Egne maskiner og lang erfaring.">
+    <meta property="og:url" content="https://edvardsenbyggtjenester.no/grunnarbeid.html">
+    <meta property="og:site_name" content="Edvardsen Byggtjenester">
+    <meta property="og:image" content="https://edvardsenbyggtjenester.no/assets/logo.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Grunnarbeid i Vestby | Edvardsen Byggtjenester">
+    <meta name="twitter:description" content="Graving, drenering og planering i Vestby og omegn. Egne maskiner.">
+    <meta name="twitter:image" content="https://edvardsenbyggtjenester.no/assets/logo.png">
+
+    <link rel="icon" type="image/png" href="/assets/logo.png">
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Edvardsen Byggtjenester",
+      "url": "https://edvardsenbyggtjenester.no/",
+      "image": "https://edvardsenbyggtjenester.no/assets/logo.png",
+      "telephone": "+4790056314",
+      "email": "kim.ebt@outlook.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Karen Bachs vei 23",
+        "postalCode": "1542",
+        "addressLocality": "Vestby",
+        "addressCountry": "NO"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Vestby" },
+        { "@type": "City", "name": "Moss" },
+        { "@type": "City", "name": "Ski" },
+        { "@type": "City", "name": "Ås" },
+        { "@type": "AdministrativeArea", "name": "Akershus" }
+      ],
+      "description": "Grunnarbeid i Vestby og omegn. Graving, drenering og planering med egne maskiner."
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
@@ -90,7 +139,7 @@
         <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center gap-2 sm:gap-4">
                 <a href="index.html" class="flex items-center gap-2 sm:gap-3">
-                    <img src="/assets/logo.png" alt="EBT Logo" class="h-8 sm:h-10 md:h-12 w-auto">
+                    <img src="/assets/logo.png" alt="Edvardsen Byggtjenester logo" class="h-8 sm:h-10 md:h-12 w-auto">
                     <span class="text-white font-black uppercase italic hidden lg:block text-sm">
                         Edvardsen <span class="text-ebt-green underline">Byggtjenester</span>
                     </span>
@@ -101,7 +150,7 @@
 
             <div class="flex space-x-2 sm:space-x-4 md:space-x-6 font-bold text-slate-200 text-[9px] sm:text-xs md:text-sm uppercase italic items-center">
                 <a href="tomrertjenester.html" class="hover:text-ebt-green transition py-1">Tømrer</a>
-                <a href="grunnarbeid.html" class="text-ebt-green underline py-1 whitespace-nowrap">Grunnarbeid</a>
+                <a href="grunnarbeid.html" class="text-ebt-green underline py-1 whitespace-nowrap" aria-current="page">Grunnarbeid</a>
                 <a href="utleie.html" class="hover:text-ebt-green transition py-1">Utleie</a>
                 <a href="om-oss.html" class="hover:text-ebt-green transition py-1 whitespace-nowrap">Om oss</a>
                 <a href="kontakt.html" class="bg-ebt-green text-black px-2 sm:px-4 py-1.5 rounded shadow-md ml-1 hover:bg-white transition">Kontakt</a>
@@ -111,17 +160,34 @@
 
     <header class="hero-dark text-white py-12 md:py-20 px-4 border-b-8 border-ebt-green text-center md:text-left">
         <div class="max-w-7xl mx-auto">
+            <p class="text-sm uppercase tracking-[0.25em] text-slate-400 font-bold italic mb-4">
+                Grunnarbeid i Vestby og omegn
+            </p>
             <h1 class="text-4xl md:text-6xl font-black uppercase italic leading-tight text-ebt-green pr-4 md:pr-10">
                 Grunnarbeid
             </h1>
             <p class="text-lg md:text-2xl text-slate-300 font-bold uppercase italic tracking-widest mt-2 pr-4 md:pr-10">
                 Graving • Drenering • Planering
             </p>
+
+            <div class="mt-8 flex flex-col sm:flex-row justify-center md:justify-start gap-4">
+                <a href="tel:90056314" class="inline-flex items-center justify-center gap-3 bg-ebt-green text-black font-black px-8 py-4 uppercase italic hover:bg-white transition shadow-lg">
+                    <i class="fas fa-phone-alt"></i> Ring 900 56 314
+                </a>
+                <a href="kontakt.html" class="inline-block border-2 border-white text-white font-black px-8 py-4 uppercase italic hover:bg-white hover:text-black transition shadow-lg text-center">
+                    Be om befaring
+                </a>
+            </div>
+
+            <p class="mt-4 text-xs text-slate-500 italic">
+                Tips: Send gjerne bilde av jobben på SMS, så kan jeg gi raskere tilbakemelding.
+            </p>
         </div>
     </header>
 
     <main class="max-w-7xl mx-auto py-12 md:py-20 px-4 space-y-24">
 
+        <!-- Drenering -->
         <section class="grid md:grid-cols-2 gap-12 items-center">
             <div class="space-y-6">
                 <div class="flex items-center gap-4">
@@ -135,29 +201,40 @@
                 <div class="bg-slate-950 p-4 border-l-4 border-white italic text-sm text-slate-400">
                     Vi sørger for riktig fall og masser slik at vannet ledes trygt bort fra boligen.
                 </div>
+                <div class="grid grid-cols-1 gap-3 pt-2">
+                    <div class="flex items-center gap-3 bg-slate-950 p-3 border-l-4 border-ebt-green">
+                        <i class="fas fa-tint text-ebt-green"></i>
+                        <span class="font-black uppercase italic text-xs tracking-wider">Drensrør og isolering av grunnmur</span>
+                    </div>
+                    <div class="flex items-center gap-3 bg-slate-950 p-3 border-l-4 border-white">
+                        <i class="fas fa-water text-white"></i>
+                        <span class="font-black uppercase italic text-xs tracking-wider">Riktig fall og massehåndtering</span>
+                    </div>
+                </div>
             </div>
 
             <div class="grid grid-cols-2 gap-3">
                 <div class="img-container aspect-square rounded-sm shadow-2xl">
                     <div class="img-placeholder">Drenering under arbeid</div>
-                    <img src="grunn_dren_1.jpg" alt="Drenering arbeid" onerror="this.style.display='none'">
+                    <img src="grunn_dren_1.jpg" alt="Dreneringsarbeid i Vestby" onerror="this.style.display='none'">
                 </div>
                 <div class="img-container aspect-square rounded-sm shadow-2xl">
                     <div class="img-placeholder">Ferdig isolert</div>
-                    <img src="Drenering_vestby_2.JPG" alt="Ferdig drenering" onerror="this.style.display='none'">
+                    <img src="Drenering_vestby_2.JPG" alt="Ferdig drenering og isolering av grunnmur i Vestby" onerror="this.style.display='none'">
                 </div>
             </div>
         </section>
 
+        <!-- Planering -->
         <section class="grid md:grid-cols-2 gap-12 items-center">
             <div class="order-2 md:order-1 grid grid-cols-2 gap-3">
                 <div class="img-container aspect-square rounded-sm shadow-2xl">
                     <div class="img-placeholder">Grunnarbeid hage</div>
-                    <img src="grunn_planering_1.jpg" alt="Planering før" onerror="this.style.display='none'">
+                    <img src="grunn_planering_1.jpg" alt="Planering av hage og uteområde i Vestby" onerror="this.style.display='none'">
                 </div>
                 <div class="img-container aspect-square rounded-sm shadow-2xl">
                     <div class="img-placeholder">Klargjort for gårdsplass</div>
-                    <img src="planering_etter_2.jpg" alt="Planering etter" onerror="this.style.display='none'">
+                    <img src="planering_etter_2.jpg" alt="Ferdig planert gårdsplass i Vestby" onerror="this.style.display='none'">
                 </div>
             </div>
 
@@ -171,22 +248,44 @@
                     solid komprimering og et perfekt underlag for videre arbeid.
                 </p>
                 <ul class="text-slate-400 text-sm space-y-2 uppercase font-bold italic tracking-tighter">
-                    <li><i class="fas fa-check text-ebt-green mr-2"></i> Oppretting av gårdsplass</li>
-                    <li><i class="fas fa-check text-ebt-green mr-2"></i> Utgraving for tilbygg</li>
-                    <li><i class="fas fa-check text-ebt-green mr-2"></i> Planering av plen/hage</li>
+                    <li><i class="fas fa-check text-ebt-green mr-2"></i>Oppretting av gårdsplass</li>
+                    <li><i class="fas fa-check text-ebt-green mr-2"></i>Utgraving for tilbygg</li>
+                    <li><i class="fas fa-check text-ebt-green mr-2"></i>Planering av plen og hage</li>
                 </ul>
             </div>
         </section>
 
+        <!-- Lokal SEO-tekst -->
+        <section class="bg-black border border-slate-800 p-8 md:p-10 shadow-xl">
+            <div class="max-w-4xl">
+                <h2 class="text-2xl md:text-3xl font-black uppercase italic mb-4">Grunnarbeid i Vestby og omegn</h2>
+                <p class="text-slate-300 leading-relaxed">
+                    Edvardsen Byggtjenester utfører grunnarbeid i Vestby, Moss, Ski, Ås og hele Follo-regionen.
+                    Med egne maskiner og kompetansebevis for gravemaskin, hjullaster og dumper tar jeg på meg
+                    graving, drenering og planering for både private og næringskunder. Ring for en uforpliktende befaring.
+                </p>
+            </div>
+        </section>
+
+        <!-- CTA -->
         <div class="bg-slate-950 p-10 text-center rounded-sm border-b-8 border-ebt-green shadow-2xl relative overflow-hidden group">
             <div class="absolute inset-0 bg-ebt-green opacity-5 group-hover:opacity-10 transition-opacity"></div>
-            <h3 class="text-white text-2xl md:text-3xl font-black uppercase italic mb-8 relative z-10">
+            <h3 class="text-white text-2xl md:text-3xl font-black uppercase italic mb-4 relative z-10">
                 Trenger du en maskinfører til ditt prosjekt?
             </h3>
-            <a href="tel:90056314" class="inline-block bg-ebt-green text-black font-black px-12 py-5 rounded-sm uppercase italic text-xl hover:bg-white transition w-full sm:w-auto shadow-lg relative z-10">
-                <i class="fas fa-phone-alt mr-2"></i> Be om befaring
-            </a>
+            <p class="text-slate-400 mb-8 italic relative z-10">
+                Ta kontakt for en uforpliktende prat om ditt grunnarbeidsbehov.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4 relative z-10">
+                <a href="tel:90056314" class="inline-block bg-ebt-green text-black font-black px-12 py-5 rounded-sm uppercase italic text-xl hover:bg-white transition shadow-lg">
+                    <i class="fas fa-phone-alt mr-2"></i> Ring 900 56 314
+                </a>
+                <a href="kontakt.html" class="inline-block bg-white text-black font-black px-12 py-5 rounded-sm uppercase italic text-xl hover:bg-ebt-green transition shadow-lg">
+                    Send forespørsel
+                </a>
+            </div>
         </div>
+
     </main>
 
     <footer class="bg-black text-slate-500 py-12 px-4 border-t-8 border-ebt-green text-center">
@@ -204,7 +303,7 @@
                 <a href="vilkar-utleie.html" class="text-[10px] text-slate-400 hover:text-white underline transition">Vilkår utleie</a>
             </div>
 
-            <p class="mt-4 text-[10px] opacity-50 text-slate-400">© 2026 Edvardsen Byggtjenester. Designet for profesjonelle resultater.</p>
+            <p class="mt-4 text-[10px] opacity-50 text-slate-400">© 2026 Edvardsen Byggtjenester</p>
         </div>
     </footer>
 
@@ -221,7 +320,6 @@
                 <button onclick="rejectCookies()" class="bg-slate-700 text-white px-6 py-2 font-black uppercase italic text-sm rounded shadow-lg hover:bg-slate-600 transition">
                     Avslå
                 </button>
-
                 <button onclick="acceptCookies()" class="bg-green-500 text-black px-6 py-2 font-black uppercase italic text-sm rounded shadow-lg hover:bg-white transition">
                     Godta
                 </button>
@@ -229,30 +327,31 @@
         </div>
     </div>
 
+    <!-- Mobil ring-knapp -->
+    <a href="tel:90056314" class="sm:hidden fixed bottom-5 right-5 bg-ebt-green text-black font-black uppercase italic px-5 py-3 rounded-full shadow-2xl flex items-center gap-2 z-50">
+        <i class="fa-solid fa-phone"></i> Ring
+    </a>
+
     <script>
         function acceptCookies() {
             localStorage.setItem('cookieChoice', 'accepted');
-
             gtag('consent', 'update', {
                 analytics_storage: 'granted',
                 ad_storage: 'denied',
                 ad_user_data: 'denied',
                 ad_personalization: 'denied'
             });
-
             document.getElementById('cookie-banner').classList.add('hidden');
         }
 
         function rejectCookies() {
             localStorage.setItem('cookieChoice', 'rejected');
-
             gtag('consent', 'update', {
                 analytics_storage: 'denied',
                 ad_storage: 'denied',
                 ad_user_data: 'denied',
                 ad_personalization: 'denied'
             });
-
             document.getElementById('cookie-banner').classList.add('hidden');
         }
 
@@ -279,5 +378,6 @@
             }
         }
     </script>
+
 </body>
 </html>
