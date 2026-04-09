@@ -9,7 +9,6 @@
 
       gtag('js', new Date());
 
-      /* Standard: ingen analyse før samtykke */
       gtag('consent', 'default', {
         analytics_storage: 'denied',
         ad_storage: 'denied',
@@ -23,7 +22,57 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Om Oss | Edvardsen Byggtjenester</title>
+
+    <title>Om oss – Kim-Roger Edvardsen | Edvardsen Byggtjenester</title>
+    <meta name="description" content="Kim-Roger Edvardsen er tømrermester med lang erfaring fra byggebransjen i Vestby. Mester i byggfag, maskinfører og faglig kompetanse du kan stole på.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://edvardsenbyggtjenester.no/om-oss.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="nb_NO">
+    <meta property="og:title" content="Om oss – Kim-Roger Edvardsen | Edvardsen Byggtjenester">
+    <meta property="og:description" content="Tømrermester med lang erfaring fra byggebransjen i Vestby og omegn. Mester i byggfag og maskinfører.">
+    <meta property="og:url" content="https://edvardsenbyggtjenester.no/om-oss.html">
+    <meta property="og:site_name" content="Edvardsen Byggtjenester">
+    <meta property="og:image" content="https://edvardsenbyggtjenester.no/assets/logo.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Om oss | Edvardsen Byggtjenester">
+    <meta name="twitter:description" content="Tømrermester med lang erfaring fra byggebransjen i Vestby og omegn.">
+    <meta name="twitter:image" content="https://edvardsenbyggtjenester.no/assets/logo.png">
+
+    <link rel="icon" type="image/png" href="/assets/logo.png">
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Edvardsen Byggtjenester",
+      "url": "https://edvardsenbyggtjenester.no/",
+      "image": "https://edvardsenbyggtjenester.no/assets/logo.png",
+      "telephone": "+4790056314",
+      "email": "kim.ebt@outlook.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Karen Bachs vei 23",
+        "postalCode": "1542",
+        "addressLocality": "Vestby",
+        "addressCountry": "NO"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Vestby" },
+        { "@type": "City", "name": "Moss" },
+        { "@type": "City", "name": "Ski" },
+        { "@type": "City", "name": "Ås" },
+        { "@type": "AdministrativeArea", "name": "Akershus" }
+      ],
+      "description": "Tømrermester og maskinfører i Vestby. Tømrertjenester, grunnarbeid og utleie i Follo og omegn."
+    }
+    </script>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
@@ -55,7 +104,7 @@
         <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center gap-2 sm:gap-4">
                 <a href="index.html" class="flex items-center gap-2 sm:gap-3">
-                    <img src="/assets/logo.png" alt="EBT Logo" class="h-8 sm:h-10 md:h-12 w-auto">
+                    <img src="/assets/logo.png" alt="Edvardsen Byggtjenester logo" class="h-8 sm:h-10 md:h-12 w-auto">
                     <span class="text-white font-black uppercase italic hidden lg:block text-sm">
                         Edvardsen <span class="text-ebt-green underline">Byggtjenester</span>
                     </span>
@@ -64,11 +113,11 @@
                 <img src="/assets/mesterlogo.png" alt="Mesterbrev" class="h-8 sm:h-10 w-auto opacity-90" title="Mester i byggfag">
             </div>
             
-            <div class="flex space-x-2 sm:space-x-4 md:space-x-6 font-bold text-slate-200 text-[9px] sm:text-xs md:text-sm uppercase italic">
+            <div class="flex space-x-2 sm:space-x-4 md:space-x-6 font-bold text-slate-200 text-[9px] sm:text-xs md:text-sm uppercase italic items-center">
                 <a href="tomrertjenester.html" class="hover:text-ebt-green transition py-1">Tømrer</a>
                 <a href="grunnarbeid.html" class="hover:text-ebt-green transition py-1 whitespace-nowrap">Grunnarbeid</a>
                 <a href="utleie.html" class="hover:text-ebt-green transition py-1">Utleie</a>
-                <a href="om-oss.html" class="text-ebt-green underline py-1">Om oss</a>
+                <a href="om-oss.html" class="text-ebt-green underline py-1" aria-current="page">Om oss</a>
                 <a href="kontakt.html" class="bg-ebt-green text-black px-2 sm:px-4 py-1 rounded hover:bg-white transition">Kontakt</a>
             </div>
         </div>
@@ -76,8 +125,24 @@
 
     <header class="hero-dark text-white py-12 md:py-20 px-6 border-b-8 border-ebt-green text-left">
         <div class="max-w-7xl mx-auto">
-            <h1 class="text-4xl md:text-6xl font-black uppercase italic leading-tight text-ebt-green pr-10">Faglig Kompetanse</h1>
-            <p class="text-sm md:text-2xl text-slate-300 font-bold uppercase italic tracking-widest mt-2 pr-10">Mester i byggfag & Maskinfører</p>
+            <p class="text-sm uppercase tracking-[0.25em] text-slate-400 font-bold italic mb-4">
+                Vestby og omegn
+            </p>
+            <h1 class="text-4xl md:text-6xl font-black uppercase italic leading-tight text-ebt-green pr-10">
+                Faglig Kompetanse
+            </h1>
+            <p class="text-sm md:text-2xl text-slate-300 font-bold uppercase italic tracking-widest mt-2 pr-10">
+                Mester i byggfag & Maskinfører
+            </p>
+
+            <div class="mt-8 flex flex-col sm:flex-row gap-4">
+                <a href="tel:90056314" class="inline-flex items-center justify-center gap-3 bg-ebt-green text-black font-black px-8 py-4 uppercase italic hover:bg-white transition shadow-lg">
+                    <i class="fas fa-phone-alt"></i> Ring 900 56 314
+                </a>
+                <a href="kontakt.html" class="inline-block border-2 border-white text-white font-black px-8 py-4 uppercase italic hover:bg-white hover:text-black transition shadow-lg text-center">
+                    Be om befaring
+                </a>
+            </div>
         </div>
     </header>
 
@@ -94,7 +159,7 @@
                     Jeg heter Kim-Roger Edvardsen, og er tømrermester med mange års erfaring fra byggebransjen.
                 </p>
 
-                <div class="prose prose-slate prose-invert prose-lg text-slate-300 leading-relaxed italic">
+                <div class="prose prose-slate prose-invert prose-lg text-slate-300 leading-relaxed italic space-y-4">
                     <p>
                         Gjennom mitt eget firma, <strong>Edvardsen Byggtjenester</strong>, tar jeg på meg både store og små oppdrag – alt fra komplette byggeprosjekter og rehabilitering til de mindre fiksejobbene som gjør hverdagen din litt enklere.
                     </p>
@@ -128,22 +193,35 @@
                             <ul class="text-[10px] text-slate-400 space-y-1.5 font-bold uppercase italic">
                                 <li>• Bygg & Rehabilitering</li>
                                 <li>• Graveoppdrag</li>
-                                <li>• Vaktmestertjenester</li>
+                                <li>• Verktøyutleie</li>
                             </ul>
                         </div>
                     </div>
                 </div>
+
+                <!-- Lokal SEO-tekst -->
+                <div class="bg-black border border-slate-800 p-6 shadow-xl mt-4">
+                    <h3 class="text-lg font-black uppercase italic text-ebt-green mb-3">Lokalt forankret i Vestby</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed italic">
+                        Edvardsen Byggtjenester holder til i Vestby og utfører oppdrag i hele Follo-regionen –
+                        inkludert Moss, Ski, Ås og omegn. Jeg kjenner området godt og er opptatt av å levere
+                        solid håndverk til folk i nærområdet.
+                    </p>
+                </div>
                 
-                <div class="pt-8">
-                    <a href="kontakt.html" class="inline-block bg-ebt-green text-black font-black px-8 py-4 rounded-sm uppercase italic hover:bg-white transition shadow-lg">
+                <div class="pt-4 flex flex-col sm:flex-row gap-4">
+                    <a href="kontakt.html" class="inline-block bg-ebt-green text-black font-black px-8 py-4 rounded-sm uppercase italic hover:bg-white transition shadow-lg text-center">
                         Kontakt for gratis befaring
+                    </a>
+                    <a href="tel:90056314" class="inline-flex items-center justify-center gap-2 bg-white text-black font-black px-8 py-4 rounded-sm uppercase italic hover:bg-ebt-green transition shadow-lg">
+                        <i class="fas fa-phone-alt"></i> 900 56 314
                     </a>
                 </div>
             </div>
 
             <div class="relative mt-10 md:mt-0">
                 <div class="bg-black rounded-sm overflow-hidden border-4 border-white shadow-2xl aspect-[4/5] relative">
-                    <img src="profilbilde.jpg" alt="Kim-Roger Edvardsen" class="w-full h-full object-cover relative z-10" onerror="this.style.display='none'">
+                    <img src="profilbilde.jpg" alt="Kim-Roger Edvardsen – tømrermester i Vestby" class="w-full h-full object-cover relative z-10" onerror="this.style.display='none'">
                     <div class="absolute inset-0 flex items-center justify-center text-slate-500 font-black italic text-center p-8 text-sm">
                         Last opp profilbilde.jpg her
                     </div>
@@ -165,11 +243,13 @@
                 </div>
             </div>
 
-            <div class="mt-2 flex justify-center items-center gap-4">
+            <div class="flex justify-center items-center gap-4">
                 <a href="personvern.html" class="text-[10px] text-slate-400 hover:text-white underline transition">Personvernerklæring</a>
                 <a href="cookies.html" class="text-[10px] text-slate-400 hover:text-white underline transition">Cookies</a>
                 <a href="vilkar-utleie.html" class="text-[10px] text-slate-400 hover:text-white underline transition">Vilkår utleie</a>
             </div>
+
+            <p class="text-[10px] opacity-50 text-slate-400">© 2026 Edvardsen Byggtjenester</p>
         </div>
     </footer>
 
@@ -186,7 +266,6 @@
                 <button onclick="rejectCookies()" class="bg-slate-700 text-white px-6 py-2 font-black uppercase italic text-sm rounded shadow-lg hover:bg-slate-600 transition">
                     Avslå
                 </button>
-
                 <button onclick="acceptCookies()" class="bg-green-500 text-black px-6 py-2 font-black uppercase italic text-sm rounded shadow-lg hover:bg-white transition">
                     Godta
                 </button>
@@ -194,30 +273,31 @@
         </div>
     </div>
 
+    <!-- Mobil ring-knapp -->
+    <a href="tel:90056314" class="sm:hidden fixed bottom-5 right-5 bg-ebt-green text-black font-black uppercase italic px-5 py-3 rounded-full shadow-2xl flex items-center gap-2 z-50">
+        <i class="fa-solid fa-phone"></i> Ring
+    </a>
+
     <script>
         function acceptCookies() {
             localStorage.setItem('cookieChoice', 'accepted');
-
             gtag('consent', 'update', {
                 analytics_storage: 'granted',
                 ad_storage: 'denied',
                 ad_user_data: 'denied',
                 ad_personalization: 'denied'
             });
-
             document.getElementById('cookie-banner').classList.add('hidden');
         }
 
         function rejectCookies() {
             localStorage.setItem('cookieChoice', 'rejected');
-
             gtag('consent', 'update', {
                 analytics_storage: 'denied',
                 ad_storage: 'denied',
                 ad_user_data: 'denied',
                 ad_personalization: 'denied'
             });
-
             document.getElementById('cookie-banner').classList.add('hidden');
         }
 
