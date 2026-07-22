@@ -22,31 +22,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Utleie av verktøy og byggutstyr i Vestby | Edvardsen Byggtjenester</title>
-    <meta name="description" content="Leie av verktøy og byggutstyr i Vestby. Edvardsen Byggtjenester tilbyr byggvarmer, lensepumpe, ventilasjonsvifte og giraffsliper for privat og bedrift.">
+    <title>Utleie gjennom Hygglo | Edvardsen Byggtjenester</title>
+    <meta name="description" content="Se og bestill utleieutstyr fra Edvardsen Byggtjenester gjennom Hygglo. Oppdaterte priser, tilgjengelighet, betaling, leieavtale og forsikring håndteres på Hygglo.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://edvardsenbyggtjenester.no/utleie.html">
 
-    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:locale" content="nb_NO">
-    <meta property="og:title" content="Utleie av verktøy og byggutstyr i Vestby | Edvardsen Byggtjenester">
-    <meta property="og:description" content="Leie av byggvarmer, lensepumpe, ventilasjonsvifte og giraffsliper i Vestby og omegn. For privat og bedrift.">
+    <meta property="og:title" content="Utleie gjennom Hygglo | Edvardsen Byggtjenester">
+    <meta property="og:description" content="Se tilgjengelig utleieutstyr, priser og bestill trygt gjennom Hygglo.">
     <meta property="og:url" content="https://edvardsenbyggtjenester.no/utleie.html">
     <meta property="og:site_name" content="Edvardsen Byggtjenester">
     <meta property="og:image" content="https://edvardsenbyggtjenester.no/assets/logo.png">
 
-    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Utleie av verktøy og byggutstyr i Vestby | Edvardsen Byggtjenester">
-    <meta name="twitter:description" content="Leie av byggvarmer, lensepumpe, ventilasjonsvifte og giraffsliper i Vestby og omegn.">
+    <meta name="twitter:title" content="Utleie gjennom Hygglo | Edvardsen Byggtjenester">
+    <meta name="twitter:description" content="Se tilgjengelig utleieutstyr, priser og bestill trygt gjennom Hygglo.">
     <meta name="twitter:image" content="https://edvardsenbyggtjenester.no/assets/logo.png">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">
 
-    <!-- Structured data – rettet telefonnummer -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -65,17 +62,21 @@
       },
       "areaServed": [
         {
-          "@type": "City",
-          "name": "Vestby"
+          "@type": "AdministrativeArea",
+          "name": "Østfold"
         },
         {
           "@type": "AdministrativeArea",
           "name": "Akershus"
+        },
+        {
+          "@type": "Place",
+          "name": "Follo"
         }
       ],
-      "description": "Utleie av verktøy, byggvarmere, ventilasjonsvifte, lensepumpe og giraffsliper i Vestby og omegn for privat og bedrift.",
+      "description": "Utleieutstyr fra Edvardsen Byggtjenester bestilles gjennom Hygglo.",
       "sameAs": [
-        "https://www.facebook.com/"
+        "https://www.hygglo.no/users/boNM8UwOW-kim"
       ]
     }
     </script>
@@ -86,7 +87,7 @@
         .hero-dark {
             background-color: #000000;
             background-image:
-                linear-gradient(to right, rgba(0,0,0,0.92), rgba(0,0,0,0.82)),
+                linear-gradient(to right, rgba(0,0,0,0.93), rgba(0,0,0,0.78)),
                 url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23111111' fill-opacity='0.55'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
 
@@ -94,143 +95,38 @@
         .bg-ebt-green { background-color: #00E676; }
         .border-ebt-green { border-color: #00E676; }
 
-        .equipment-card {
-            transition: all 0.3s ease-in-out;
-            border: 1px solid #334155;
-        }
-
-        .equipment-card:hover {
-            border-color: #00E676;
-            box-shadow: 0 10px 30px -10px rgba(0, 230, 118, 0.20);
-            transform: translateY(-4px);
-        }
-
-        .equipment-image {
-            width: 100%;
-            height: 260px;
-            border-bottom: 1px solid #1e293b;
-            background: #0f172a;
-        }
-
-        .equipment-image-contain {
-            object-fit: contain;
-            object-position: center;
-            padding: 1rem;
-        }
-
-        .equipment-image-center {
-            object-fit: cover;
-            object-position: center;
-        }
-
-        .equipment-image-top {
-            object-fit: cover;
-            object-position: top;
-        }
-
-        .spec-pill {
-            display: inline-block;
-            padding: 0.35rem 0.65rem;
-            border: 1px solid #334155;
-            border-radius: 9999px;
-            font-size: 0.7rem;
-            font-weight: 800;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-            color: #cbd5e1;
+        .info-card {
             background: #020617;
+            border: 1px solid #334155;
+            transition: border-color .25s ease, transform .25s ease, box-shadow .25s ease;
         }
 
-        .hero-info-card {
-            border: 1px solid #1e293b;
-            background: rgba(15, 23, 42, 0.75);
-            backdrop-filter: blur(6px);
+        .info-card:hover {
+            border-color: #00E676;
+            transform: translateY(-3px);
+            box-shadow: 0 14px 34px -18px rgba(0, 230, 118, .45);
         }
 
-        .detail-box {
-            margin-top: 1rem;
-            padding-top: 1rem;
-            border-top: 1px solid #1e293b;
+        .hygglo-panel {
+            background:
+                radial-gradient(circle at top right, rgba(0,230,118,.12), transparent 38%),
+                #020617;
+            border: 1px solid #334155;
         }
 
-        .detail-title {
-            font-size: 0.75rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            font-style: italic;
-            letter-spacing: 0.08em;
+        .check-item {
+            display: flex;
+            gap: .8rem;
+            align-items: flex-start;
+        }
+
+        .check-item i {
             color: #00E676;
-            margin-bottom: 0.75rem;
-        }
-
-        .detail-text {
-            font-size: 0.875rem;
-            line-height: 1.65;
-            color: #cbd5e1;
-        }
-
-        .detail-list {
-            margin-top: 0.75rem;
-            display: grid;
-            gap: 0.35rem;
-            font-size: 0.8rem;
-            color: #94a3b8;
-        }
-
-        .detail-list strong {
-            color: #e2e8f0;
-        }
-
-        .price-line {
-            color: #00E676;
-            font-size: 1.1rem;
-            font-weight: 900;
-            font-style: italic;
-            text-transform: uppercase;
-            margin-bottom: 0.4rem;
-        }
-
-        .price-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 0.4rem;
-            margin-bottom: 0.85rem;
-        }
-
-        .price-box {
-            background: #0f172a;
-            border: 1px solid #1e293b;
-            border-radius: 4px;
-            padding: 0.4rem 0.3rem;
-            text-align: center;
-        }
-
-        .price-box-label {
-            font-size: 0.6rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: 0.06em;
-            color: #64748b;
-            display: block;
-        }
-
-        .price-box-amount {
-            font-size: 0.78rem;
-            font-weight: 900;
-            font-style: italic;
-            color: #00E676;
-            display: block;
-            margin-top: 0.15rem;
-        }
-
-        .price-subline {
-            color: #94a3b8;
-            font-size: 0.75rem;
-            line-height: 1.5;
-            margin-bottom: 1rem;
+            margin-top: .25rem;
         }
     </style>
 </head>
+
 <body class="bg-slate-900 text-slate-100">
 
     <nav class="bg-black sticky top-0 z-50 border-b-2 border-ebt-green">
@@ -256,450 +152,170 @@
         </div>
     </nav>
 
-    <header class="hero-dark text-white py-14 md:py-24 px-4 border-b-8 border-ebt-green">
+    <header class="hero-dark text-white py-16 md:py-28 px-4 border-b-8 border-ebt-green">
         <div class="max-w-7xl mx-auto">
             <div class="max-w-4xl">
                 <p class="text-sm md:text-base uppercase tracking-[0.25em] text-slate-400 font-bold italic mb-4">
-                    Utleie i Vestby og omegn
+                    Trygg og enkel utleie
                 </p>
 
                 <h1 class="text-4xl md:text-6xl font-black uppercase italic leading-tight text-ebt-green">
-                    Utleie av verktøy, varme og tørkeutstyr
+                    Utleie gjennom Hygglo
                 </h1>
 
                 <p class="text-base md:text-xl text-slate-300 font-medium mt-6 max-w-3xl leading-relaxed">
-                    Praktisk og driftssikkert utstyr for bygg, rehabilitering og oppussing. Her kan du leie varmeovner, ventilasjonsvifte, lensepumpe og giraffsliper til både små og større prosjekter.
+                    Alt utstyret mitt leies ut gjennom Hygglo. Der finner du oppdaterte priser,
+                    tilgjengelighet og full informasjon om hvert produkt.
                 </p>
 
-                <!-- Kontaktknapper synlig i hero -->
                 <div class="pt-8 flex flex-col sm:flex-row gap-4">
-                    <a href="tel:90056314" class="inline-flex items-center justify-center gap-3 bg-ebt-green text-black font-black px-8 py-4 uppercase italic hover:bg-white transition shadow-lg">
-                        <i class="fas fa-phone-alt"></i> Ring 900 56 314
+                    <a href="https://www.hygglo.no/users/boNM8UwOW-kim" target="_blank" rel="noopener noreferrer"
+                       class="inline-flex items-center justify-center gap-3 bg-ebt-green text-black font-black px-8 py-4 uppercase italic hover:bg-white transition shadow-lg">
+                        <i class="fas fa-arrow-up-right-from-square"></i>
+                        Se utstyret mitt på Hygglo
                     </a>
-                    <a href="kontakt.html" class="inline-block border-2 border-white text-white font-black px-8 py-4 uppercase italic hover:bg-white hover:text-black transition shadow-lg text-center">
-                        Send forespørsel
-                    </a>
-                    <a href="vilkar-utleie.html" class="inline-block border-2 border-slate-600 text-slate-400 font-black px-8 py-4 uppercase italic hover:border-white hover:text-white transition shadow-lg text-center">
-                        Se vilkår
+
+                    <a href="kontakt.html"
+                       class="inline-flex items-center justify-center gap-3 border-2 border-white text-white font-black px-8 py-4 uppercase italic hover:bg-white hover:text-black transition shadow-lg">
+                        <i class="fas fa-envelope"></i>
+                        Kontakt meg
                     </a>
                 </div>
 
                 <p class="mt-4 text-xs text-slate-500 italic">
-                    Tips: Send gjerne bilde/beskrivelse på SMS, så svarer jeg raskt på hva som passer.
+                    Hygglo åpnes i en ny fane.
                 </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-10">
-                <div class="hero-info-card p-5 shadow-lg">
-                    <p class="text-ebt-green font-black uppercase italic text-sm mb-2">Fleksibel leie</p>
-                    <p class="text-slate-300 text-sm leading-relaxed">
-                        Korte og lengre leieperioder etter behov.
-                    </p>
-                </div>
-
-                <div class="hero-info-card p-5 shadow-lg">
-                    <p class="text-ebt-green font-black uppercase italic text-sm mb-2">Henting i Vestby</p>
-                    <p class="text-slate-300 text-sm leading-relaxed">
-                        Enkelt og praktisk etter avtale.
-                    </p>
-                </div>
-
-                <div class="hero-info-card p-5 shadow-lg">
-                    <p class="text-ebt-green font-black uppercase italic text-sm mb-2">Privat og bedrift</p>
-                    <p class="text-slate-300 text-sm leading-relaxed">
-                        Passer både håndverkere og private kunder.
-                    </p>
-                </div>
             </div>
         </div>
     </header>
 
     <main class="max-w-7xl mx-auto py-12 md:py-20 px-4">
 
-        <section class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start mb-16">
-            <div class="lg:col-span-2">
-                <div class="flex items-center gap-4 mb-6">
-                    <div class="h-10 w-2 bg-ebt-green"></div>
-                    <h2 class="text-3xl md:text-4xl font-black uppercase italic">Utstyr tilgjengelig for utleie</h2>
-                </div>
-
-                <p class="text-lg text-slate-300 leading-relaxed font-medium max-w-3xl">
-                    Her finner du utstyr som passer godt til tørking, oppvarming, luftflytting, vannhåndtering og sliping på byggeplass eller under oppussing.
+        <section class="grid grid-cols-1 lg:grid-cols-5 gap-8 items-stretch">
+            <div class="lg:col-span-3 hygglo-panel p-7 md:p-10 shadow-xl">
+                <p class="text-ebt-green uppercase tracking-widest text-xs font-black italic mb-3">
+                    Slik fungerer det
                 </p>
-            </div>
 
-            <div class="bg-black text-white p-6 rounded-sm italic border-l-4 border-ebt-green shadow-xl">
-                Vi holder til i Vestby og tilbyr fleksible leieavtaler for både korte og lengre oppdrag.
-            </div>
-        </section>
+                <h2 class="text-3xl md:text-4xl font-black uppercase italic text-white mb-6">
+                    Bestill direkte hos Hygglo
+                </h2>
 
-        <section class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-
-            <!-- Giraffsliper -->
-            <article class="equipment-card bg-slate-950 overflow-hidden shadow-xl">
-                <img src="/assets/utleie.vestby.giraffsliper.jpg" alt="Bosch giraffsliper til utleie i Vestby" class="equipment-image equipment-image-contain">
-                <div class="p-6">
-                    <div class="flex items-start justify-between gap-4 mb-4">
-                        <h3 class="text-xl font-black uppercase italic text-white">Giraffsliper</h3>
-                        <span class="spec-pill">Slip / puss</span>
-                    </div>
-
-                    <p class="price-line">Fra 249 kr / døgn</p>
-                    <div class="price-grid">
-                        <div class="price-box">
-                            <span class="price-box-label">Dag</span>
-                            <span class="price-box-amount">249 kr</span>
-                        </div>
-                        <div class="price-box">
-                            <span class="price-box-label">Helg</span>
-                            <span class="price-box-amount">399 kr</span>
-                        </div>
-                        <div class="price-box">
-                            <span class="price-box-label">Uke</span>
-                            <span class="price-box-amount">990 kr</span>
-                        </div>
-                    </div>
-                    <p class="price-subline">Pakkepris ved leie av flere produkter</p>
-
-                    <p class="text-slate-300 text-sm leading-relaxed mb-5">
-                        Praktisk langhalssliper for vegg og tak. God løsning for sparkling, pussing og jevning av flater før maling.
-                    </p>
-
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="spec-pill">Bosch</span>
-                        <span class="spec-pill">Tak og vegg</span>
-                        <span class="spec-pill">Proffutstyr</span>
-                    </div>
-
-                    <div class="detail-box">
-                        <h4 class="detail-title">Detaljer</h4>
-                        <p class="detail-text">
-                            Giraffsliperen er egnet for sliping av gipsvegger og tak, og har funksjoner som gjør arbeidet lettere ved både sparkling, pussing og overflatebehandling.
-                        </p>
-                        <div class="detail-list">
-                            <p><strong>Effekt:</strong> 550 W</p>
-                            <p><strong>Slipeskive:</strong> 215 mm</p>
-                            <p><strong>Slipeskivepapir:</strong> 225 mm</p>
-                            <p><strong>Hastighet:</strong> 340–910 o/min</p>
-                            <p><strong>Vekt:</strong> 4,8 kg</p>
-                            <p><strong>Inkludert:</strong> koffert, sandpapir, myk skive og kabelklemmer</p>
-                        </div>
-                    </div>
-
-                    <a href="tel:90056314" class="inline-flex items-center justify-center gap-2 w-full text-center bg-ebt-green text-black font-black px-6 py-3 uppercase italic hover:bg-white transition mt-6">
-                        <i class="fas fa-phone-alt text-sm"></i> Ring for å booke
-                    </a>
-                </div>
-            </article>
-
-            <!-- Lensepumpe -->
-            <article class="equipment-card bg-slate-950 overflow-hidden shadow-xl">
-                <img src="/assets/utleie.vestby.lensepumpe.JPG" alt="Lensepumpe til utleie i Vestby" class="equipment-image equipment-image-center">
-                <div class="p-6">
-                    <div class="flex items-start justify-between gap-4 mb-4">
-                        <h3 class="text-xl font-black uppercase italic text-white">Lensepumpe</h3>
-                        <span class="spec-pill">Vannhåndtering</span>
-                    </div>
-
-                    <p class="price-line">Fra 299 kr / døgn</p>
-                    <div class="price-grid">
-                        <div class="price-box">
-                            <span class="price-box-label">Dag</span>
-                            <span class="price-box-amount">299 kr</span>
-                        </div>
-                        <div class="price-box">
-                            <span class="price-box-label">Helg</span>
-                            <span class="price-box-amount">499 kr</span>
-                        </div>
-                        <div class="price-box">
-                            <span class="price-box-label">Uke</span>
-                            <span class="price-box-amount">1190 kr</span>
-                        </div>
-                    </div>
-                    <p class="price-subline">Pakkepris ved leie av flere produkter</p>
-
-                    <p class="text-slate-300 text-sm leading-relaxed mb-5">
-                        Robust pumpe for tømming av vann i kjeller, byggegrop eller andre områder med behov for rask drenering.
-                    </p>
-
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="spec-pill">Vannflytting</span>
-                        <span class="spec-pill">Effektiv</span>
-                        <span class="spec-pill">Klar for byggplass</span>
-                    </div>
-
-                    <div class="detail-box">
-                        <h4 class="detail-title">Teknisk info</h4>
-                        <p class="detail-text">
-                            Kraftig lensepumpe for effektiv tømming av vann på byggeplass, i kjeller eller andre områder der vann må fjernes raskt.
-                        </p>
-                        <div class="detail-list">
-                            <p><strong>Effekt:</strong> 500 W</p>
-                            <p><strong>Spenning:</strong> 230V / 50Hz</p>
-                            <p><strong>Kapasitet:</strong> opptil 210 l/min</p>
-                            <p><strong>Løftehøyde:</strong> opptil 12 m</p>
-                            <p><strong>Utløpsdiameter:</strong> 50 mm</p>
-                            <p><strong>Slange:</strong> leveres med 10 m slange</p>
-                            <p><strong>Vekt:</strong> ca. 12,5 kg</p>
-                        </div>
-                    </div>
-
-                    <a href="tel:90056314" class="inline-flex items-center justify-center gap-2 w-full text-center bg-ebt-green text-black font-black px-6 py-3 uppercase italic hover:bg-white transition mt-6">
-                        <i class="fas fa-phone-alt text-sm"></i> Ring for å booke
-                    </a>
-                </div>
-            </article>
-
-            <!-- Varmovn 2kW -->
-            <article class="equipment-card bg-slate-950 overflow-hidden shadow-xl">
-                <img src="/assets/utleie.vestby.varmovn 2 kw.JPG" alt="Byggvarmer 2 kW til utleie i Vestby" class="equipment-image equipment-image-top">
-                <div class="p-6">
-                    <div class="flex items-start justify-between gap-4 mb-4">
-                        <h3 class="text-xl font-black uppercase italic text-white">Byggvarmer 2 kW</h3>
-                        <span class="spec-pill">Oppvarming</span>
-                    </div>
-
-                    <p class="price-line">Fra 99 kr / døgn</p>
-                    <div class="price-grid">
-                        <div class="price-box">
-                            <span class="price-box-label">Dag</span>
-                            <span class="price-box-amount">99 kr</span>
-                        </div>
-                        <div class="price-box">
-                            <span class="price-box-label">Helg</span>
-                            <span class="price-box-amount">199 kr</span>
-                        </div>
-                        <div class="price-box">
-                            <span class="price-box-label">Uke</span>
-                            <span class="price-box-amount">449 kr</span>
-                        </div>
-                    </div>
-                    <p class="price-subline">Pakkepris ved leie av flere produkter</p>
-
-                    <p class="text-slate-300 text-sm leading-relaxed mb-5">
-                        Elektrisk varmeovn som passer godt til mindre rom, punktoppvarming og tørking ved lettere arbeider.
-                    </p>
-
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="spec-pill">2 kW</span>
-                        <span class="spec-pill">Justerbar effekt</span>
-                        <span class="spec-pill">Kompakt</span>
-                    </div>
-
-                    <div class="detail-box">
-                        <h4 class="detail-title">Bruksområde</h4>
-                        <p class="detail-text">
-                            Egnet for mindre rom, tørking og generell oppvarming på byggeplass eller ved oppussing. En praktisk løsning når du trenger rask og enkel varme.
-                        </p>
-                        <div class="detail-list">
-                            <p><strong>Effekt:</strong> 2 kW</p>
-                            <p><strong>Bruk:</strong> punktoppvarming og tørk</p>
-                            <p><strong>Fordel:</strong> kompakt og enkel å flytte</p>
-                        </div>
-                    </div>
-
-                    <a href="tel:90056314" class="inline-flex items-center justify-center gap-2 w-full text-center bg-ebt-green text-black font-black px-6 py-3 uppercase italic hover:bg-white transition mt-6">
-                        <i class="fas fa-phone-alt text-sm"></i> Ring for å booke
-                    </a>
-                </div>
-            </article>
-
-            <!-- Varmovn 3.3kW -->
-            <article class="equipment-card bg-slate-950 overflow-hidden shadow-xl">
-                <img src="/assets/utleie.vestby.varmovn 3.3kw.JPG" alt="Byggvarmer 3,3 kW til utleie i Vestby" class="equipment-image equipment-image-top">
-                <div class="p-6">
-                    <div class="flex items-start justify-between gap-4 mb-4">
-                        <h3 class="text-xl font-black uppercase italic text-white">Byggvarmer 3,3 kW</h3>
-                        <span class="spec-pill">Oppvarming</span>
-                    </div>
-
-                    <p class="price-line">Fra 139 kr / døgn</p>
-                    <div class="price-grid">
-                        <div class="price-box">
-                            <span class="price-box-label">Dag</span>
-                            <span class="price-box-amount">139 kr</span>
-                        </div>
-                        <div class="price-box">
-                            <span class="price-box-label">Helg</span>
-                            <span class="price-box-amount">249 kr</span>
-                        </div>
-                        <div class="price-box">
-                            <span class="price-box-label">Uke</span>
-                            <span class="price-box-amount">599 kr</span>
-                        </div>
-                    </div>
-                    <p class="price-subline">Pakkepris ved leie av flere produkter</p>
-
-                    <p class="text-slate-300 text-sm leading-relaxed mb-5">
-                        Kraftigere elektrisk byggvarmer for raskere oppvarming av arbeidsområder, tørk og kalde soner på byggeplass.
-                    </p>
-
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="spec-pill">3,3 kW</span>
-                        <span class="spec-pill">Trinnløs justering</span>
-                        <span class="spec-pill">Stabil drift</span>
-                    </div>
-
-                    <div class="detail-box">
-                        <h4 class="detail-title">Bruksområde</h4>
-                        <p class="detail-text">
-                            Passer godt når du trenger mer varmeeffekt på byggeplass, i garasje, nybygg eller ved tørking i kjøligere perioder.
-                        </p>
-                        <div class="detail-list">
-                            <p><strong>Effekt:</strong> 3,3 kW</p>
-                            <p><strong>Bruk:</strong> oppvarming og byggtørk</p>
-                            <p><strong>Fordel:</strong> høyere kapasitet og jevn varme</p>
-                        </div>
-                    </div>
-
-                    <a href="tel:90056314" class="inline-flex items-center justify-center gap-2 w-full text-center bg-ebt-green text-black font-black px-6 py-3 uppercase italic hover:bg-white transition mt-6">
-                        <i class="fas fa-phone-alt text-sm"></i> Ring for å booke
-                    </a>
-                </div>
-            </article>
-
-            <!-- Ventilasjonsvifte -->
-            <article class="equipment-card bg-slate-950 overflow-hidden shadow-xl">
-                <img src="/assets/utleie.vestby.ventilasjonsvifte.JPG" alt="Ventilasjonsvifte til utleie i Vestby" class="equipment-image equipment-image-center">
-                <div class="p-6">
-                    <div class="flex items-start justify-between gap-4 mb-4">
-                        <h3 class="text-xl font-black uppercase italic text-white">Ventilasjonsvifte</h3>
-                        <span class="spec-pill">Luftflytting</span>
-                    </div>
-
-                    <p class="price-line">Fra 199 kr / døgn</p>
-                    <div class="price-grid">
-                        <div class="price-box">
-                            <span class="price-box-label">Dag</span>
-                            <span class="price-box-amount">199 kr</span>
-                        </div>
-                        <div class="price-box">
-                            <span class="price-box-label">Helg</span>
-                            <span class="price-box-amount">329 kr</span>
-                        </div>
-                        <div class="price-box">
-                            <span class="price-box-label">Uke</span>
-                            <span class="price-box-amount">799 kr</span>
-                        </div>
-                    </div>
-                    <p class="price-subline">Pakkepris ved leie av flere produkter</p>
-
-                    <p class="text-slate-300 text-sm leading-relaxed mb-5">
-                        Egnet for sirkulasjon av luft, tørkearbeid og ventilering av arbeidsområder ved bygg og rehabilitering.
-                    </p>
-
-                    <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="spec-pill">Typhoon blower</span>
-                        <span class="spec-pill">God luftstrøm</span>
-                        <span class="spec-pill">Bygg og tørk</span>
-                    </div>
-
-                    <div class="detail-box">
-                        <h4 class="detail-title">Bruksområde</h4>
-                        <p class="detail-text">
-                            Ventilasjonsviften brukes til luftflytting, ventilering og raskere tørk i rom, kjellere og bygg under arbeid.
-                        </p>
-                        <div class="detail-list">
-                            <p><strong>Bruk:</strong> ventilasjon, tørk og sirkulasjon</p>
-                            <p><strong>Tilbehør:</strong> leveres med 10 m slange/rør</p>
-                            <p><strong>Fordel:</strong> enkel å plassere og flytte</p>
-                            <p><strong>Passer for:</strong> bygg, rehabilitering og oppussing</p>
-                        </div>
-                    </div>
-
-                    <a href="tel:90056314" class="inline-flex items-center justify-center gap-2 w-full text-center bg-ebt-green text-black font-black px-6 py-3 uppercase italic hover:bg-white transition mt-6">
-                        <i class="fas fa-phone-alt text-sm"></i> Ring for å booke
-                    </a>
-                </div>
-            </article>
-
-            <!-- Kontaktkort -->
-            <article class="equipment-card bg-black border-ebt-green overflow-hidden shadow-xl flex flex-col justify-between">
-                <div class="p-6 md:p-8">
-                    <div class="text-ebt-green text-3xl mb-4">
-                        <i class="fas fa-phone-alt"></i>
-                    </div>
-                    <h3 class="text-2xl font-black uppercase italic text-white mb-4">
-                        Trenger du noe annet?
-                    </h3>
-                    <p class="text-slate-300 text-sm leading-relaxed mb-6">
-                        Jeg har også tilgang på diverse mindre verktøy og utstyr. Ta kontakt, så finner vi en løsning som passer prosjektet ditt.
-                    </p>
-
-                    <ul class="space-y-3 text-sm text-slate-300 mb-6">
-                        <li class="flex items-center gap-3">
-                            <span class="h-2 w-2 bg-ebt-green rounded-full"></span>
-                            Fleksibel leieperiode
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <span class="h-2 w-2 bg-ebt-green rounded-full"></span>
-                            For privat og bedrift
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <span class="h-2 w-2 bg-ebt-green rounded-full"></span>
-                            Henting etter avtale i Vestby
-                        </li>
-                    </ul>
-
-                    <!-- Telefonnummer synlig direkte -->
-                    <a href="tel:90056314" class="flex items-center gap-3 text-ebt-green font-black text-xl italic mb-2 hover:text-white transition">
-                        <i class="fas fa-phone-alt"></i> 900 56 314
-                    </a>
-                    <p class="text-slate-500 text-xs italic">Svarer raskt – gjerne på SMS også</p>
-                </div>
-
-                <div class="px-6 pb-6 md:px-8 md:pb-8 flex flex-col gap-3">
-                    <a href="tel:90056314" class="inline-block w-full text-center bg-ebt-green text-black font-black px-6 py-3 uppercase italic hover:bg-white transition">
-                        <i class="fas fa-phone-alt mr-2"></i> Ring 900 56 314
-                    </a>
-                    <a href="kontakt.html" class="inline-block w-full text-center border border-slate-700 text-slate-300 font-black px-6 py-3 uppercase italic hover:border-ebt-green hover:text-ebt-green transition">
-                        Send forespørsel
-                    </a>
-                </div>
-            </article>
-        </section>
-
-        <section class="mt-12 bg-black border border-slate-800 p-8 md:p-10 shadow-xl">
-            <div class="max-w-4xl">
-                <h2 class="text-2xl md:text-3xl font-black uppercase italic mb-4">Verktøyutleie i Vestby</h2>
-                <p class="text-slate-300 leading-relaxed">
-                    Edvardsen Byggtjenester tilbyr verktøyutleie i Vestby og omegn for både privat og bedrift.
-                    Her kan du leie byggvarmer, giraffsliper, lensepumpe og ventilasjonsvifte til oppussing, rehabilitering,
-                    tørkearbeid og byggeprosjekter – og har du behov for noe annet, er det bare å ta kontakt.
+                <p class="text-slate-300 leading-relaxed mb-7">
+                    På Hygglo-profilen min kan du se hvilke produkter som er tilgjengelige,
+                    hva de koster og hvilke leieperioder som kan velges. Hele bestillingen
+                    gjennomføres der.
                 </p>
-            </div>
-        </section>
 
-        <section class="mt-16 bg-slate-950 border border-slate-800 p-8 md:p-10 shadow-xl">
-            <div class="grid md:grid-cols-2 gap-10 items-center">
+                <div class="grid gap-5">
+                    <div class="check-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h3 class="font-black text-white">Oppdaterte priser og tilgjengelighet</h3>
+                            <p class="text-slate-400 text-sm mt-1">Du ser alltid gjeldende pris og om produktet er ledig.</p>
+                        </div>
+                    </div>
+
+                    <div class="check-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <div>
+                            <h3 class="font-black text-white">Tryggere utleie</h3>
+                            <p class="text-slate-400 text-sm mt-1">Betaling, leieavtale og forsikringsordning håndteres gjennom Hygglo.</p>
+                        </div>
+                    </div>
+
+                    <div class="check-item">
+                        <i class="fas fa-calendar-check"></i>
+                        <div>
+                            <h3 class="font-black text-white">Enkel reservasjon</h3>
+                            <p class="text-slate-400 text-sm mt-1">Velg produkt og ønsket periode direkte på profilen.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="https://www.hygglo.no/users/boNM8UwOW-kim" target="_blank" rel="noopener noreferrer"
+                   class="mt-9 inline-flex items-center justify-center gap-3 bg-ebt-green text-black font-black px-8 py-4 uppercase italic hover:bg-white transition shadow-lg">
+                    <i class="fas fa-tools"></i>
+                    Gå til Hygglo-profilen
+                </a>
+            </div>
+
+            <aside class="lg:col-span-2 bg-black border-l-4 border-ebt-green p-7 md:p-10 shadow-xl flex flex-col justify-between">
                 <div>
-                    <h2 class="text-3xl font-black uppercase italic mb-4">Praktisk informasjon</h2>
-                    <p class="text-slate-300 leading-relaxed mb-4">
-                        Utstyret leies ut etter tilgjengelighet. For pris, varighet og reservasjon er det best å ta kontakt direkte.
-                    </p>
-                    <p class="text-slate-400 leading-relaxed">
-                        Oppgi gjerne hvilket utstyr du trenger, hvor lenge du ønsker å leie, og når du ønsker å hente det.
-                    </p>
-                    <p class="text-slate-400 leading-relaxed mt-4 text-sm">
-                        Pakkepris ved leie av flere produkter. Helg, uke og langtidsleie etter avtale.
+                    <div class="text-ebt-green text-4xl mb-5">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+
+                    <h2 class="text-2xl md:text-3xl font-black uppercase italic text-white mb-5">
+                        Henting etter avtale
+                    </h2>
+
+                    <p class="text-slate-300 leading-relaxed">
+                        Utstyret hentes i Vestby etter avtale. Praktisk informasjon om produktet,
+                        henting og levering finner du i den enkelte annonsen på Hygglo.
                     </p>
                 </div>
 
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="tel:90056314" class="inline-flex items-center justify-center gap-3 bg-ebt-green text-black font-black px-8 py-4 uppercase italic hover:bg-white transition shadow-lg">
-                        <i class="fas fa-phone-alt"></i> Ring 900 56 314
-                    </a>
-                    <a href="vilkar-utleie.html" class="inline-block bg-white text-black font-black px-8 py-4 uppercase italic hover:bg-ebt-green transition shadow-lg text-center">
-                        Les vilkår
+                <div class="mt-8 border-t border-slate-800 pt-6">
+                    <p class="text-slate-500 text-xs uppercase tracking-widest font-black mb-2">Spørsmål før bestilling?</p>
+                    <a href="tel:90056314" class="text-ebt-green font-black text-xl italic hover:text-white transition">
+                        <i class="fas fa-phone-alt mr-2"></i>900 56 314
                     </a>
                 </div>
-            </div>
+            </aside>
         </section>
+
+        <section class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+            <article class="info-card p-6 shadow-lg">
+                <div class="text-ebt-green text-2xl mb-4"><i class="fas fa-tag"></i></div>
+                <h3 class="text-lg font-black uppercase italic text-white mb-3">Pris</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    Gjeldende priser og eventuelle pakkepriser vises på Hygglo.
+                </p>
+            </article>
+
+            <article class="info-card p-6 shadow-lg">
+                <div class="text-ebt-green text-2xl mb-4"><i class="fas fa-calendar-days"></i></div>
+                <h3 class="text-lg font-black uppercase italic text-white mb-3">Tilgjengelighet</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    Ledige datoer og valg av leieperiode finner du i annonsen.
+                </p>
+            </article>
+
+            <article class="info-card p-6 shadow-lg">
+                <div class="text-ebt-green text-2xl mb-4"><i class="fas fa-file-signature"></i></div>
+                <h3 class="text-lg font-black uppercase italic text-white mb-3">Avtale og betaling</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    Leieavtale og betaling gjennomføres i Hygglo-systemet.
+                </p>
+            </article>
+        </section>
+
+        <section class="mt-14 text-center bg-slate-950 border border-slate-800 p-8 md:p-12 shadow-xl">
+            <img src="/assets/logo.png" alt="Edvardsen Byggtjenester" class="h-24 md:h-32 w-auto mx-auto mb-7">
+
+            <h2 class="text-3xl md:text-4xl font-black uppercase italic text-white mb-5">
+                Se tilgjengelig utstyr
+            </h2>
+
+            <p class="text-slate-300 leading-relaxed max-w-2xl mx-auto">
+                Klikk deg videre til Hygglo for å se hele utvalget, oppdaterte priser
+                og tilgjengelige datoer.
+            </p>
+
+            <a href="https://www.hygglo.no/users/boNM8UwOW-kim" target="_blank" rel="noopener noreferrer"
+               class="mt-8 inline-flex items-center justify-center gap-3 bg-ebt-green text-black font-black px-8 py-4 uppercase italic hover:bg-white transition shadow-lg">
+                <i class="fas fa-arrow-up-right-from-square"></i>
+                Åpne Hygglo
+            </a>
+        </section>
+
     </main>
 
     <footer class="bg-black text-slate-500 py-12 px-4 border-t-8 border-ebt-green text-center">
         <div class="max-w-7xl mx-auto">
             <p class="font-black uppercase italic text-white mb-4 text-xl tracking-wider">Edvardsen Byggtjenester</p>
+
             <div class="flex flex-col md:flex-row justify-center items-center gap-4 text-[10px] md:text-xs uppercase font-bold tracking-widest italic text-white">
                 <span>Karen Bachs vei 23, 1542 Vestby</span>
                 <span class="hidden md:block">|</span>
@@ -709,7 +325,6 @@
             <div class="mt-8 flex justify-center items-center gap-4">
                 <a href="personvern.html" class="text-[10px] text-slate-400 hover:text-white underline transition">Personvernerklæring</a>
                 <a href="cookies.html" class="text-[10px] text-slate-400 hover:text-white underline transition">Cookies</a>
-                <a href="vilkar-utleie.html" class="text-[10px] text-slate-400 hover:text-white underline transition">Vilkår utleie</a>
             </div>
         </div>
     </footer>
@@ -726,6 +341,7 @@
                 <button onclick="rejectCookies()" class="bg-slate-700 text-white px-6 py-2 font-black uppercase italic text-sm rounded shadow-lg hover:bg-slate-600 transition">
                     Avslå
                 </button>
+
                 <button onclick="acceptCookies()" class="bg-green-500 text-black px-6 py-2 font-black uppercase italic text-sm rounded shadow-lg hover:bg-white transition">
                     Godta
                 </button>
@@ -733,9 +349,9 @@
         </div>
     </div>
 
-    <!-- Mobile sticky call button -->
-    <a href="tel:90056314" class="sm:hidden fixed bottom-5 right-5 bg-ebt-green text-black font-black uppercase italic px-5 py-3 rounded-full shadow-2xl flex items-center gap-2">
-        <i class="fa-solid fa-phone"></i> Ring
+    <a href="https://www.hygglo.no/users/boNM8UwOW-kim" target="_blank" rel="noopener noreferrer"
+       class="sm:hidden fixed bottom-5 right-5 bg-ebt-green text-black font-black uppercase italic px-5 py-3 rounded-full shadow-2xl flex items-center gap-2 z-40">
+        <i class="fas fa-tools"></i> Hygglo
     </a>
 
     <script>
