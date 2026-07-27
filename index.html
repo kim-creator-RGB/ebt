@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
- <meta property="og:title" content="Edvardsen Byggtjenester">
-<meta property="og:description" content="Tømrer, graving og grunnarbeid i Vestby og omegn. Utleieutstyr formidles trygt gjennom Hygglo.">
-<meta property="og:image" content="https://edvardsenbyggtjenester.no/assets/facebook.jpg">
-<meta property="og:url" content="https://edvardsenbyggtjenester.no/">
-<meta property="og:type" content="website">
-  <!-- Google tag (gtag.js) -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Bygg og grunnarbeid i Vestby | Edvardsen Byggtjenester</title>
+  <meta name="description" content="Edvardsen Byggtjenester utfører bygg, graving og grunnarbeid i Vestby, Follo, Akershus og Østfold. Fra grunnarbeid til ferdig resultat.">
+
+  <meta property="og:title" content="Edvardsen Byggtjenester">
+  <meta property="og:description" content="Bygg og grunnarbeid – fra start til ferdig resultat.">
+  <meta property="og:image" content="https://edvardsenbyggtjenester.no/assets/facebook.jpg">
+  <meta property="og:url" content="https://edvardsenbyggtjenester.no/">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" type="image/png" href="/assets/logo.png">
+
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-M43SBMDNYW"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-
     gtag('js', new Date());
 
-    /* Standard: ingen analyse før samtykke */
     gtag('consent', 'default', {
       analytics_storage: 'denied',
       ad_storage: 'denied',
@@ -26,370 +32,436 @@
     gtag('config', 'G-M43SBMDNYW');
   </script>
 
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <title>Tømrer og grunnarbeid i Vestby | Edvardsen Byggtjenester</title>
-  <meta name="description" content="Tømrer, graving og grunnarbeid i Vestby, Follo, Akershus og Østfold. Ryddig jobb, god dialog og skikkelig håndverk. Utleieutstyr bestilles gjennom Hygglo." />
-
-  <meta property="og:title" content="Edvardsen Byggtjenester" />
-  <meta property="og:description" content="Tømrer • Graver • Grunnarbeid i Vestby og omegn. Utleieutstyr bestilles gjennom Hygglo." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="/assets/logo.png" />
-
-  <link rel="icon" type="image/png" href="/assets/logo.png" />
-
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <style>
-    body { font-family: 'Inter', sans-serif; }
+    :root {
+      --green: #00E676;
+      --panel: #0d1117;
+      --line: #252b36;
+    }
 
-    .hero-dark{
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #080b10;
+      color: #f8fafc;
+    }
+
+    .text-ebt-green { color: var(--green); }
+    .bg-ebt-green { background-color: var(--green); }
+    .border-ebt-green { border-color: var(--green); }
+
+    .hero {
+      min-height: 760px;
       background:
-        radial-gradient(1000px 500px at 50% 0%, rgba(0,230,118,0.12), transparent 60%),
-        linear-gradient(180deg, rgba(0,0,0,0.75), rgba(0,0,0,0.85)),
-        url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23111111' fill-opacity='0.6'%3E%3Cpath d='M38 36v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zM38 6V2h-2v4h-4v2h4v4h2V8h4V6h-4zM8 36v-4H6v4H2v2h4v4h2v-4h4v-2H8zM8 6V2H6v4H2v2h4v4h2V8h4V6H8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-      background-color:#000;
+        linear-gradient(90deg, rgba(0,0,0,.93) 0%, rgba(0,0,0,.76) 48%, rgba(0,0,0,.28) 100%),
+        linear-gradient(180deg, rgba(0,0,0,.06), rgba(0,0,0,.72)),
+        url("/Drenering_vestby_2.JPG") center/cover no-repeat;
+      position: relative;
     }
 
-    .text-ebt-green { color: #00E676; }
-    .bg-ebt-green { background-color: #00E676; }
-    .border-ebt-green { border-color: #00E676; }
-
-    .card{
-      border: 1px solid #334155;
-      transition: all .25s ease;
-    }
-    .card:hover{
-      transform: translateY(-4px);
-      border-color: #00E676;
-      box-shadow: 0 16px 40px -18px rgba(0, 230, 118, .35);
+    .hero::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 140px;
+      background: linear-gradient(to bottom, transparent, #080b10);
+      pointer-events: none;
     }
 
-    .glass{
-      background: rgba(2, 6, 23, 0.55);
-      border: 1px solid rgba(148, 163, 184, 0.25);
-      backdrop-filter: blur(10px);
+    .eyebrow { letter-spacing: .24em; }
+
+    .nav-link {
+      position: relative;
     }
-</style>
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      width: 0;
+      height: 2px;
+      background: var(--green);
+      transition: width .2s ease;
+    }
+
+    .nav-link:hover::after { width: 100%; }
+
+    .service-tile {
+      position: relative;
+      overflow: hidden;
+      min-height: 410px;
+      background-position: center;
+      background-size: cover;
+      border: 1px solid var(--line);
+      transition: transform .3s ease, border-color .3s ease;
+    }
+
+    .service-tile:hover {
+      transform: translateY(-5px);
+      border-color: var(--green);
+    }
+
+    .service-tile::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,.96), rgba(0,0,0,.18));
+    }
+
+    .service-tile .content {
+      position: absolute;
+      inset: auto 0 0 0;
+      padding: 2rem;
+      z-index: 2;
+    }
+
+    .project-large,
+    .project-small {
+      overflow: hidden;
+      position: relative;
+      border: 1px solid var(--line);
+      background: #0d1117;
+    }
+
+    .project-large img,
+    .project-small img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .4s ease;
+    }
+
+    .project-large:hover img,
+    .project-small:hover img {
+      transform: scale(1.035);
+    }
+
+    .project-overlay {
+      position: absolute;
+      inset: auto 0 0 0;
+      background: linear-gradient(to top, rgba(0,0,0,.9), transparent);
+      padding: 2rem;
+    }
+
+    .stat { border-left: 1px solid var(--line); }
+    .stat:first-child { border-left: 0; }
+
+    @media (max-width: 767px) {
+      .hero {
+        min-height: 690px;
+        background-position: 62% center;
+      }
+
+      .stat {
+        border-left: 0;
+        border-top: 1px solid var(--line);
+      }
+
+      .stat:first-child { border-top: 0; }
+    }
+  </style>
 </head>
 
-<body class="bg-slate-900 text-slate-100">
+<body>
 
-  <div class="bg-black/60 border-b border-slate-800">
-    <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between text-[11px] sm:text-xs">
-      <div class="text-slate-300 flex items-center gap-2">
+  <div class="bg-black border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center text-[11px] sm:text-xs">
+      <div class="flex items-center gap-2 text-slate-400">
         <i class="fa-solid fa-location-dot text-ebt-green"></i>
         <span>Vestby • Follo • Akershus • Østfold</span>
       </div>
-      <a href="tel:90056314" class="text-white font-bold hover:text-ebt-green transition">
+      <a href="tel:90056314" class="font-bold text-white hover:text-ebt-green transition">
         <i class="fa-solid fa-phone mr-2 text-ebt-green"></i>900 56 314
       </a>
     </div>
   </div>
 
-  <nav class="bg-black sticky top-0 z-50 border-b-2 border-ebt-green">
+  <nav class="bg-black/95 backdrop-blur sticky top-0 z-50 border-b border-white/10">
     <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-      <div class="flex items-center gap-3">
-        <a href="index.html" class="flex items-center gap-3">
-          <img src="/assets/logo.png" alt="Edvardsen Byggtjenester logo" class="h-9 sm:h-10 md:h-12 w-auto">
-          <span class="text-white font-black uppercase italic hidden xl:block text-sm">
-            Edvardsen <span class="text-ebt-green underline">Byggtjenester</span>
-          </span>
-        </a>
-        <div class="h-8 w-px bg-slate-700 hidden sm:block"></div>
-        <img src="/assets/mesterlogo.png" alt="Mesterbrev" class="h-10 sm:h-14 w-auto brightness-0 invert hidden sm:block" title="Mester i byggfag">
-      </div>
+      <a href="index.html" class="flex items-center gap-4">
+        <img src="/assets/logo.png" alt="Edvardsen Byggtjenester logo" class="h-10 sm:h-12 w-auto">
+        <div class="hidden lg:block">
+          <div class="font-black uppercase italic leading-none">Edvardsen</div>
+          <div class="font-black uppercase italic text-ebt-green text-xs tracking-[.18em]">Byggtjenester</div>
+        </div>
+      </a>
 
-      <div class="flex space-x-2 sm:space-x-4 md:space-x-6 font-bold text-slate-200 text-[10px] sm:text-xs md:text-sm uppercase italic items-center">
-        <a href="tomrertjenester.html" class="hover:text-ebt-green transition py-1">Tømrer</a>
-        <a href="grunnarbeid.html" class="hover:text-ebt-green transition py-1 whitespace-nowrap">Grunnarbeid</a>
-        <a href="utleie.html" class="hover:text-ebt-green transition py-1">Utleie</a>
-        <a href="om-oss.html" class="hover:text-ebt-green transition py-1 whitespace-nowrap">Om oss</a>
-        <a href="kontakt.html" class="bg-ebt-green text-black px-3 sm:px-4 py-2 rounded shadow-md ml-1 hover:bg-white transition">
-          Kontakt
-        </a>
+      <div class="flex items-center gap-3 sm:gap-5 md:gap-7 text-[10px] sm:text-xs md:text-sm font-bold uppercase">
+        <a href="grunnarbeid.html" class="nav-link hover:text-ebt-green transition">Grunnarbeid</a>
+        <a href="tomrertjenester.html" class="nav-link hover:text-ebt-green transition">Tømrer</a>
+        <a href="utleie.html" class="nav-link hover:text-ebt-green transition">Utleie</a>
+        <a href="om-oss.html" class="nav-link hover:text-ebt-green transition hidden sm:block">Om oss</a>
+        <a href="kontakt.html" class="bg-ebt-green text-black px-4 py-2.5 font-black hover:bg-white transition">Kontakt</a>
       </div>
     </div>
   </nav>
 
-  <header class="hero-dark text-white border-b-8 border-ebt-green">
-    <div class="max-w-7xl mx-auto px-4 py-16 md:py-24">
-      <div class="grid md:grid-cols-12 gap-10 items-center">
-        <div class="md:col-span-7 text-center md:text-left">
-          <h1 class="text-4xl sm:text-5xl md:text-7xl font-black uppercase italic leading-tight">
-            Skikkelig <span class="text-ebt-green">Håndverk</span>
-          </h1>
-          <p class="mt-5 text-sm sm:text-base md:text-xl text-slate-300 font-bold uppercase italic tracking-widest leading-relaxed">
-            Tømrer • Graver • Grunnarbeid i Vestby og omegn
-          </p>
+  <header class="hero border-b border-ebt-green">
+    <div class="relative z-10 max-w-7xl mx-auto px-4 pt-24 sm:pt-32 md:pt-40 pb-28">
+      <div class="max-w-4xl">
+        <p class="eyebrow text-ebt-green uppercase font-black text-xs sm:text-sm mb-6">
+          Bygg • Grunnarbeid • Graving
+        </p>
 
-          <div class="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-3 text-left">
-            <div class="glass rounded p-4">
-              <div class="text-ebt-green font-black uppercase italic text-xs">Ryddig prosess</div>
-              <div class="text-slate-200 text-sm mt-1">God dialog og tydelige avtaler</div>
-            </div>
-           <div class="glass rounded p-4">
-  <div class="text-ebt-green font-black uppercase italic text-xs">Riktig utstyr</div>
-  <div class="text-slate-200 text-sm mt-1">Tilpasset jobben som skal gjøres</div>
-</div>
-            <div class="glass rounded p-4">
-              <div class="text-ebt-green font-black uppercase italic text-xs">Kvalitet</div>
-              <div class="text-slate-200 text-sm mt-1">Bygget for å vare</div>
-            </div>
-          </div>
+        <h1 class="text-4xl sm:text-6xl md:text-8xl font-black uppercase italic leading-[.98]">
+          Fra grunnarbeid
+          <span class="block text-ebt-green">til ferdig resultat</span>
+        </h1>
 
-          <div class="mt-10 flex flex-col sm:flex-row justify-center md:justify-start gap-4">
-            <a href="kontakt.html" class="bg-ebt-green text-black font-black px-8 py-5 rounded uppercase italic text-lg hover:bg-white transition shadow-lg">
-              Be om befaring
-            </a>
-            <a href="tel:90056314" class="bg-white text-black font-black px-8 py-5 rounded uppercase italic text-lg hover:bg-ebt-green transition shadow-lg">
-              <i class="fas fa-phone-alt mr-2"></i> 900 56 314
-            </a>
-          </div>
+        <p class="mt-7 text-base sm:text-lg md:text-xl text-slate-200 max-w-2xl leading-relaxed">
+          Lokal håndverker i Vestby med fokus på ryddig utførelse, god dialog og solide løsninger.
+        </p>
 
-          <p class="mt-4 text-xs text-slate-400 italic">
-            Tips: Send gjerne bilde/video av jobben på SMS, så kan jeg gi raskere tilbakemelding.
-          </p>
+        <div class="mt-10 flex flex-col sm:flex-row gap-4">
+          <a href="kontakt.html" class="bg-ebt-green text-black px-8 py-4 font-black uppercase text-center hover:bg-white transition">Be om befaring</a>
+          <a href="tel:90056314" class="border border-white/50 bg-black/35 px-8 py-4 font-black uppercase text-center hover:bg-white hover:text-black transition">Ring 900 56 314</a>
         </div>
-
-        <div class="md:col-span-5">
-          <div class="bg-slate-950/70 border border-slate-800 rounded p-6 md:p-8 shadow-2xl">
-            <div class="flex items-center gap-3">
-              <div class="h-10 w-2 bg-ebt-green shadow-[0_0_14px_rgba(0,230,118,0.45)]"></div>
-              <h2 class="text-2xl font-black uppercase italic">Hva kan vi hjelpe med?</h2>
-            </div>
-
-            <ul class="mt-6 space-y-3 text-slate-200">
-              <li class="flex gap-3">
-                <i class="fa-solid fa-check text-ebt-green mt-1"></i>
-                <span><strong>Tømrer:</strong> terrasse, tilbygg, rehabilitering, innvendig arbeid</span>
-              </li>
-              <li class="flex gap-3">
-                <i class="fa-solid fa-check text-ebt-green mt-1"></i>
-                <span><strong>Grunnarbeid:</strong> drenering, planering, graving og masser</span>
-              </li>
-              <li class="flex gap-3">
-                <i class="fa-solid fa-check text-ebt-green mt-1"></i>
-                <span><strong>Utleie:</strong> verktøy og byggutstyr bestilles gjennom Hygglo</span>
-              </li>
-            </ul>
-
-            <div class="mt-7 grid grid-cols-2 gap-3">
-              <a href="kontakt.html" class="text-center bg-black/60 border border-slate-700 rounded py-3 font-black uppercase italic text-sm hover:border-ebt-green hover:text-ebt-green transition">
-                Spørsmål?
-              </a>
-              <a href="kontakt.html" class="text-center bg-ebt-green text-black rounded py-3 font-black uppercase italic text-sm hover:bg-white transition">
-                Kontakt
-              </a>
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
   </header>
 
-  <main class="max-w-7xl mx-auto py-14 md:py-20 px-4 space-y-16">
+  <main>
 
-    <section>
-      <div class="flex items-end justify-between gap-6 mb-8">
-        <div>
-          <h2 class="text-3xl md:text-4xl font-black uppercase italic">Tjenester</h2>
-          <p class="text-slate-400 italic mt-2">Kort fortalt — trygt og ryddig utført.</p>
+    <section class="max-w-7xl mx-auto px-4 py-16 md:py-24">
+      <div class="grid lg:grid-cols-12 gap-8 items-end mb-10">
+        <div class="lg:col-span-8">
+          <p class="eyebrow text-ebt-green uppercase font-black text-xs mb-4">Hva skal du ha gjort?</p>
+          <h2 class="text-4xl md:text-6xl font-black uppercase italic">Én aktør. Flere fagområder.</h2>
         </div>
-        <a href="kontakt.html" class="hidden sm:inline-flex items-center gap-2 text-ebt-green font-black uppercase italic text-sm border-b-4 border-ebt-green pb-1 hover:text-white transition">
-          Be om befaring <i class="fas fa-arrow-right"></i>
-        </a>
+        <div class="lg:col-span-4">
+          <p class="text-slate-400 leading-relaxed">
+            Her er noen av områdene jeg jobber med. Har du et annet prosjekt, er det bare å ta kontakt.
+          </p>
+        </div>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
-        <!-- Tømrer -->
-        <div class="card bg-slate-950 border-b-8 border-white p-8 flex flex-col justify-between rounded">
-          <div>
-            <div class="text-4xl mb-6 text-ebt-green"><i class="fas fa-hammer"></i></div>
-            <h3 class="text-2xl md:text-3xl font-black uppercase italic mb-4 text-white">Tømrer</h3>
-            <p class="text-slate-300 mb-8 font-medium italic">Nybygg, tilbygg, terrasser og rehabilitering. Kvalitet fra fundament til møne.</p>
+      <div class="grid md:grid-cols-2 gap-6">
+        <a href="grunnarbeid.html" class="service-tile" style="background-image:url('/Drenering_vestby_2.JPG')">
+          <div class="content">
+            <span class="text-ebt-green text-sm font-black uppercase tracking-widest">01</span>
+            <h3 class="text-3xl md:text-4xl font-black uppercase italic mt-2">Grunnarbeid</h3>
+            <p class="text-slate-300 mt-3 max-w-md">Drenering, planering, gårdsplasser, grøfter og annet arbeid rundt hus og tomt.</p>
           </div>
-          <a href="tomrertjenester.html" class="inline-block font-black uppercase italic text-sm border-b-4 border-ebt-green pb-1 self-start text-ebt-green hover:text-white transition">
-            Se tømrertjenester <i class="fas fa-arrow-right ml-1"></i>
-          </a>
+        </a>
+
+        <a href="tomrertjenester.html" class="service-tile" style="background-image:url('/tomrer_vestby_slutt_2.jpg')">
+          <div class="content">
+            <span class="text-ebt-green text-sm font-black uppercase tracking-widest">02</span>
+            <h3 class="text-3xl md:text-4xl font-black uppercase italic mt-2">Tømrerarbeid</h3>
+            <p class="text-slate-300 mt-3 max-w-md">Terrasser, rehabilitering, innvendig arbeid og utvalgte byggeprosjekter.</p>
+          </div>
+        </a>
+
+        <a href="#prosjekter" class="service-tile md:col-span-2" style="background-image:url('/planering_etter_1.jpg'); min-height: 360px;">
+          <div class="content">
+            <span class="text-ebt-green text-sm font-black uppercase tracking-widest">03</span>
+            <h3 class="text-3xl md:text-4xl font-black uppercase italic mt-2">Hele prosjektet</h3>
+            <p class="text-slate-300 mt-3 max-w-2xl">Fra første vurdering og grunnarbeid til ferdig løsning.</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="bg-black border-y border-white/10">
+      <div class="max-w-7xl mx-auto grid md:grid-cols-4">
+        <div class="stat p-8 text-center">
+          <i class="fa-solid fa-award text-ebt-green text-3xl mb-4"></i>
+          <h3 class="font-black uppercase">Mesterbrev</h3>
+          <p class="text-sm text-slate-500 mt-2">Faglig trygghet</p>
         </div>
 
-        <!-- Grunnarbeid -->
-        <div class="card bg-slate-950 border-b-8 border-white p-8 flex flex-col justify-between rounded">
-          <div>
-            <div class="text-4xl mb-6 text-ebt-green"><i class="fas fa-snowplow"></i></div>
-            <h3 class="text-2xl md:text-3xl font-black uppercase italic mb-4 text-white">Grunnarbeid</h3>
-            <p class="text-slate-300 mb-8 font-medium italic">Graving, drenering og planering av gårdsplass eller hage – med riktig utstyr til jobben.</p>
-          </div>
-          <a href="grunnarbeid.html" class="inline-block font-black uppercase italic text-sm border-b-4 border-ebt-green pb-1 self-start text-ebt-green hover:text-white transition">
-            Se grunnarbeid <i class="fas fa-arrow-right ml-1"></i>
-          </a>
+        <div class="stat p-8 text-center">
+          <i class="fa-solid fa-comments text-ebt-green text-3xl mb-4"></i>
+          <h3 class="font-black uppercase">God dialog</h3>
+          <p class="text-sm text-slate-500 mt-2">Tydelige avtaler</p>
         </div>
 
-        <!-- Utleie -->
-        <div class="card bg-slate-950 border-b-8 border-ebt-green p-8 flex flex-col justify-between rounded">
-          <div>
-            <div class="text-4xl mb-6 text-ebt-green"><i class="fas fa-tools"></i></div>
-            <h3 class="text-2xl md:text-3xl font-black uppercase italic mb-3 text-white">Utleie</h3>
-            <p class="text-slate-400 text-xs uppercase italic font-bold tracking-widest mb-5">
-              Trygg bestilling gjennom Hygglo
-            </p>
+        <div class="stat p-8 text-center">
+          <i class="fa-solid fa-screwdriver-wrench text-ebt-green text-3xl mb-4"></i>
+          <h3 class="font-black uppercase">Riktig løsning</h3>
+          <p class="text-sm text-slate-500 mt-2">Tilpasset prosjektet</p>
+        </div>
 
-            <p class="text-slate-300 mb-5 font-medium italic leading-relaxed">
-              Utleieutstyret mitt ligger samlet på Hygglo. Der finner du oppdaterte priser,
-              tilgjengelige datoer og informasjon om hvert produkt.
-            </p>
-
-            <ul class="space-y-3 text-sm text-slate-300 mb-5">
-              <li class="flex items-start gap-3">
-                <i class="fas fa-check text-ebt-green mt-1"></i>
-                <span>Pris og tilgjengelighet oppdateres på Hygglo</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <i class="fas fa-shield-alt text-ebt-green mt-1"></i>
-                <span>Betaling, leieavtale og forsikringsordning håndteres der</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <i class="fas fa-location-dot text-ebt-green mt-1"></i>
-                <span>Henting i Vestby etter avtale</span>
-              </li>
-            </ul>
-
-            <p class="text-slate-500 text-xs italic">
-              Du sendes videre til Hygglo i en ny fane.
-            </p>
-          </div>
-
-          <a href="https://www.hygglo.no/users/boNM8UwOW-kim"
-             target="_blank"
-             rel="noopener noreferrer"
-             class="inline-flex items-center gap-2 font-black uppercase italic text-sm border-b-4 border-ebt-green pb-1 self-start text-ebt-green hover:text-white transition mt-6">
-            Se utstyret på Hygglo <i class="fas fa-arrow-up-right-from-square ml-1"></i>
-          </a>
+        <div class="stat p-8 text-center">
+          <i class="fa-solid fa-location-dot text-ebt-green text-3xl mb-4"></i>
+          <h3 class="font-black uppercase">Lokal i Vestby</h3>
+          <p class="text-sm text-slate-500 mt-2">Kort vei til kunden</p>
         </div>
       </div>
     </section>
 
-    <section>
-      <div class="flex items-end justify-between gap-6 mb-8">
+    <section id="prosjekter" class="max-w-7xl mx-auto px-4 py-16 md:py-24">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
         <div>
-          <h2 class="text-3xl md:text-4xl font-black uppercase italic">Eksempler på arbeid</h2>
-          <p class="text-slate-400 italic mt-2">Noen jobber vi har utført (flere kommer).</p>
+          <p class="eyebrow text-ebt-green uppercase font-black text-xs mb-4">Utvalgte prosjekter</p>
+          <h2 class="text-4xl md:text-6xl font-black uppercase italic">Arbeid jeg har utført</h2>
         </div>
+        <p class="text-slate-500 max-w-md">Ekte bilder fra gjennomførte jobber.</p>
       </div>
 
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div class="card rounded overflow-hidden bg-slate-950">
-          <div class="h-44 sm:h-52 md:h-56">
-            <img
-              src="/Drenering_vestby_2.JPG"
-              alt="Drenering og isolering av grunnmur"
-              class="w-full h-full object-cover"
-              loading="lazy"
-            />
+      <div class="grid lg:grid-cols-12 gap-6">
+        <div class="project-large lg:col-span-7 h-[520px]">
+          <img src="/Drenering_vestby_2.JPG" alt="Dreneringsarbeid ved bolig i Vestby" loading="lazy">
+          <div class="project-overlay">
+            <p class="text-ebt-green text-xs font-black uppercase tracking-widest">Grunnarbeid</p>
+            <h3 class="text-2xl md:text-3xl font-black uppercase italic mt-2">Drenering ved bolig</h3>
           </div>
         </div>
 
-        <div class="card rounded overflow-hidden bg-slate-950">
-          <div class="h-44 sm:h-52 md:h-56">
-            <img
-              src="/planering_etter_1.jpg"
-              alt="Planering av uteområde og hage"
-              class="w-full h-full object-cover"
-              loading="lazy"
-            />
+        <div class="lg:col-span-5 grid gap-6">
+          <div class="project-small h-[248px]">
+            <img src="/planering_etter_1.jpg" alt="Ferdig planert uteområde" loading="lazy">
+            <div class="project-overlay">
+              <h3 class="text-xl font-black uppercase italic">Planering</h3>
+            </div>
           </div>
-        </div>
 
-        <div class="card rounded overflow-hidden bg-slate-950">
-          <div class="h-44 sm:h-52 md:h-56">
-            <img
-              src="/Trapp_vestby_2.jpg"
-              alt="Terrasse og trapp bygget av tømrer"
-              class="w-full h-full object-cover"
-              loading="lazy"
-            />
-          </div>
-        </div>
+          <div class="grid grid-cols-2 gap-6 h-[248px]">
+            <div class="project-small">
+              <img src="/Trapp_vestby_2.jpg" alt="Tømrerarbeid med trapp" loading="lazy">
+              <div class="project-overlay p-4">
+                <h3 class="text-base font-black uppercase italic">Tømrer</h3>
+              </div>
+            </div>
 
-        <div class="card rounded overflow-hidden bg-slate-950">
-          <div class="h-44 sm:h-52 md:h-56">
-            <img
-              src="/tomrer_vestby_slutt_2.jpg"
-              alt="Innvendig tømrerarbeid og oppussing"
-              class="w-full h-full object-cover"
-              loading="lazy"
-            />
+            <div class="project-small">
+              <img src="/tomrer_vestby_slutt_2.jpg" alt="Ferdig innvendig tømrerarbeid" loading="lazy">
+              <div class="project-overlay p-4">
+                <h3 class="text-base font-black uppercase italic">Rehabilitering</h3>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="mt-8 bg-slate-950 border border-slate-800 rounded p-8 text-center">
-        <h3 class="text-xl md:text-2xl font-black uppercase italic">Vil du ha et prisoverslag?</h3>
-        <p class="text-slate-400 italic mt-2">Ring eller send en kort beskrivelse — gjerne med bilde.</p>
-        <div class="mt-6 flex flex-col sm:flex-row justify-center gap-4">
-          <a href="kontakt.html" class="bg-ebt-green text-black font-black px-8 py-4 rounded uppercase italic hover:bg-white transition shadow-lg">
-            Kontakt / skjema
-          </a>
-          <a href="tel:90056314" class="bg-white text-black font-black px-8 py-4 rounded uppercase italic hover:bg-ebt-green transition shadow-lg">
-            <i class="fa-solid fa-phone mr-2"></i> Ring 900 56 314
-          </a>
+    <section class="max-w-7xl mx-auto px-4 pb-20">
+      <div class="grid md:grid-cols-2 gap-6">
+        <a href="utleie.html" class="group bg-[#0d1117] border border-white/10 p-8 hover:border-ebt-green transition">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <p class="text-ebt-green text-xs font-black uppercase tracking-widest mb-3">Utleie</p>
+              <h2 class="text-2xl md:text-3xl font-black uppercase italic">Utstyr gjennom Hygglo</h2>
+              <p class="text-slate-400 mt-3">Priser, tilgjengelighet og bestilling finner du på Hygglo.</p>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square text-ebt-green text-xl group-hover:translate-x-1 group-hover:-translate-y-1 transition"></i>
+          </div>
+        </a>
+
+        <a href="om-oss.html" class="group bg-[#0d1117] border border-white/10 p-8 hover:border-ebt-green transition">
+          <div class="flex items-start justify-between gap-4">
+            <div>
+              <p class="text-ebt-green text-xs font-black uppercase tracking-widest mb-3">Om firmaet</p>
+              <h2 class="text-2xl md:text-3xl font-black uppercase italic">Lokalt og personlig</h2>
+              <p class="text-slate-400 mt-3">Les mer om Edvardsen Byggtjenester og hvordan jeg jobber.</p>
+            </div>
+            <i class="fa-solid fa-arrow-right text-ebt-green text-xl group-hover:translate-x-1 transition"></i>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="bg-ebt-green text-black">
+      <div class="max-w-7xl mx-auto px-4 py-16 md:py-20 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+        <div>
+          <p class="uppercase font-black tracking-[.22em] text-xs mb-3">Har du et prosjekt?</p>
+          <h2 class="text-4xl md:text-6xl font-black uppercase italic leading-none">La oss ta en prat</h2>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="kontakt.html" class="bg-black text-white px-8 py-4 font-black uppercase text-center hover:bg-white hover:text-black transition">Kontakt meg</a>
+          <a href="tel:90056314" class="border-2 border-black px-8 py-4 font-black uppercase text-center hover:bg-black hover:text-white transition">900 56 314</a>
         </div>
       </div>
     </section>
 
   </main>
 
-  <footer class="bg-black text-slate-500 py-12 px-4 border-t-8 border-ebt-green text-center">
-    <div class="max-w-7xl mx-auto">
-      <p class="font-black uppercase italic text-white mb-4 text-xl tracking-wider">Edvardsen Byggtjenester</p>
-      <div class="flex flex-col md:flex-row justify-center items-center gap-3 text-[10px] md:text-xs uppercase font-bold tracking-widest italic text-white">
-        <span>Karen Bachs vei 23, 1542 Vestby</span>
-        <span class="hidden md:block">|</span>
-        <span>Org.nr: 936 481 612 MVA</span>
+  <footer class="bg-black text-slate-500 py-12 px-4 border-t border-white/10">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 items-center text-center md:text-left">
+      <div>
+        <img src="/assets/logo.png" alt="Edvardsen Byggtjenester logo" class="h-12 w-auto mx-auto md:mx-0">
       </div>
 
-      <div class="mt-6 flex justify-center items-center gap-4">
-        <a href="personvern.html" class="text-[10px] text-slate-400 hover:text-white underline transition">Personvernerklæring</a>
-        <a href="cookies.html" class="text-[10px] text-slate-400 hover:text-white underline transition">Cookies</a>
+      <div class="text-xs uppercase font-bold tracking-widest text-slate-300 md:text-center">
+        <p>Karen Bachs vei 23, 1542 Vestby</p>
+        <p class="mt-2">Org.nr: 936 481 612 MVA</p>
       </div>
 
-      <p class="mt-4 text-[10px] opacity-50 text-slate-400">© 2026 Edvardsen Byggtjenester</p>
+      <div class="flex justify-center md:justify-end gap-4 text-xs">
+        <a href="personvern.html" class="hover:text-white transition">Personvern</a>
+        <a href="cookies.html" class="hover:text-white transition">Cookies</a>
+      </div>
     </div>
+
+    <p class="text-center mt-8 text-[10px] text-slate-600">© 2026 Edvardsen Byggtjenester</p>
   </footer>
 
-  <!-- Cookie banner -->
-  <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-black border-t-4 border-green-500 p-4 z-[100] hidden">
+  <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-black border-t-2 border-ebt-green p-4 z-[100] hidden">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-      <p class="text-xs sm:text-sm text-slate-300 italic font-medium text-center md:text-left">
-        Vi bruker enkle informasjonskapsler for å sikre at nettsiden fungerer optimalt.
-        Ved å bruke siden godtar du vår <a href="personvern.html" class="underline text-white">personvernerklæring</a>.
+      <p class="text-xs sm:text-sm text-slate-300 text-center md:text-left">
+        Vi bruker nødvendige informasjonskapsler og, dersom du samtykker, Google Analytics.
+        <a href="cookies.html" class="underline text-white">Les mer</a>.
       </p>
-      <button onclick="acceptCookies()" class="bg-green-500 text-black px-6 py-2 font-black uppercase italic text-sm rounded shadow-lg hover:bg-white transition">
-        OK, skjønner!
-      </button>
+
+      <div class="flex gap-3">
+        <button onclick="rejectCookies()" class="bg-slate-700 text-white px-5 py-2 font-black uppercase text-xs hover:bg-slate-600 transition">Avslå</button>
+        <button onclick="acceptCookies()" class="bg-ebt-green text-black px-5 py-2 font-black uppercase text-xs hover:bg-white transition">Godta</button>
+      </div>
     </div>
   </div>
 
-  <!-- Mobile sticky call button -->
-  <a href="tel:90056314" class="sm:hidden fixed bottom-5 right-5 bg-ebt-green text-black font-black uppercase italic px-5 py-3 rounded-full shadow-2xl flex items-center gap-2">
+  <a href="tel:90056314" class="sm:hidden fixed bottom-5 right-5 bg-ebt-green text-black font-black uppercase px-5 py-3 rounded-full shadow-2xl flex items-center gap-2 z-40">
     <i class="fa-solid fa-phone"></i> Ring
   </a>
 
   <script>
     function acceptCookies() {
-      localStorage.setItem('cookiesAccepted', 'true');
+      localStorage.setItem('cookieChoice', 'accepted');
+      gtag('consent', 'update', {
+        analytics_storage: 'granted',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied'
+      });
       document.getElementById('cookie-banner').classList.add('hidden');
     }
+
+    function rejectCookies() {
+      localStorage.setItem('cookieChoice', 'rejected');
+      gtag('consent', 'update', {
+        analytics_storage: 'denied',
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied'
+      });
+      document.getElementById('cookie-banner').classList.add('hidden');
+    }
+
     window.onload = function() {
-      if (!localStorage.getItem('cookiesAccepted')) {
-        document.getElementById('cookie-banner').classList.remove('hidden');
+      const choice = localStorage.getItem('cookieChoice');
+      const banner = document.getElementById('cookie-banner');
+
+      if (!choice) {
+        banner.classList.remove('hidden');
+      } else if (choice === 'accepted') {
+        gtag('consent', 'update', {
+          analytics_storage: 'granted',
+          ad_storage: 'denied',
+          ad_user_data: 'denied',
+          ad_personalization: 'denied'
+        });
       }
     }
   </script>
+
 </body>
 </html>
