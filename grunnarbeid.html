@@ -89,6 +89,27 @@
         .bg-ebt-green { background-color: #00E676; }
         .border-ebt-green { border-color: #00E676; }
 
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 0;
+            height: 2px;
+            background: #00E676;
+            transition: width .2s ease;
+        }
+
+        .nav-link:hover::after,
+        .nav-link[aria-current="page"]::after {
+            width: 100%;
+        }
+
         .img-container {
             background-color: #0f172a;
             position: relative;
@@ -135,28 +156,38 @@
 
 <body class="bg-slate-900 text-slate-100">
 
-    <nav class="bg-black sticky top-0 z-50 border-b-2 border-ebt-green">
-        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center gap-2 sm:gap-4">
-                <a href="index.html" class="flex items-center gap-2 sm:gap-3">
-                    <img src="/assets/logo.png" alt="Edvardsen Byggtjenester logo" class="h-8 sm:h-10 md:h-12 w-auto">
-                    <span class="text-white font-black uppercase italic hidden lg:block text-sm">
-                        Edvardsen <span class="text-ebt-green underline">Byggtjenester</span>
-                    </span>
-                </a>
-                <div class="h-8 w-px bg-slate-700 hidden sm:block"></div>
-                <img src="/assets/mesterlogo.png" alt="Mesterbrev" class="h-8 sm:h-10 w-auto opacity-90" title="Mester i byggfag">
-            </div>
+  <div class="bg-black border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center text-[11px] sm:text-xs">
+      <div class="flex items-center gap-2 text-slate-400">
+        <i class="fa-solid fa-location-dot text-ebt-green"></i>
+        <span>Vestby • Follo • Akershus • Østfold</span>
+      </div>
+      <a href="tel:90056314" class="font-bold text-white hover:text-ebt-green transition">
+        <i class="fa-solid fa-phone mr-2 text-ebt-green"></i>900 56 314
+      </a>
+    </div>
+  </div>
 
-            <div class="flex space-x-2 sm:space-x-4 md:space-x-6 font-bold text-slate-200 text-[9px] sm:text-xs md:text-sm uppercase italic items-center">
-                <a href="tomrertjenester.html" class="hover:text-ebt-green transition py-1">Tømrer</a>
-                <a href="grunnarbeid.html" class="text-ebt-green underline py-1 whitespace-nowrap" aria-current="page">Grunnarbeid</a>
-                <a href="utleie.html" class="hover:text-ebt-green transition py-1">Utleie</a>
-                <a href="om-oss.html" class="hover:text-ebt-green transition py-1 whitespace-nowrap">Om oss</a>
-                <a href="kontakt.html" class="bg-ebt-green text-black px-2 sm:px-4 py-1.5 rounded shadow-md ml-1 hover:bg-white transition">Kontakt</a>
-            </div>
+  <nav class="bg-black/95 backdrop-blur sticky top-0 z-50 border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="index.html" class="flex items-center gap-4">
+        <img src="/assets/logo.png" alt="Edvardsen Byggtjenester logo" class="h-10 sm:h-12 w-auto">
+        <div class="hidden lg:block">
+          <div class="font-black uppercase italic leading-none">Edvardsen</div>
+          <div class="font-black uppercase italic text-ebt-green text-xs tracking-[.18em]">Byggtjenester</div>
         </div>
-    </nav>
+      </a>
+
+      <div class="flex items-center gap-3 sm:gap-5 md:gap-7 text-[10px] sm:text-xs md:text-sm font-bold uppercase">
+        <a href="grunnarbeid.html" class="nav-link text-ebt-green" aria-current="page">Graving</a>
+        <a href="tomrertjenester.html" class="nav-link hover:text-ebt-green transition">Tømrer</a>
+        <a href="utleie.html" class="nav-link hover:text-ebt-green transition">Utleie</a>
+        <a href="om-oss.html" class="nav-link hover:text-ebt-green transition hidden sm:block">Om oss</a>
+        <a href="kontakt.html" class="bg-ebt-green text-black px-4 py-2.5 font-black hover:bg-white transition">Kontakt</a>
+      </div>
+    </div>
+  </nav>
+
 
     <header class="hero-dark text-white py-12 md:py-20 px-4 border-b-8 border-ebt-green text-center md:text-left">
         <div class="max-w-7xl mx-auto">
