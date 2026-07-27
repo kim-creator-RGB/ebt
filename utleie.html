@@ -114,6 +114,23 @@
             border: 1px solid #334155;
         }
 
+
+        .nav-link{position:relative;}
+        .nav-link::after{
+            content:"";
+            position:absolute;
+            left:0;
+            bottom:-5px;
+            width:0;
+            height:2px;
+            background:#00E676;
+            transition:width .2s ease;
+        }
+        .nav-link:hover::after,
+        .nav-link[aria-current="page"]::after{
+            width:100%;
+        }
+
         .check-item {
             display: flex;
             gap: .8rem;
@@ -129,28 +146,38 @@
 
 <body class="bg-slate-900 text-slate-100">
 
-    <nav class="bg-black sticky top-0 z-50 border-b-2 border-ebt-green">
-        <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center gap-2 sm:gap-4">
-                <a href="index.html" class="flex items-center gap-2 sm:gap-3">
-                    <img src="/assets/logo.png" alt="Logo for Edvardsen Byggtjenester" class="h-8 sm:h-10 md:h-12 w-auto">
-                    <span class="text-white font-black uppercase italic hidden lg:block text-sm">
-                        Edvardsen <span class="text-ebt-green underline">Byggtjenester</span>
-                    </span>
-                </a>
-                <div class="h-8 w-px bg-slate-700 hidden sm:block"></div>
-                <img src="/assets/mesterlogo.png" alt="Mesterbrev" class="h-8 sm:h-10 w-auto opacity-90" title="Mester i byggfag">
-            </div>
+  <div class="bg-black border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 py-2 flex justify-between items-center text-[11px] sm:text-xs">
+      <div class="flex items-center gap-2 text-slate-400">
+        <i class="fa-solid fa-location-dot text-ebt-green"></i>
+        <span>Vestby • Follo • Akershus • Østfold</span>
+      </div>
+      <a href="tel:90056314" class="font-bold text-white hover:text-ebt-green transition">
+        <i class="fa-solid fa-phone mr-2 text-ebt-green"></i>900 56 314
+      </a>
+    </div>
+  </div>
 
-            <div class="flex space-x-2 sm:space-x-4 md:space-x-6 font-bold text-slate-200 text-[9px] sm:text-xs md:text-sm uppercase italic items-center">
-                <a href="tomrertjenester.html" class="hover:text-ebt-green transition py-1">Tømrer</a>
-                <a href="grunnarbeid.html" class="hover:text-ebt-green transition py-1 whitespace-nowrap">Grunnarbeid</a>
-                <a href="utleie.html" class="text-ebt-green underline py-1" aria-current="page">Utleie</a>
-                <a href="om-oss.html" class="hover:text-ebt-green transition py-1">Om oss</a>
-                <a href="kontakt.html" class="bg-ebt-green text-black px-2 sm:px-4 py-1 rounded hover:bg-white transition">Kontakt</a>
-            </div>
+  <nav class="bg-black/95 backdrop-blur sticky top-0 z-50 border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="index.html" class="flex items-center gap-4">
+        <img src="/assets/logo.png" alt="Edvardsen Byggtjenester logo" class="h-10 sm:h-12 w-auto">
+        <div class="hidden lg:block">
+          <div class="font-black uppercase italic leading-none">Edvardsen</div>
+          <div class="font-black uppercase italic text-ebt-green text-xs tracking-[.18em]">Byggtjenester</div>
         </div>
-    </nav>
+      </a>
+
+      <div class="flex items-center gap-3 sm:gap-5 md:gap-7 text-[10px] sm:text-xs md:text-sm font-bold uppercase">
+        <a href="grunnarbeid.html" class="nav-link hover:text-ebt-green transition">Graving</a>
+        <a href="tomrertjenester.html" class="nav-link hover:text-ebt-green transition">Tømrer</a>
+        <a href="utleie.html" class="nav-link text-ebt-green" aria-current="page">Utleie</a>
+        <a href="om-oss.html" class="nav-link hover:text-ebt-green transition hidden sm:block">Om oss</a>
+        <a href="kontakt.html" class="bg-ebt-green text-black px-4 py-2.5 font-black hover:bg-white transition">Kontakt</a>
+      </div>
+    </div>
+  </nav>
+
 
     <header class="hero-dark text-white py-16 md:py-28 px-4 border-b-8 border-ebt-green">
         <div class="max-w-7xl mx-auto">
@@ -312,22 +339,27 @@
 
     </main>
 
-    <footer class="bg-black text-slate-500 py-12 px-4 border-t-8 border-ebt-green text-center">
-        <div class="max-w-7xl mx-auto">
-            <p class="font-black uppercase italic text-white mb-4 text-xl tracking-wider">Edvardsen Byggtjenester</p>
+  <footer class="bg-black text-slate-500 py-12 px-4 border-t border-white/10">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-8 items-center text-center md:text-left">
+      <div>
+        <img src="/assets/logo.png" alt="Edvardsen Byggtjenester logo" class="h-12 w-auto mx-auto md:mx-0">
+      </div>
 
-            <div class="flex flex-col md:flex-row justify-center items-center gap-4 text-[10px] md:text-xs uppercase font-bold tracking-widest italic text-white">
-                <span>Karen Bachs vei 23, 1542 Vestby</span>
-                <span class="hidden md:block">|</span>
-                <span>Org.nr: 936 481 612 MVA</span>
-            </div>
+      <div class="text-xs uppercase font-bold tracking-widest text-slate-300 md:text-center">
+        <p>Karen Bachs vei 23, 1542 Vestby</p>
+        <p class="mt-2">Org.nr: 936 481 612 MVA</p>
+      </div>
 
-            <div class="mt-8 flex justify-center items-center gap-4">
-                <a href="personvern.html" class="text-[10px] text-slate-400 hover:text-white underline transition">Personvernerklæring</a>
-                <a href="cookies.html" class="text-[10px] text-slate-400 hover:text-white underline transition">Cookies</a>
-            </div>
-        </div>
-    </footer>
+      <div class="flex justify-center md:justify-end gap-4 text-xs">
+        <a href="personvern.html" class="hover:text-white transition">Personvern</a>
+        <a href="cookies.html" class="hover:text-white transition">Cookies</a>
+      </div>
+    </div>
+
+    <p class="text-center mt-8 text-[10px] text-slate-600">© 2026 Edvardsen Byggtjenester</p>
+  </footer>
+
+
 
     <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-black border-t-4 border-green-500 p-4 z-[100] hidden">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
